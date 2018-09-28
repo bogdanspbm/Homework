@@ -9,10 +9,10 @@ def Calc(action,a,b):
        }
        return calculator_actions[action]
     except:
-       if b == 0 and (action == '*' or action == '/' or action == '-' or action == '+' or action == '**'):
-          return 'Infinity'
+       if b == 0 and action == '/':
+          return "Na nol' delit' nelzya"
        else:
           return 'Unknown operation'
 
 
-#print(Calc('!',2,0))
+print(Calc('/',2,0))
