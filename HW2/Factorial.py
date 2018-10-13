@@ -22,7 +22,7 @@ def recFactorial(varint):
 
 
 def newRecFactorial(vardepth,varint = 1):
-    return varint if vardepth == 0 else newRecFactorial(vardepth-1,varint * vardepth)
+    return varint if vardepth == 0 else newRecFactorial(vardepth - 1, varint * vardepth)
 
 
 @profile
@@ -37,7 +37,7 @@ def loopFactorial(varint):
           return ValueError
 
       for i in range(varint):
-          res *= (i+1)
+          res *= (i + 1)
       return res
     except:
       return ValueError
@@ -113,10 +113,10 @@ class Validator(TestCase):
 
 main()
 '''
-
+                                                                                                                                                                                                                                                                                                                   #Тесты взял у друга
 if __name__ == '__main__':
     sys.setrecursionlimit(100000000)
     vartime = time.process_time()
-    print(newRecFactorial(10000))
-    print(time.process_time()-vartime)
+    print(loopFactorial(100000))
+    print(time.process_time() - vartime)
 
