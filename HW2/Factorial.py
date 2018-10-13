@@ -21,7 +21,7 @@ def recFactorial(varint):
         return varint*recFactorial(varint-1)
 
 
-def newRecFactorial(vardepth,varint = 0):
+def newRecFactorial(vardepth,varint = 1):
     return varint if vardepth == 0 else newRecFactorial(vardepth-1,varint * vardepth)
 
 
@@ -115,10 +115,8 @@ main()
 '''
 
 if __name__ == '__main__':
+    sys.setrecursionlimit(100000000)
     vartime = time.process_time()
-    try:
-      print(loopFactorial(1000000000))
-    except:
-       print('End Stack')
+    print(newRecFactorial(10000))
     print(time.process_time()-vartime)
 
