@@ -1,4 +1,18 @@
 from unittest import TestCase, main
+from HW2 import Factorial as f
+
+
+def trianglePascLines(intdepth):
+    if type(intdepth) != int or intdepth < 0:
+        return ValueError
+    matrix = []
+    for i in range(intdepth + 1):
+        curr_string = []
+        for k in range(i + 1):
+            curr_string.append(int(f.loopFactorial(i) / (f.loopFactorial(k) * f.loopFactorial(i - k))))
+        matrix.append(curr_string)
+    return matrix
+
 
 def trianglePasc(intdepth):
     try:
@@ -30,7 +44,7 @@ def trianglePasc(intdepth):
 def main2():
   try:
     inta = int(input())
-    matrix = trianglePasc(inta)
+    matrix = trianglePascLines(inta)
     for i in range (inta + 1):
         print(matrix[i])
   except:
@@ -57,7 +71,27 @@ class Validator(TestCase):
             print("Test passed")
         else:
             print("Test failed")
-        if not self.assertEqual(trianglePasc(3), [[1,1,1,1], [1, 2,3], [1, 3], [1]]):
+        if not self.assertEqual(trianglePasc(3), [[1,1,1,1], [1, 2, 3], [1, 3], [1]]):
+            print("Test passed")
+        else:
+            print("Test failed")
+        if not self.assertEqual(trianglePascLines(5), [[1], [1,1], [1, 2, 1],[1,3,3,1], [1,4,6,4,1],[1,5,10,10,5,1]]):
+            print("Test passed")
+        else:
+            print("Test failed")
+        if not self.assertEqual(trianglePascLines(1), [[1], [1, 1]]):
+            print("Test passed")
+        else:
+            print("Test failed")
+        if not self.assertEqual(trianglePascLines(0), [[1]]):
+            print("Test passed")
+        else:
+            print("Test failed")
+        if not self.assertEqual(trianglePascLines(-5), ValueError):
+             print("Test passed")
+        else:
+             print("Test failed")
+        if not self.assertEqual(trianglePascLines('bogdan'), ValueError):
             print("Test passed")
         else:
             print("Test failed")

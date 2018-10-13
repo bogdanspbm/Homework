@@ -1,7 +1,6 @@
 from memory_profiler import *
 from unittest import TestCase, main
 
-counter = 0
 
 @profile
 def startRecFactorial(varint):
@@ -10,17 +9,20 @@ def startRecFactorial(varint):
       if varint < 0 or type(varint) != int:
            return ValueError
 
-      return recFactorial(varint)
+      return newRecFactorial(varint)
    except:
       return ValueError
 
 def recFactorial(varint):
     global counter
-    counter += 1
     if varint == 1 or varint == 0:
         return 1
     else:
         return varint*recFactorial(varint-1)
+
+
+def newRecFactorial(vardepth,varint = 0):
+    return varint if vardepth == 0 else newRecFactorial(vardepth-1,varint * vardepth)
 
 
 @profile
@@ -115,7 +117,7 @@ main()
 if __name__ == '__main__':
     vartime = time.process_time()
     try:
-       loopFactorial(10000)
+      print(loopFactorial(1000000000))
     except:
        print('End Stack')
     print(time.process_time()-vartime)
