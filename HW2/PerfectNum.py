@@ -4,21 +4,21 @@ from unittest import TestCase, main
 def isPerfect(number):
     try:
       if number <= 1:
-        return 0
+        return ValueError
       divs = d.Dividers(number)
       res = 1
       for i in range(len(divs)):
           if divs[i] > 1:
-              res *= divs[i]
-      res /= number
+              res += divs[i]
+      res -= number
       return res == number
     except:
-        return 0
+        return ValueError
 
-'''
+
 class Validator(TestCase):
     def test_correct_values(self):
-        if not self.assertFalse(isPerfect(1)):
+        if not self.assertEqual(isPerfect(1), ValueError):
             print("Test passed")
         else:
             print("Test failed")
@@ -41,8 +41,7 @@ class Validator(TestCase):
 
 
 main()
-'''
 
 
 
-#print((isPerfect(6)))
+#print((isPerfect(28)))
