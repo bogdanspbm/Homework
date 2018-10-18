@@ -6,6 +6,15 @@ class ChatBot:
         self.Name = Name
         self.Token = Token
         self.bot_blueprints = []
+        self.CurrentBP = 0
+
+
+    def selectCurrentBP(self, bp = -1):
+
+        if bp == -1:
+            bp = int(input('Enter BP id: '))
+
+        self.CurrentBP = bp
 
 
     def addBlueprint(self):
