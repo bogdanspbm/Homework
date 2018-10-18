@@ -117,6 +117,6 @@ main()
 if __name__ == '__main__':
     sys.setrecursionlimit(100000000)
     vartime = time.process_time()
-    print(loopFactorial(100000))
+    print(loopFactorial(14881337))
     print(time.process_time() - vartime)
 
