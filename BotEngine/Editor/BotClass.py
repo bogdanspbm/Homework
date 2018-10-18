@@ -35,7 +35,7 @@ class ChatBot:
 
         if id == 0:
             id = int(input('Enter ID: '))
-            self.bot_blueprints[id].bpEditor()
+            self.bot_blueprints[id].bpEditor(self)
 
     def displayBlueprints(self):
 
@@ -48,7 +48,8 @@ class ChatBot:
         'run': self.runBot,
         'save': self.saveBot,
         'close': self.closeBot,
-        'display': self.displayBlueprints
+        'display': self.displayBlueprints,
+        'edit': self.editBlueprint
         }
 
         self.Parent = ParentEditor

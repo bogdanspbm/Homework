@@ -1,3 +1,5 @@
+from BotEngine.Editor.FuncLabClass import *
+
 class Blueprint():
 
 
@@ -10,23 +12,42 @@ class Blueprint():
 
         self.ParentBot.botMenu()
 
-    def addNewAnswer(self, type = -1, input = '', output = '', goto = -1):
+    def addFunc(self, type = '', inputv = '', output = '', goto = -1):
 
-        if type == -1:
-            type = int(input('Enter answer type: '))
+        if type == '':
+            type = input('Enter type: ')
 
-        if type == 1:
-            pass
+        if inputv == '':
+            inputv = input('Enter input: ')
 
+        if output == '':
+            output = input('Enter output: ')
+
+        if goto == -1 and type != 'print':
+            goto = int(input('Enter goto: '))
+
+
+        self.blueprint_lib[inputv] = BlueprintFunctions(type, inputv, output, goto, self)
+
+
+    def testBluerpint(self):
+        while True:
+            inp = input('Test: ')
+
+            if inp == 'stop':
+                return
+
+            self.blueprint_lib[inp].result(self.blueprint_lib[inp])
 
     def bpEditor(self, parentBot):
 
         actions = {
-
+        'add': self.addFunc,
+        'close': self.closeBlueprint,
+        'test': self.testBluerpint
         }
 
         self.ParentBot = parentBot
-
 
         while True:
             actions[input('Blueprint: ')]()
