@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9057142-7147-45bd-9f0c-910f4c07b5e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BotEngine/Editor/EditorClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW2/Factorial.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW2/Factorial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BotEngine/Editor/EditorClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/EditorClass.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,12 +97,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2050" />
+          <entry key="py" value="2967" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2050" />
+          <entry key="Python" value="2967" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -125,10 +123,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BotClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="460">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
               <folding>
-                <marker date="1539841288505" expanded="true" signature="61:62" ph="..." />
+                <marker date="1539876778980" expanded="true" signature="61:62" ph="..." />
+                <marker date="1539876778980" expanded="true" signature="648:696" ph="..." />
               </folding>
             </state>
           </provider>
@@ -137,12 +136,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/Editor/EditorClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="45" selection-end-column="41" />
+            <state relative-caret-position="202">
+              <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <marker date="1539801315891" expanded="true" signature="70:71" ph="..." />
-                <marker date="1539801315891" expanded="true" signature="399:543" ph="..." />
+                <marker date="1539876659499" expanded="true" signature="70:71" ph="..." />
+                <marker date="1539876659499" expanded="true" signature="412:701" ph="..." />
               </folding>
             </state>
           </provider>
@@ -151,10 +150,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="165">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
               <folding>
-                <marker date="1539793341736" expanded="true" signature="18:19" ph="..." />
+                <marker date="1539876270744" expanded="true" signature="18:19" ph="..." />
               </folding>
             </state>
           </provider>
@@ -427,7 +426,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16490486" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -533,32 +531,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="165">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding>
-            <marker date="1539793341736" expanded="true" signature="18:19" ph="..." />
+            <marker date="1539876270744" expanded="true" signature="18:19" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/Editor/EditorClass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="45" selection-end-column="41" />
+        <state relative-caret-position="202">
+          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1539801315891" expanded="true" signature="70:71" ph="..." />
-            <marker date="1539801315891" expanded="true" signature="399:543" ph="..." />
+            <marker date="1539876659499" expanded="true" signature="70:71" ph="..." />
+            <marker date="1539876659499" expanded="true" signature="412:701" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BotClass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="460">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           <folding>
-            <marker date="1539841288505" expanded="true" signature="61:62" ph="..." />
+            <marker date="1539876778980" expanded="true" signature="61:62" ph="..." />
+            <marker date="1539876778980" expanded="true" signature="648:696" ph="..." />
           </folding>
         </state>
       </provider>

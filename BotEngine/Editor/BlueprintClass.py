@@ -8,6 +8,7 @@ class Blueprint():
     def __init__(self, id):
         self.ID = id
 
-
+    def bpEditor(self):
+        pass
 
 

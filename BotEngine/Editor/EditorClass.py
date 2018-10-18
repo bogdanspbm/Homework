@@ -3,12 +3,12 @@ import pickle
 
 class Editor():
 
-    def createBot(self, name, token):
+    def createBot(self, name = '', token = ''):
 
-        if(name == ''):
+        if name == '':
             name = input('Enter bot name: ')
 
-        if(token == ''):
+        if token == '':
             token = input('Enter bot token: ')
 
         self.CurrentBot = ChatBot(name, token) # Creating bot
@@ -17,7 +17,10 @@ class Editor():
 
 
 
-    def loadBot(self, name):
+    def loadBot(self, name = ''):
+
+        if name == '':
+            name = input('Enter bot name: ')
 
         BotFile = open('../Bots/' + name, 'rb+')
 
@@ -27,8 +30,13 @@ class Editor():
 
         BotFile.close() # Closes file
 
+        self.CurrentBot.botMenu(self)
 
-    def saveBot(self, bot):
+
+    def saveBot(self, bot = 0):
+
+        if bot == 0:
+            bot = self.CurrentBot
 
         BotFile = open('../Bots/' + bot.Name, 'wb+') # Create or Open File
 
@@ -37,12 +45,19 @@ class Editor():
 
         BotFile.close() # Close file
 
+    def editorMenu(self):
+
+        actions = {
+        'create': self.createBot,
+        'load': self.loadBot,
+        'sace': self.saveBot
+        }
+
+        while True:
+            actions[input('Editor: ')]()
+
 
 
 app = Editor()
-#app.createBot('','')
-app.loadBot('A')
-print(app.CurrentBot.Name + 'len(app.CurrentBot.bot_blueprints)')
-app.CurrentBot.addBlueprint()
-app.saveBot(app.CurrentBot)
-print(len(app.CurrentBot.bot_blueprints))
+app.editorMenu()
+
