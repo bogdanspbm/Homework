@@ -1,122 +1,98 @@
 from memory_profiler import *
 from unittest import TestCase, main
 
-
-@profile
+#@profile
 def startRecFactorial(varint):
-   sys.setrecursionlimit(100000000)
-   try:
-      if varint < 0 or type(varint) != int:
-           return ValueError
 
-      return newRecFactorial(varint)
-   except:
-      return ValueError
+    sys.setrecursionlimit(100000000)
+
+    if type(varint) != int:
+        raise ValueError('Not int')
+
+    if varint < 0:
+        raise ValueError('Not natural')
+
+    return newRecFactorial(varint)
+
 
 def recFactorial(varint):
-    global counter
     if varint == 1 or varint == 0:
         return 1
     else:
         return varint*recFactorial(varint-1)
 
 
-def newRecFactorial(vardepth,varint = 1):
+def newRecFactorial(vardepth, varint = 1):
     return varint if vardepth == 0 else newRecFactorial(vardepth - 1, varint * vardepth)
 
 
-@profile
+#@profile
 def loopFactorial(varint):
-    try:
-      res = 1
 
-      if varint == 0 or varint == 1:
-         return 1
+    if type(varint) != int:
+        raise ValueError('Not integer')
 
-      if varint < 0  or type(varint) != int:
-          return ValueError
+    res = 1
 
-      for i in range(varint):
-          res *= (i + 1)
-      return res
-    except:
-      return ValueError
+    if varint == 0 or varint == 1:
+        return 1
 
-'''
-#тесты взял у друга 
+    if varint < 0:
+        raise ValueError('Not natural')
+
+    for i in range(varint):
+        res *= (i + 1)
+
+    return res
+
 class Validator(TestCase):
-    def test_correct_values(self):
-        if not self.assertEqual(loopFactorial("321"), ValueError):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(loopFactorial("bogdan"), ValueError):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(loopFactorial(312.1322), ValueError):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(loopFactorial(10), 3628800):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(loopFactorial(0), 1):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(loopFactorial(-432), ValueError):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(loopFactorial(112.7531), ValueError):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(loopFactorial([3]), ValueError):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(loopFactorial("1234"), ValueError):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(startRecFactorial("fewwc"), ValueError):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(startRecFactorial(1032.01), ValueError):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(startRecFactorial(10), 3628800):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(startRecFactorial(0), 1):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(startRecFactorial(-4312), ValueError):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(startRecFactorial(1312.25), ValueError):
-            print("Test passed")
-        else:
-            print("Test failed")
-        if not self.assertEqual(startRecFactorial([3,4]), ValueError):
-            print("Test passed")
-        else:
-            print("Test failed")
 
-main()
-'''
-                                                                                                                                                                                                                                                                                                                   #Тесты взял у друга
+    def test_1(self):
+        self.assertRaises(ValueError, startRecFactorial, '10.2')
+
+    def test_2(self):
+        self.assertRaises(ValueError, loopFactorial, '12')
+
+    def test_3(self):
+        self.assertEqual(startRecFactorial(3), 6)
+
+    def test_4(self):
+        self.assertEqual(loopFactorial(3), 6)
+
+    def test_5(self):
+        self.assertEqual(loopFactorial(10), 3628800)
+
+    def test_6(self):
+        self.assertEqual(startRecFactorial(10), 3628800)
+
+    def test_7(self):
+        self.assertRaises(ValueError, startRecFactorial, 11.1)
+
+    def test_8(self):
+        self.assertRaises(ValueError, loopFactorial, 13.9)
+
+    def test_9(self):
+        self.assertRaises(ValueError, startRecFactorial, -5)
+
+    def test_10(self):
+        self.assertRaises(ValueError, loopFactorial, -5)
+
+    def test_11(self):
+        self.assertEqual(loopFactorial(0), 1)
+
+    def test_12(self):
+        self.assertEqual(startRecFactorial(0), 1)
+
+    def test_13(self):
+        self.assertEqual(loopFactorial(1), 1)
+
+    def test_14(self):
+        self.assertEqual(startRecFactorial(1), 1)
+
+
+
+
+                                                                                                                                                                                                                                                                                                                #Тесты взял у друга
 if __name__ == '__main__':
-    sys.setrecursionlimit(100000000)
-    vartime = time.process_time()
-    print(loopFactorial(14881337))
-    print(time.process_time() - vartime)
+    main()
 

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9057142-7147-45bd-9f0c-910f4c07b5e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Editor/FuncLabClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/FuncLabClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2/Factorial.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW2/Factorial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2/PascalTriangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW2/PascalTriangle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2/PerfectNum.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW2/PerfectNum.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,23 +97,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="5227" />
+          <entry key="py" value="6451" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="5227" />
+          <entry key="Python" value="6451" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="4" />
+          <entry key="FactorialResult" value="1" />
+          <entry key="py" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="4" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="7" />
         </counts>
       </usages-collector>
     </session>
@@ -148,7 +150,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="403">
@@ -168,6 +170,54 @@
               <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
               <folding>
                 <marker date="1539885393162" expanded="true" signature="74:75" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HW2/Factorial.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="89" column="44" selection-start-line="89" selection-start-column="44" selection-end-line="89" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+                <marker date="1539964357192" expanded="true" signature="614:689" ph="..." />
+                <marker date="1539964357192" expanded="true" signature="1396:2303" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW2/PerfectNum.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="22" column="54" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="22" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW2/FactorialResult">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW2/PascalTriangle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <marker date="1539962726799" expanded="true" signature="1206:1685" ph="..." />
               </folding>
             </state>
           </provider>
@@ -195,13 +245,13 @@
         <option value="$PROJECT_DIR$/Dividers.py" />
         <option value="$PROJECT_DIR$/HW2/Task1.py" />
         <option value="$PROJECT_DIR$/HW2/FactorialResult" />
-        <option value="$PROJECT_DIR$/HW2/PascalTriangle.py" />
-        <option value="$PROJECT_DIR$/HW2/PerfectNum.py" />
-        <option value="$PROJECT_DIR$/HW2/Factorial.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/EditorClass.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/FuncLabClass.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" />
+        <option value="$PROJECT_DIR$/HW2/PerfectNum.py" />
+        <option value="$PROJECT_DIR$/HW2/PascalTriangle.py" />
+        <option value="$PROJECT_DIR$/HW2/Factorial.py" />
       </list>
     </option>
   </component>
@@ -256,6 +306,16 @@
             </path>
             <path>
               <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework" type="462c0819:PsiDirectoryNode" />
+              <item name="HW1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework" type="462c0819:PsiDirectoryNode" />
+              <item name="HW2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -290,7 +350,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.EditorClass">
+  <component name="RunManager" selected="Python.Factorial">
     <configuration name="EditorClass" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hw01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -409,10 +469,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.EditorClass" />
         <item itemvalue="Python.Factorial" />
-        <item itemvalue="Python.PerfectNum" />
         <item itemvalue="Python.PascalTriangle" />
+        <item itemvalue="Python.PerfectNum" />
+        <item itemvalue="Python.EditorClass" />
         <item itemvalue="Python.Palindrome" />
       </list>
     </recent_temporary>
@@ -487,23 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW2/FactorialResult">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW2/PerfectNum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HW1/Dividers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -522,26 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW2/Factorial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="119" column="32" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW2/PascalTriangle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -586,6 +609,46 @@
           <folding>
             <marker date="1539885929741" expanded="true" signature="63:64" ph="..." />
             <marker date="1539885929741" expanded="true" signature="707:890" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW2/PerfectNum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="22" column="54" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="22" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW2/PascalTriangle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1539962726799" expanded="true" signature="1206:1685" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW2/FactorialResult">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW2/Factorial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="89" column="44" selection-start-line="89" selection-start-column="44" selection-end-line="89" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1539964357192" expanded="true" signature="614:689" ph="..." />
+            <marker date="1539964357192" expanded="true" signature="1396:2303" ph="..." />
           </folding>
         </state>
       </provider>
