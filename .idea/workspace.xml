@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9057142-7147-45bd-9f0c-910f4c07b5e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lesson_20_10_18/Main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson_20_10_18/GameFuncs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson_20_10_18/UninTests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW2/PascalTriangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW2/PascalTriangle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson_20_10_18/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_20_10_18/Game.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,45 +98,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="6502" />
+          <entry key="dummy" value="11" />
+          <entry key="py" value="8328" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="6502" />
+          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="Python" value="8328" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="FactorialResult" value="1" />
-          <entry key="py" value="8" />
+          <entry key="py" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="8" />
+          <entry key="Python" value="10" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BotEngine/Editor/EditorClass.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="56" column="40" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="56" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <marker date="1539876659499" expanded="true" signature="70:71" ph="..." />
-                <marker date="1539876659499" expanded="true" signature="412:701" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BotClass.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -178,8 +167,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HW2/Factorial.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="77" column="56" lean-forward="true" selection-start-line="77" selection-start-column="56" selection-end-line="77" selection-end-column="56" />
+            <state relative-caret-position="55">
+              <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
                 <marker date="1540016336745" expanded="true" signature="614:689" ph="..." />
@@ -192,8 +181,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HW2/PerfectNum.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+            <state relative-caret-position="495">
+              <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -210,11 +199,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HW2/PascalTriangle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+            <state relative-caret-position="255">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <marker date="1540038754545" expanded="true" signature="1205:1684" ph="..." />
@@ -223,9 +212,41 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lesson_20_10_18/GameFuncs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+              <folding>
+                <marker date="1540043255168" expanded="true" signature="860:1034" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson_20_10_18/Main.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Lesson_20_10_18/UninTests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <marker date="1540041725911" expanded="true" signature="104:105" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lesson_20_10_18/Game.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+              <folding>
+                <marker date="1540043288188" expanded="true" signature="52:57" ph="..." />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -236,6 +257,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -256,8 +282,11 @@
         <option value="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" />
         <option value="$PROJECT_DIR$/HW2/PerfectNum.py" />
         <option value="$PROJECT_DIR$/HW2/Factorial.py" />
-        <option value="$PROJECT_DIR$/Lesson_20_10_18/Main.py" />
         <option value="$PROJECT_DIR$/HW2/PascalTriangle.py" />
+        <option value="$PROJECT_DIR$/Lesson_20_10_18/Main.py" />
+        <option value="$PROJECT_DIR$/Lesson_20_10_18/UninTests.py" />
+        <option value="$PROJECT_DIR$/Lesson_20_10_18/GameFuncs.py" />
+        <option value="$PROJECT_DIR$/Lesson_20_10_18/Game.py" />
       </list>
     </option>
   </component>
@@ -322,6 +351,11 @@
             </path>
             <path>
               <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework" type="462c0819:PsiDirectoryNode" />
+              <item name="Lesson_20_10_18" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -357,8 +391,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Factorial">
-    <configuration name="EditorClass" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Game">
+    <configuration name="Game" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hw01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -366,11 +400,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BotEngine/Editor" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson_20_10_18" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BotEngine/Editor/EditorClass.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson_20_10_18/Game.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -379,7 +413,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Factorial" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hw01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -387,34 +421,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HW2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson_20_10_18" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW2/Factorial.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Palindrome" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="hw01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\UnrealEngine\Projects\hw01\HW1\Palindrome.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson_20_10_18/GameFuncs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -467,20 +478,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in UninTests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="hw01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson_20_10_18" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Lesson_20_10_18/UninTests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.Palindrome" />
-      <item itemvalue="Python.Factorial" />
       <item itemvalue="Python.PerfectNum" />
       <item itemvalue="Python.PascalTriangle" />
-      <item itemvalue="Python.EditorClass" />
+      <item itemvalue="Python.Main" />
+      <item itemvalue="Python tests.Unittests in UninTests.py" />
+      <item itemvalue="Python.Game" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Factorial" />
-        <item itemvalue="Python.PascalTriangle" />
+        <item itemvalue="Python.Game" />
+        <item itemvalue="Python.Main" />
+        <item itemvalue="Python tests.Unittests in UninTests.py" />
         <item itemvalue="Python.PerfectNum" />
-        <item itemvalue="Python.EditorClass" />
-        <item itemvalue="Python.Palindrome" />
+        <item itemvalue="Python.PascalTriangle" />
       </list>
     </recent_temporary>
   </component>
@@ -497,6 +522,32 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_in_UninTests_py - 2018.10.20 at 16h 18m 34s.xml">
+      <configuration name="Unittests in UninTests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_UninTests_py - 2018.10.20 at 16h 18m 51s.xml">
+      <configuration name="Unittests in UninTests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_UninTests_py - 2018.10.20 at 16h 19m 27s.xml">
+      <configuration name="Unittests in UninTests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_UninTests_py - 2018.10.20 at 16h 20m 02s.xml">
+      <configuration name="Unittests in UninTests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_UninTests_py - 2018.10.20 at 16h 20m 07s.xml">
+      <configuration name="Unittests in UninTests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_UninTests_py - 2018.10.20 at 16h 20m 26s.xml">
+      <configuration name="Unittests in UninTests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_UninTests_py - 2018.10.20 at 16h 22m 06s.xml">
+      <configuration name="Unittests in UninTests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_UninTests_py - 2018.10.20 at 16h 35m 08s.xml">
+      <configuration name="Unittests in UninTests.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -510,13 +561,13 @@
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16490486" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16490486" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27801418" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27801418" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39858156" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
@@ -627,25 +678,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW2/Factorial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="77" column="56" lean-forward="true" selection-start-line="77" selection-start-column="56" selection-end-line="77" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <marker date="1540016336745" expanded="true" signature="614:689" ph="..." />
-            <marker date="1540016336745" expanded="true" signature="1396:1996" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson_20_10_18/Main.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/HW2/PerfectNum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+        <state relative-caret-position="495">
+          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -654,11 +690,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HW2/PascalTriangle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        <state relative-caret-position="255">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <marker date="1540038754545" expanded="true" signature="1205:1684" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW2/Factorial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1540016336745" expanded="true" signature="614:689" ph="..." />
+            <marker date="1540016336745" expanded="true" signature="1396:1996" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson_20_10_18/Game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <marker date="1540043288188" expanded="true" signature="52:57" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson_20_10_18/UninTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1540041725911" expanded="true" signature="104:105" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson_20_10_18/GameFuncs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+          <folding>
+            <marker date="1540043255168" expanded="true" signature="860:1034" ph="..." />
           </folding>
         </state>
       </provider>
