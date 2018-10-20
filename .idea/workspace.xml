@@ -14,11 +14,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Homework$Unittests_for_caesar_test_Validator.coverage" NAME="Unittests for caesar_test.Validator Coverage Results" MODIFIED="1540059469930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/hw01$Factorial.coverage" NAME="Factorial Coverage Results" MODIFIED="1539409358899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW2" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_in_balls_collide_test_py.coverage" NAME="Unittests in balls_collide_test.py Coverage Results" MODIFIED="1540058127756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/hw01$PascalTriangle.coverage" NAME="PascalTriangle Coverage Results" MODIFIED="1539409661489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW2" />
+    <SUITE FILE_PATH="coverage/Homework$caesar_logic.coverage" NAME="caesar_logic Coverage Results" MODIFIED="1540058987594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
+    <SUITE FILE_PATH="coverage/Homework$caesar.coverage" NAME="caesar Coverage Results" MODIFIED="1540060256628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/hw01$PerfectNum.coverage" NAME="PerfectNum Coverage Results" MODIFIED="1539365516612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW2" />
+    <SUITE FILE_PATH="coverage/Homework$Unittests_for_caesar_test_Validator_test1.coverage" NAME="Unittests for caesar_test.Validator.test1 Coverage Results" MODIFIED="1540059261263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/Homework$balls_collide.coverage" NAME="balls_collide Coverage Results" MODIFIED="1540057164859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
+    <SUITE FILE_PATH="coverage/Homework$Unittests_in_caesar_test_py.coverage" NAME="Unittests in caesar_test.py Coverage Results" MODIFIED="1540059091349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1171218306">
@@ -135,22 +140,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="2" />
+          <entry key="py" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="2" />
+          <entry key="Python" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2002" />
+          <entry key="py" value="3315" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2002" />
+          <entry key="Python" value="3315" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -168,15 +173,60 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HW3/balls_collide_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="136">
+              <caret line="8" column="20" selection-end-line="25" selection-end-column="10" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <marker date="1540058127722" expanded="true" signature="96:101" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW3/caesar_logic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-181">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+              <folding>
+                <marker date="1540059003133" expanded="true" signature="510:516" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW3/caesar_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HW3/caesar.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+              <folding>
+                <marker date="1540060223875" expanded="true" signature="139:144" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW1/Palindrome.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -222,6 +272,9 @@
         <option value="$PROJECT_DIR$/HW3/BallsInteraction.py" />
         <option value="$PROJECT_DIR$/HW3/balls_collide.py" />
         <option value="$PROJECT_DIR$/HW3/balls_collide_test.py" />
+        <option value="$PROJECT_DIR$/HW3/caesar_logic.py" />
+        <option value="$PROJECT_DIR$/HW3/caesar_test.py" />
+        <option value="$PROJECT_DIR$/HW3/caesar.py" />
       </list>
     </option>
   </component>
@@ -327,52 +380,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in balls_collide_test.py">
-    <configuration name="Game" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="hw01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson_20_10_18" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson_20_10_18/Game.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="hw01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson_20_10_18" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson_20_10_18/GameFuncs.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="balls_collide" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.caesar">
+    <configuration name="caesar" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hw01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -385,7 +394,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW3/balls_collide.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW3/caesar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -394,22 +403,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in UninTests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="caesar_logic" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hw01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson_20_10_18" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HW3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Lesson_20_10_18/UninTests.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW3/caesar_logic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in balls_collide_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for caesar_test.Validator" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="hw01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -420,24 +436,54 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/HW3/balls_collide_test.py&quot;" />
+      <option name="_new_target" value="&quot;caesar_test.Validator&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for caesar_test.Validator.test1" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="hw01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HW3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;caesar_test.Validator.test1&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in caesar_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="hw01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HW3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/HW3/caesar_test.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Main" />
-      <item itemvalue="Python tests.Unittests in UninTests.py" />
-      <item itemvalue="Python.Game" />
-      <item itemvalue="Python.balls_collide" />
-      <item itemvalue="Python tests.Unittests in balls_collide_test.py" />
+      <item itemvalue="Python.caesar_logic" />
+      <item itemvalue="Python tests.Unittests in caesar_test.py" />
+      <item itemvalue="Python tests.Unittests for caesar_test.Validator.test1" />
+      <item itemvalue="Python tests.Unittests for caesar_test.Validator" />
+      <item itemvalue="Python.caesar" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in balls_collide_test.py" />
-        <item itemvalue="Python.balls_collide" />
-        <item itemvalue="Python.Game" />
-        <item itemvalue="Python.Main" />
-        <item itemvalue="Python tests.Unittests in UninTests.py" />
+        <item itemvalue="Python.caesar" />
+        <item itemvalue="Python tests.Unittests for caesar_test.Validator" />
+        <item itemvalue="Python tests.Unittests for caesar_test.Validator.test1" />
+        <item itemvalue="Python tests.Unittests in caesar_test.py" />
+        <item itemvalue="Python.caesar_logic" />
       </list>
     </recent_temporary>
   </component>
@@ -455,27 +501,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.20 at 20h 48m 39s.xml">
-      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.20 at 20h 49m 21s.xml">
-      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.20 at 20h 50m 07s.xml">
-      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.20 at 20h 50m 34s.xml">
-      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.20 at 20h 52m 25s.xml">
-      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.20 at 20h 53m 00s.xml">
-      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.20 at 20h 54m 08s.xml">
-      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.20 at 20h 54m 16s.xml">
       <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
     </history-entry>
@@ -484,6 +509,27 @@
     </history-entry>
     <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.20 at 20h 55m 27s.xml">
       <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_caesar_test_py - 2018.10.20 at 21h 11m 31s.xml">
+      <configuration name="Unittests in caesar_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_caesar_test_Validator_test1 - 2018.10.20 at 21h 11m 39s.xml">
+      <configuration name="Unittests for caesar_test.Validator.test1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_caesar_test_Validator_test1 - 2018.10.20 at 21h 14m 21s.xml">
+      <configuration name="Unittests for caesar_test.Validator.test1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_caesar_test_Validator - 2018.10.20 at 21h 14m 29s.xml">
+      <configuration name="Unittests for caesar_test.Validator" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_caesar_test_Validator - 2018.10.20 at 21h 15m 10s.xml">
+      <configuration name="Unittests for caesar_test.Validator" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_caesar_test_Validator - 2018.10.20 at 21h 15m 38s.xml">
+      <configuration name="Unittests for caesar_test.Validator" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_caesar_test_Validator - 2018.10.20 at 21h 17m 50s.xml">
+      <configuration name="Unittests for caesar_test.Validator" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -554,13 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="69" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW1/Palindrome.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -659,11 +698,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HW3/balls_collide_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        <state relative-caret-position="136">
+          <caret line="8" column="20" selection-end-line="25" selection-end-column="10" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <marker date="1540058127722" expanded="true" signature="96:101" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW3/caesar_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW3/caesar_logic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-181">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding>
+            <marker date="1540059003133" expanded="true" signature="510:516" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW1/Palindrome.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW3/caesar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+          <folding>
+            <marker date="1540060223875" expanded="true" signature="139:144" ph="..." />
           </folding>
         </state>
       </provider>
