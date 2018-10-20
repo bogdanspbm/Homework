@@ -3,9 +3,9 @@ import random
 
 class HangmanGame():
 
-    def __init__(self, tryc):
+    def __init__(self, tryc = 5):
         self.maxtriescount = tryc
-        self.words = ['airfield', 'hatchet', 'holidays', 'computer', 'university', 'photoconduction']
+        self.words = ['airfield', 'hatchet', 'holidays', 'computer', 'university', 'photoconduction', 'bellwether', 'auxochrome', 'fragmentariness']
 
     def startNewGame(self):
         self.currentword = self.words[random.randrange(len(self.words))]
@@ -21,7 +21,16 @@ class HangmanGame():
             return 0
 
     def canUseChar(self, char):
-        return self.openedChars.count(char.lower()) == 0
+        #  useble = 'ёйцукенгшщзхъфывапролджэячсмитьбю'
+        useble = 'abcdefghijklmnopqrstuvwxyz'
+
+        if type(char) != str:
+            raise TypeError('Need char')
+
+        if useble.find(char.lower()) != -1 and len(char) == 1:
+            return 1
+        else:
+            return 0
 
     def charToWrite(self, index):
         if self.openedChars.count(self.currentword[index]) != 0:
@@ -67,9 +76,10 @@ class HangmanGame():
 
             self.openChar(ch)
 
+            print('Tries: ' + str(self.currenttry))
             print(self.getCurState())
 
         if self.checkWin():
             print('You won!')
         else:
-            print('You lose(')
+            print('You lose(. Secret word = ' + self.currentword)
