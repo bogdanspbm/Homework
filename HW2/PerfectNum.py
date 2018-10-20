@@ -37,6 +37,9 @@ class Validator(TestCase):
     def test_6(self):
         self.assertRaises(ValueError, isPerfect, [[123], [124]])
 
+    def test_7(self):
+        self.assertRaises(ValueError, isPerfect, 28.0)
+
 
 main()
 

@@ -90,9 +90,8 @@ class Validator(TestCase):
         self.assertEqual(startRecFactorial(1), 1)
 
 
-
-
-                                                                                                                                                                                                                                                                                                                #Тесты взял у друга
 if __name__ == '__main__':
     main()
+
+
 
