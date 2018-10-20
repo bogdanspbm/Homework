@@ -34,7 +34,7 @@ def trianglePasc(intdepth):
     for i in range(intdepth):
         matrix.append([])
         for j in range(intdepth):
-            if(i + j <= intdepth - 1):
+            if i + j <= intdepth - 1:
                 matrix[i].append(-1)
 
     for i in range(intdepth):
