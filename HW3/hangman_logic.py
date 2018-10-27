@@ -3,9 +3,10 @@ import random
 
 class HangmanGame():
 
-    def __init__(self, tryc = 5):
+    def __init__(self, tryc=5):
         self.maxtriescount = tryc
-        self.words = ['airfield', 'hatchet', 'holidays', 'computer', 'university', 'photoconduction', 'bellwether', 'auxochrome', 'fragmentariness']
+        self.words = ['airfield', 'hatchet', 'holidays', 'computer', 'university', 'photoconduction', 'bellwether',
+                      'auxochrome', 'fragmentariness']
 
     def startNewGame(self):
         self.currentword = self.words[random.randrange(len(self.words))]

@@ -2,7 +2,6 @@ from math import *
 
 
 def balls_collide(ball1, ball2):
-
     if (len(ball1) or len(ball2)) != 4:
         raise TypeError('Bad input count')
 
@@ -33,6 +32,5 @@ def balls_collide(ball1, ball2):
     # print(veclen)
 
     return veclen > ball1[3] + ball2[3]
-
 
 # print(balls_collide((100, 100, 100.0, 100), (-100, -100, -100, 3)))

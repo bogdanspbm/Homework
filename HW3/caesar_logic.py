@@ -1,12 +1,11 @@
 def encrypt(offset, text):
-    
     strcaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     strsmall = 'abcdefghijklmnopqrstuvwxyz'
 
     strcaps2 = strcaps[offset:] + strcaps[:offset]
     strsmall2 = strsmall[offset:] + strsmall[:offset]
 
-    encrypter = {' ':' '}
+    encrypter = {' ': ' '}
 
     result = ''
 
@@ -21,7 +20,6 @@ def encrypt(offset, text):
 
 
 def decrypt(offset, text):
-
     strcaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     strsmall = 'abcdefghijklmnopqrstuvwxyz'
 
@@ -40,3 +38,11 @@ def decrypt(offset, text):
         result += encrypter[text[i]]
 
     return result
+
+
+def isIntegerInRange(value):
+    try:
+        testint = int(value)
+        return testint > -1 and testint < 27
+    except:
+        return 0

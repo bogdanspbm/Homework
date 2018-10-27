@@ -17,7 +17,7 @@ class Validator(TestCase):
         self.assertRaises(TypeError, HangmanGame().canUseChar, -2)
 
     def test_5(self):
-        self.assertRaises(TypeError, HangmanGame().canUseChar, [1,2])
+        self.assertRaises(TypeError, HangmanGame().canUseChar, [1, 2])
 
 
 if __name__ == '__main__':
