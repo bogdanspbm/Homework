@@ -51,6 +51,24 @@ def isDifrDigits(number):
 
     return 1
 
+
+
+def isIntInRange( var ):
+    try:
+        res = int(var)
+        if res >= 0 and res <= 10:
+            return True
+        else:
+            return False
+    except:
+        return False
+
+
+def readFile(fname):
+    input_file = open(fname,'wb+')
+
 #print(bullCount('1234', '4231'))
 #print(cowCount('1234', '4231'))
 #print(getNumber(5))
+
+#print('\a')

@@ -22,6 +22,30 @@ class Validator(TestCase):
     def test_6(self):
         self.assertEqual(bullCount('0156', '1506'), 1)
 
+    def test_7(self):
+        self.assertTrue(isDifrDigits(getNumber(4)))
+
+    def test_8(self):
+        self.assertTrue(isDifrDigits(getNumber(7)))
+
+    def test_9(self):
+        self.assertTrue(isDifrDigits(getNumber(9)))
+
+    def test_12(self):
+        self.assertTrue(isDifrDigits(getNumber(1)))
+
+    def test_13(self):
+        self.assertTrue(isDifrDigits(getNumber(10)))
+
+    def test_10(self):
+        self.assertEqual(len(getNumber(4)), 4)
+
+    def test_11(self):
+        self.assertEqual(len(getNumber(7)), 7)
+
+    def test_12(self):
+        self.assertEqual(len(getNumber(9)), 9)
+
 
 if __name__ == '__main__':
     main()
