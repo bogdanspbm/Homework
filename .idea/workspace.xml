@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9057142-7147-45bd-9f0c-910f4c07b5e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/hw01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hw01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW3/balls_collide.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW3/balls_collide.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW3/balls_collide_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW3/balls_collide_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW3/caesar.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW3/caesar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW3/caesar_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW3/caesar_logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW3/caesar_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW3/caesar_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW3/handman_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW3/handman_tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW3/hangman_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW3/hangman_logic.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,13 +107,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="py" value="8799" />
+          <entry key="py" value="8860" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Python" value="8799" />
+          <entry key="Python" value="8860" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -187,11 +178,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HW3/balls_collide.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            <state relative-caret-position="334">
+              <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -262,7 +253,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HW3/hangman.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -325,12 +316,12 @@
         <option value="$PROJECT_DIR$/HW3/BallsInteraction.py" />
         <option value="$PROJECT_DIR$/HW3/hangman.py" />
         <option value="$PROJECT_DIR$/HW3/handman_tests.py" />
-        <option value="$PROJECT_DIR$/HW3/balls_collide.py" />
         <option value="$PROJECT_DIR$/HW3/balls_collide_test.py" />
         <option value="$PROJECT_DIR$/HW3/caesar.py" />
         <option value="$PROJECT_DIR$/HW3/caesar_logic.py" />
         <option value="$PROJECT_DIR$/HW3/caesar_test.py" />
         <option value="$PROJECT_DIR$/HW3/hangman_logic.py" />
+        <option value="$PROJECT_DIR$/HW3/balls_collide.py" />
       </list>
     </option>
   </component>
@@ -419,7 +410,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in handman_tests.py">
+  <component name="RunManager" selected="Python tests.Unittests in balls_collide_test.py">
     <configuration name="hangman" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hw01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -506,9 +497,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in balls_collide_test.py" />
         <item itemvalue="Python tests.Unittests in handman_tests.py" />
         <item itemvalue="Python.hangman" />
-        <item itemvalue="Python tests.Unittests in balls_collide_test.py" />
         <item itemvalue="Python tests.Unittests in caesar_test.py" />
         <item itemvalue="Python tests.Unittests for handman_tests.Validator.test_3" />
       </list>
@@ -528,21 +519,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_caesar_test_Validator_test8 - 2018.10.27 at 09h 42m 06s.xml">
-      <configuration name="Unittests for caesar_test.Validator.test8" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_balls_collide_test_Validator_test6 - 2018.10.27 at 09h 42m 19s.xml">
-      <configuration name="Unittests for balls_collide_test.Validator.test6" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_balls_collide_test_Validator_test6 - 2018.10.27 at 09h 42m 37s.xml">
-      <configuration name="Unittests for balls_collide_test.Validator.test6" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_handman_tests_Validator_test_3 - 2018.10.27 at 09h 42m 47s.xml">
-      <configuration name="Unittests for handman_tests.Validator.test_3" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_handman_tests_Validator_test_3 - 2018.10.27 at 09h 42m 52s.xml">
-      <configuration name="Unittests for handman_tests.Validator.test_3" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_handman_tests_Validator_test_3 - 2018.10.27 at 09h 42m 58s.xml">
       <configuration name="Unittests for handman_tests.Validator.test_3" configurationId="tests" />
     </history-entry>
@@ -557,6 +533,21 @@
     </history-entry>
     <history-entry file="Unittests_in_handman_tests_py - 2018.10.27 at 09h 44m 27s.xml">
       <configuration name="Unittests in handman_tests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.27 at 11h 25m 50s.xml">
+      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.27 at 11h 25m 56s.xml">
+      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.27 at 11h 26m 58s.xml">
+      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.27 at 11h 27m 25s.xml">
+      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.27 at 11h 27m 28s.xml">
+      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -748,13 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW3/balls_collide.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HW3/balls_collide_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -813,6 +797,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW3/balls_collide.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
         </state>
       </provider>
     </entry>

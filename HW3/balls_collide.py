@@ -31,6 +31,6 @@ def balls_collide(ball1, ball2):
 
     # print(veclen)
 
-    return veclen > ball1[3] + ball2[3]
+    return veclen - (ball1[3] + ball2[3]) > 0.0000000000000000000000000001
 
 # print(balls_collide((100, 100, 100.0, 100), (-100, -100, -100, 3)))
