@@ -13,19 +13,8 @@ def balls_collide(ball1, ball2):
         return ValueError('Radius should be positive')
 
     vecx = ball1[0] - ball2[0]  # Calc x coord
-
-    if vecx < 0:
-        vecx *= -1
-
     vecy = ball1[1] - ball2[1]  # Calc y coord
-
-    if vecy < 0:
-        vecy *= -1
-
     vecz = ball1[2] - ball2[2]  # Calc z coord
-
-    if vecz < 0:
-        vecz *= -1
 
     veclen = sqrt(vecx ** 2 + vecy ** 2 + vecz ** 2)
 

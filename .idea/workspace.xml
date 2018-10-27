@@ -181,8 +181,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HW3/balls_collide.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="237">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -519,9 +519,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_handman_tests_Validator_test_3 - 2018.10.27 at 09h 42m 58s.xml">
-      <configuration name="Unittests for handman_tests.Validator.test_3" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_handman_tests_py - 2018.10.27 at 09h 43m 12s.xml">
       <configuration name="Unittests in handman_tests.py" configurationId="tests" />
     </history-entry>
@@ -547,6 +544,9 @@
       <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.27 at 11h 27m 28s.xml">
+      <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_balls_collide_test_py - 2018.10.27 at 11h 50m 21s.xml">
       <configuration name="Unittests in balls_collide_test.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -802,8 +802,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HW3/balls_collide.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state relative-caret-position="237">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
