@@ -72,8 +72,6 @@ class Poly:
                         res += str(new_coef)
                     else:
                         res = res[:len(res) - 3]
-
-
         return res
 
     def start_app(self, string=''):
