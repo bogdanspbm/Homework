@@ -6,7 +6,7 @@ class Validator(TestCase):
 
     def test_1(self):
         test_app = sl.SmileLogic()
-        self.assertTrue(test_app.start_check('[hello( )world]'))
+        self.assertTrue(test_app.start_check('Hello'))
 
     def test_2(self):
         test_app = sl.SmileLogic()
