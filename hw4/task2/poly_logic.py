@@ -8,7 +8,7 @@ class Poly:
     def get_actions(self, string=''):
 
         for char in string:
-            if char == ('+' or '-'):
+            if char == '+' or char == '-':
                 self.actions_arr.append(char)
 
     def read_coeff(self, string=''):
@@ -41,7 +41,7 @@ class Poly:
                 if tmp_el[0] == '':
                     tmp_el[0] = 1
 
-                tmp_el[1].replace('^', '')
+                tmp_el[1] = tmp_el[1].replace('^', '')
 
                 if tmp_el[1] == '':
                     tmp_el[1] = 1
@@ -59,13 +59,16 @@ class Poly:
             new_coef = int(coef) * int(degree)
 
             if i != len(self.coeffs_arr) - 1:
-                if coef == 1:
+                symb = str(self.actions_arr[i])
+                if int(degree) == 1:
                     res += str(new_coef)
                 else:
-                    res += str(new_coef) + 'x^' + str((int(degree) - 1)) + ' ' + str(self.actions_arr[i]) + ' '
+                    res += str(new_coef) + 'x^' + str((int(degree) - 1)) + ' ' + symb + ' '
             else:
-                if degree != 0:
+                if degree != 1:
                     res += str(new_coef) + 'x^' + str((int(degree) - 1))
+                else:
+                    res += str(new_coef)
 
 
         return res
@@ -73,7 +76,7 @@ class Poly:
     def start_app(self, string=''):
 
         self.read_coeff(string)
-        return self.upgrade_coeff_arr(string)
+        return self.upgrade_coeff_arr()
 
 
 

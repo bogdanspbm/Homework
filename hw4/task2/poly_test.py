@@ -5,4 +5,5 @@ class Validator(TestCase):
 
     def test_1(self):
         app = poly.Poly()
-        self.assertEqual(app.start_app('2x^2 + x^1 '), 0)
+        self.assertEqual(app.start_app('5x^4 - 12x^2 + 3x'), '20x^3 - 24x^1 + 3')
+
