@@ -65,7 +65,7 @@ def isIntInRange( var ):
 
 
 def readFile(fname):
-    input_file = open(fname,'wb+')
+    input_file = open(fname, 'wb+')
 
 #print(bullCount('1234', '4231'))
 #print(cowCount('1234', '4231'))
