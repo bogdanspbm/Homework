@@ -65,10 +65,13 @@ class Poly:
                 else:
                     res += str(new_coef) + 'x^' + str((int(degree) - 1)) + ' ' + symb + ' '
             else:
-                if degree != 1:
+                if degree > 1:
                     res += str(new_coef) + 'x^' + str((int(degree) - 1))
                 else:
-                    res += str(new_coef)
+                    if new_coef != 0:
+                        res += str(new_coef)
+                    else:
+                        res = res[:len(res) - 3]
 
 
         return res
