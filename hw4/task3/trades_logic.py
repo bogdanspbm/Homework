@@ -29,7 +29,6 @@ class Time:
 
     def __eq__(self, other):
 
-
         if self.hour != other.hour:
             return 0
         elif self.min != other.min:
@@ -41,19 +40,13 @@ class Time:
 
     def __le__(self, other):
 
+        sec_a = self.hour * 24 * 60 + self.min * 60 + self.sec
+        sec_b = other.hour * 24 * 60 + other.min * 60 + other.sec
 
-        '''
-        if self.hour < other.hour:
-            return 1
-        elif self.min < other.min:
-            return 1
-        elif self.sec < other.sec:
-            return 1
-        elif self == other:
-            return 1
+        if sec_a > sec_b:
+            return self == other
         else:
-            return 0
-        '''
+            return 1
 
 class Trader:
 
@@ -81,11 +74,11 @@ class Trader:
             time_arr = self.split_time(self.time[i])
             st_time = Time(time_arr[0], time_arr[1], time_arr[2])
             end_time = Time(time_arr[0], time_arr[1], time_arr[2])
-            delt = end_time - st_time
-            k = 0
+            delta = end_time - st_time
+            k = 1
 
-            while delt < dif_time and i + k < len(self.time):
-                delt = end_time - st_time
+            while delta <= dif_time and i + k < len(self.time):
+                delta = end_time - st_time
                 sec_arr = self.split_time(self.time[i + k])
                 end_time = Time(sec_arr[0], sec_arr[1], sec_arr[2])
                 k += 1
@@ -98,8 +91,6 @@ class Trader:
     def split_time(time_string):
         vars = time_string.split(':')
         return vars
-
-
 
 app = Trader()
 app.csv_reader("trades.csv")
