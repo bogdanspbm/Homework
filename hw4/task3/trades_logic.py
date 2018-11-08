@@ -75,13 +75,20 @@ class Trader:
             st_time = Time(time_arr[0], time_arr[1], time_arr[2])
             end_time = Time(time_arr[0], time_arr[1], time_arr[2])
             delta = end_time - st_time
-            k = 1
+            k = 0
 
-            while delta <= dif_time and i + k < len(self.time):
-                delta = end_time - st_time
+            while delta <= dif_time and i + k < len(self.time) - 1:
+
+                if k >= 516:
+                    print(k)
+
+                k += 1
+
                 sec_arr = self.split_time(self.time[i + k])
                 end_time = Time(sec_arr[0], sec_arr[1], sec_arr[2])
-                k += 1
+                delta = end_time - st_time
+
+            k -= 1
 
             if k > self.max_res[1]:
                 self.max_res[1] = k
@@ -95,5 +102,5 @@ class Trader:
 app = Trader()
 app.csv_reader("trades.csv")
 app.get_end()
-print(app.max_res[0])
-print(app.max_res[1])
+print(app.time[app.max_res[0]])
+print(app.time[app.max_res[0] + app.max_res[1]])
