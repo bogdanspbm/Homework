@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9057142-7147-45bd-9f0c-910f4c07b5e0" name="Default Changelist" comment="" />
+    <list default="true" id="e9057142-7147-45bd-9f0c-910f4c07b5e0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/hw4/task3/trades_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw4/task3/trades_logic.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,13 +109,13 @@
         <counts>
           <entry key="bac" value="1" />
           <entry key="dummy" value="11" />
-          <entry key="py" value="14545" />
+          <entry key="py" value="15082" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="14545" />
+          <entry key="Python" value="15082" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -194,13 +196,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw4/task3/trades_logic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="166" column="30" selection-start-line="166" selection-start-column="30" selection-end-line="166" selection-end-column="30" />
+            <state relative-caret-position="412">
+              <caret line="181" column="36" lean-forward="true" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
               <folding>
-                <marker date="1541785700006" expanded="true" signature="1412:1419" ph="..." />
-                <marker date="1541785700006" expanded="true" signature="1731:1808" ph="..." />
-                <marker date="1541785700006" expanded="true" signature="1829:2034" ph="..." />
-                <marker date="1541785700006" expanded="true" signature="3625:4499" ph="..." />
+                <marker date="1541786989698" expanded="true" signature="1473:1479" ph="..." />
+                <marker date="1541786989698" expanded="true" signature="1791:1868" ph="..." />
+                <marker date="1541786989698" expanded="true" signature="2180:2412" ph="..." />
+                <marker date="1541786989698" expanded="true" signature="3717:5229" ph="..." />
               </folding>
             </state>
           </provider>
@@ -273,7 +275,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="797" />
@@ -836,13 +838,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hw4/task3/trades_logic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="166" column="30" selection-start-line="166" selection-start-column="30" selection-end-line="166" selection-end-column="30" />
+        <state relative-caret-position="412">
+          <caret line="181" column="36" lean-forward="true" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
           <folding>
-            <marker date="1541785700006" expanded="true" signature="1412:1419" ph="..." />
-            <marker date="1541785700006" expanded="true" signature="1731:1808" ph="..." />
-            <marker date="1541785700006" expanded="true" signature="1829:2034" ph="..." />
-            <marker date="1541785700006" expanded="true" signature="3625:4499" ph="..." />
+            <marker date="1541786989698" expanded="true" signature="1473:1479" ph="..." />
+            <marker date="1541786989698" expanded="true" signature="1791:1868" ph="..." />
+            <marker date="1541786989698" expanded="true" signature="2180:2412" ph="..." />
+            <marker date="1541786989698" expanded="true" signature="3717:5229" ph="..." />
           </folding>
         </state>
       </provider>

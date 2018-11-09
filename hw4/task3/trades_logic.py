@@ -20,14 +20,14 @@ class Time:
         sec_a = self.hour * 24 * 60 + self.min * 60 + self.sec
         sec_b = other.hour * 24 * 60 + other.min * 60 + other.sec
 
-        return sec_a < sec_b
+        return sec_a - sec_b < 0.0000000000000001
 
     def __eq__(self, other):
-        return self.sec == other.sec
+        return self.sec - other.sec < 0.0000000000000001
 
     def __le__(self, other):
 
-        if self.sec > other.sec:
+        if self.sec - other.sec > 0.0000000000000001:
             return self == other
         else:
             return 1
@@ -44,7 +44,6 @@ class Trader:
         file_obj = open(file, 'r')
         reader = csv.DictReader(file_obj, delimiter=',')
         for line in reader:
-
             row = []
 
             row.append(line["Time"])  # Time - 0 element
@@ -56,7 +55,6 @@ class Trader:
             self.rows.append(row)
 
         self.set_window_size(0, len(self.rows))
-
 
     @staticmethod
     def remove_not_allowed(allowed_places, array):
@@ -89,6 +87,22 @@ class Trader:
 
         return result
 
+    def calc_window_money(self, start, end, allowed_places):
+
+        money = 0.0
+        i = start
+
+        while i <= end:
+            if allowed_places.count(self.rows[i][2]) > 0:
+                a = float(self.rows[i][1])
+                b = float(self.rows[i][4])
+                money += a * b
+            i += 1
+
+        return money
+
+
+
     def get_end(self, allowed_places):
 
         self.max_res = [0, 0, 0, 0]
@@ -101,10 +115,6 @@ class Trader:
         array = self.remove_not_allowed(allowed_places, array)
 
         for i in range(len(array)):
-
-            a = float(array[i][4])
-            b = float(array[i][1])
-            money = a * b
 
             time_arr = self.split_time(array[i][0])
             st_time = Time(time_arr[0], time_arr[1], time_arr[2])
@@ -121,9 +131,6 @@ class Trader:
                 cur_count += 1
 
                 if i + cur_count < len(array):
-                    a = float(array[i + cur_count][4])
-                    b = float(array[i + cur_count][1])
-                    money += a * b
                     sec_arr = self.split_time(array[i + cur_count][0])
                     end_time = Time(sec_arr[0], sec_arr[1], sec_arr[2])
                     delta = end_time - st_time
@@ -137,7 +144,6 @@ class Trader:
                 self.max_res[0] = array[i][3]
                 self.max_res[1] = array[i + cur_count][3]
                 self.max_res[2] = cur_count + 1
-                self.max_res[3] = int(money)
 
     def start_trader(self):
 
@@ -152,6 +158,9 @@ class Trader:
         print('WINDOW SIZE: ' + str(self.max_res[2]))
         print('START: ' + self.rows[self.max_res[0]][0])
         print('END: ' + self.rows[self.max_res[1]][0])
+        a = self.max_res[0]
+        b = self.max_res[1]
+        print('MONEY: ' + str(self.calc_window_money(a, b, places)))
 
         print()
 
@@ -165,7 +174,9 @@ class Trader:
                 print('     WINDOW SIZE: ' + str(self.max_res[2]))
                 print('     START: ' + self.rows[self.max_res[0]][0])
                 print('     END: ' + self.rows[self.max_res[1]][0])
-                print('     MONEY: ' + str(self.max_res[3]))
+                a = self.max_res[0]
+                b = self.max_res[1]
+                print('     MONEY: ' + str(self.calc_window_money(a, b, char)))
                 print()
 
         self.set_window_size(0, len(self.rows))
@@ -178,13 +189,12 @@ class Trader:
                 print('WINDOW SIZE: ' + str(self.max_res[2]))
                 print('START: ' + self.rows[self.max_res[0]][0])
                 print('END: ' + self.rows[self.max_res[1]][0])
-                print('MONEY: ' + str(self.max_res[3]))
+                a = self.max_res[0]
+                b = self.max_res[1]
+                print('MONEY: ' + str(self.calc_window_money(a, b, char)))
                 print()
 
     @staticmethod
     def split_time(time_string):
         vars = time_string.split(':')
         return vars
-
-
-
