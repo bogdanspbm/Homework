@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9057142-7147-45bd-9f0c-910f4c07b5e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/hw4/task3/trades.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw4/task3/trades.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw4/task3/trades_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw4/task3/trades_logic.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -110,13 +109,13 @@
         <counts>
           <entry key="bac" value="1" />
           <entry key="dummy" value="11" />
-          <entry key="py" value="13473" />
+          <entry key="py" value="13989" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="13473" />
+          <entry key="Python" value="13989" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -197,13 +196,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw4/task3/trades_logic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="116" column="18" lean-forward="true" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
+            <state relative-caret-position="336">
+              <caret line="122" column="25" selection-start-line="122" selection-start-column="25" selection-end-line="122" selection-end-column="25" />
               <folding>
-                <marker date="1541783178124" expanded="true" signature="1658:1735" ph="..." />
-                <marker date="1541783178124" expanded="true" signature="1756:1961" ph="..." />
-                <marker date="1541783178124" expanded="true" signature="1995:2001" ph="..." />
-                <marker date="1541783178124" expanded="true" signature="3069:3934" ph="..." />
+                <marker date="1541784312164" expanded="true" signature="1658:1735" ph="..." />
+                <marker date="1541784312164" expanded="true" signature="1756:1961" ph="..." />
+                <marker date="1541784312164" expanded="true" signature="4326:5191" ph="..." />
               </folding>
             </state>
           </provider>
@@ -839,13 +837,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hw4/task3/trades_logic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="116" column="18" lean-forward="true" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
+        <state relative-caret-position="336">
+          <caret line="122" column="25" selection-start-line="122" selection-start-column="25" selection-end-line="122" selection-end-column="25" />
           <folding>
-            <marker date="1541783178124" expanded="true" signature="1658:1735" ph="..." />
-            <marker date="1541783178124" expanded="true" signature="1756:1961" ph="..." />
-            <marker date="1541783178124" expanded="true" signature="1995:2001" ph="..." />
-            <marker date="1541783178124" expanded="true" signature="3069:3934" ph="..." />
+            <marker date="1541784312164" expanded="true" signature="1658:1735" ph="..." />
+            <marker date="1541784312164" expanded="true" signature="1756:1961" ph="..." />
+            <marker date="1541784312164" expanded="true" signature="4326:5191" ph="..." />
           </folding>
         </state>
       </provider>

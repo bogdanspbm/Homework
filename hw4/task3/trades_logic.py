@@ -89,8 +89,10 @@ class Trader:
     def get_end(self, allowed_places):
 
         self.max_res = [0, 0, 0]
+
         dif_time = Time(0, 0, 1)
-        max_k = 0
+
+        max_count = 0
 
         array = self.get_window()
         array = self.remove_not_allowed(allowed_places, array)
@@ -102,30 +104,33 @@ class Trader:
             end_time = Time(time_arr[0], time_arr[1], time_arr[2])
             delta = end_time - st_time
 
-            if max_k > 1:
-                k = max_k - 1
+            if max_count > 1:
+                cur_count = max_count - 1
             else:
-                k = 0
+                cur_count = 0
 
-            while delta <= dif_time and i + k < len(array):
+            while delta <= dif_time:
 
-                k += 1
+                cur_count += 1
 
-                sec_arr = self.split_time(array[i + k - 2][0])
-                end_time = Time(sec_arr[0], sec_arr[1], sec_arr[2])
-                delta = end_time - st_time
+                if i + cur_count < len(array):
+                    sec_arr = self.split_time(array[i + cur_count][0])
+                    end_time = Time(sec_arr[0], sec_arr[1], sec_arr[2])
+                    delta = end_time - st_time
+                else:
+                    break
 
-            k -= 1
+            cur_count -= 1
 
-            if k >= max_k:
-                max_k = k + 1
+            if cur_count >= max_count:
+                max_count = cur_count + 1
                 self.max_res[0] = array[i][3]
-                self.max_res[1] = array[i + k][3]
-                self.max_res[2] = k + 1
+                self.max_res[1] = array[i + cur_count][3]
+                self.max_res[2] = cur_count + 1
 
     def start_trader(self):
 
-        places = 'QWERTYUIOPASDFGHKLZXCVBNM'
+        places = 'QWERTYUIOPASDFGHJKLZXCVBNM'
 
         self.csv_reader("trades.csv")
         self.get_end(places)
