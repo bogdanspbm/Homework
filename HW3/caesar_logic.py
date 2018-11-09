@@ -44,5 +44,5 @@ def isIntegerInRange(value):
     try:
         testint = int(value)
         return testint > -1 and testint < 27
-    except:
+    except TypeError:
         return 0
