@@ -36,42 +36,58 @@ class Time:
 class Trader:
 
     def __init__(self):
-        self.time = []
-        self.price = []
-        self.count = []
-        self.place = []
-        self.delays = []
+        self.rows = []
         self.max_res = [0, 0]
 
     def csv_reader(self, file):
         file_obj = open(file, 'r')
         reader = csv.DictReader(file_obj, delimiter=',')
         for line in reader:
-            self.time.append(line["Time"])
-            self.price.append(line["Proce"])
-            self.place.append(line["Exchange"])
+
+            row = []
+
+            row.append(line["Time"]) #  Time - 0 element
+            row.append(line["Proce"]) #  Price - 1 element
+            row.append(line["Exchange"]) #  Exchange - 2 element
+
+            self.rows.append(row)
+
+    def remove_not_allowed(self, allowed_places):
+
+        i = 0
+        result = []
+
+        while i < len(self.rows):
+
+            if allowed_places.count(self.rows[i][2]) > 0:
+                result.append(self.rows[i])
+
+            i += 1
+
+        return result
 
     def get_end(self, allowed_places):
 
         self.max_res = [0, 0]
         dif_time = Time(0, 0, 1)
 
-        for i in range(len(self.time)):
+        array = self.remove_not_allowed(allowed_places)
 
-            time_arr = self.split_time(self.time[i])
+        for i in range(len(array)):
+
+            time_arr = self.split_time(array[i][0])
             st_time = Time(time_arr[0], time_arr[1], time_arr[2])
             end_time = Time(time_arr[0], time_arr[1], time_arr[2])
             delta = end_time - st_time
             k = self.max_res[1]
-            counter = k
 
-            while delta <= dif_time and i + k < len(self.time) - 1:
+            while delta <= dif_time and i + k < len(array) - 1:
 
                 if k >= 516:
                     print(k)
                 k += 1
 
-                sec_arr = self.split_time(self.time[i + k])
+                sec_arr = self.split_time(array[i + k][0])
                 end_time = Time(sec_arr[0], sec_arr[1], sec_arr[2])
                 delta = end_time - st_time
 
@@ -87,9 +103,4 @@ class Trader:
         return vars
 
 
-app = Trader()
-app.csv_reader("trades.csv")
-app.get_end('QWERTYUIOPASDFGHJKLZXCVBNM')
-print(app.time[app.max_res[0]])
-print(app.time[app.max_res[0] + app.max_res[1]])
 
