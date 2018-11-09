@@ -37,7 +37,7 @@ class Trader:
 
     def __init__(self):
         self.rows = []
-        self.max_res = [0, 0, 0, 0]
+        self.max_res = [0, 0, 0, 0]  # 0 - start time, 1 - end time, 2 - count
         self.window_size = [0, 0]
 
     def csv_reader(self, file):
@@ -54,6 +54,7 @@ class Trader:
 
             self.rows.append(row)
 
+        file_obj.close()
         self.set_window_size(0, len(self.rows))
 
     @staticmethod
