@@ -37,7 +37,7 @@ class Trader:
 
     def __init__(self):
         self.rows = []
-        self.max_res = [0, 0, 0]
+        self.max_res = [0, 0, 0, 0]
         self.window_size = [0, 0]
 
     def csv_reader(self, file):
@@ -51,12 +51,15 @@ class Trader:
             row.append(line["Proce"])  # Price - 1 element
             row.append(line["Exchange"])  # Exchange - 2 element
             row.append(len(self.rows))  # ID - 3 element
+            row.append(line["Size"])  # Size - 4 element
 
             self.rows.append(row)
 
         self.set_window_size(0, len(self.rows))
 
-    def remove_not_allowed(self, allowed_places, array):
+
+    @staticmethod
+    def remove_not_allowed(allowed_places, array):
 
         i = 0
         result = []
@@ -88,7 +91,7 @@ class Trader:
 
     def get_end(self, allowed_places):
 
-        self.max_res = [0, 0, 0]
+        self.max_res = [0, 0, 0, 0]
 
         dif_time = Time(0, 0, 1)
 
@@ -98,6 +101,10 @@ class Trader:
         array = self.remove_not_allowed(allowed_places, array)
 
         for i in range(len(array)):
+
+            a = float(array[i][4])
+            b = float(array[i][1])
+            money = a * b
 
             time_arr = self.split_time(array[i][0])
             st_time = Time(time_arr[0], time_arr[1], time_arr[2])
@@ -114,6 +121,9 @@ class Trader:
                 cur_count += 1
 
                 if i + cur_count < len(array):
+                    a = float(array[i + cur_count][4])
+                    b = float(array[i + cur_count][1])
+                    money += a * b
                     sec_arr = self.split_time(array[i + cur_count][0])
                     end_time = Time(sec_arr[0], sec_arr[1], sec_arr[2])
                     delta = end_time - st_time
@@ -127,6 +137,7 @@ class Trader:
                 self.max_res[0] = array[i][3]
                 self.max_res[1] = array[i + cur_count][3]
                 self.max_res[2] = cur_count + 1
+                self.max_res[3] = int(money)
 
     def start_trader(self):
 
@@ -140,12 +151,10 @@ class Trader:
 
         print()
 
-        print('ALL')
-        print(self.max_res[2])
-        print(self.max_res[0] + 2)
-        print(self.max_res[1] + 2)
-        print(self.rows[self.max_res[0]][0])
-        print(self.rows[self.max_res[1]][0])
+        print('PLACE: ALL')
+        print('WINDOW SIZE: ' + str(self.max_res[2]))
+        print('START: ' + self.rows[self.max_res[0]][0])
+        print('END: ' + self.rows[self.max_res[1]][0])
 
         print()
 
@@ -155,12 +164,11 @@ class Trader:
             char = places[i]
             self.get_end(char)
             if self.max_res[2] != 0:
-                print(char)
-                print(self.max_res[2])
-                print(self.max_res[0] + 2)
-                print(self.max_res[1] + 2)
-                print(self.rows[self.max_res[0]][0])
-                print(self.rows[self.max_res[1]][0])
+                print('PLACE: ' + char)
+                print('WINDOW SIZE: ' + str(self.max_res[2]))
+                print('START: ' + self.rows[self.max_res[0]][0])
+                print('END: ' + self.rows[self.max_res[1]][0])
+                print('MONEY: ' + str(self.max_res[3]))
                 print()
 
     @staticmethod
