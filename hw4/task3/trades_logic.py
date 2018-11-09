@@ -146,9 +146,6 @@ class Trader:
         self.csv_reader("trades.csv")
         self.get_end(places)
 
-        print(self.max_res[0])
-        print(self.max_res[1])
-
         print()
 
         print('PLACE: ALL')
@@ -159,6 +156,19 @@ class Trader:
         print()
 
         self.set_window_size(self.max_res[0], self.max_res[1])
+
+        for i in range(len(places)):
+            char = places[i]
+            self.get_end(char)
+            if self.max_res[2] != 0:
+                print('     PLACE: ' + char)
+                print('     WINDOW SIZE: ' + str(self.max_res[2]))
+                print('     START: ' + self.rows[self.max_res[0]][0])
+                print('     END: ' + self.rows[self.max_res[1]][0])
+                print('     MONEY: ' + str(self.max_res[3]))
+                print()
+
+        self.set_window_size(0, len(self.rows))
 
         for i in range(len(places)):
             char = places[i]
