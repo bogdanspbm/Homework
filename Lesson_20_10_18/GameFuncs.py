@@ -66,6 +66,7 @@ def isIntInRange(var):
 
 def readFile(fname):
     input_file = open(fname, 'wb+')
+<<<<<<< HEAD
 
 
 def saveResult(result):
@@ -99,6 +100,8 @@ def showLeadList():
     print('____Winner_list____\n')
     for i in range(min(10, len(results_arr))):
         print(results_arr[i][0] + ' ' + str(results_arr[i][1]))
+=======
+>>>>>>> dc8df54841d0a70f829c045b47632ac57064f5bb
 
     print('___________________\n')
 
