@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9057142-7147-45bd-9f0c-910f4c07b5e0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/hw4/task4/actors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw4/task4/game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw4/task4/game_logic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw4/task4/game_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw4/task3/trades_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw4/task3/trades_logic.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,13 +114,13 @@
         <counts>
           <entry key="bac" value="1" />
           <entry key="dummy" value="11" />
-          <entry key="py" value="15082" />
+          <entry key="py" value="19461" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="15082" />
+          <entry key="Python" value="19461" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -123,7 +128,7 @@
           <entry key="FactorialResult" value="1" />
           <entry key="bac" value="2" />
           <entry key="csv" value="1" />
-          <entry key="py" value="37" />
+          <entry key="py" value="45" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -131,7 +136,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="37" />
+          <entry key="Python" value="45" />
         </counts>
       </usages-collector>
     </session>
@@ -193,19 +198,71 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw4/task3/trades_logic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="181" column="36" lean-forward="true" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
+            <state relative-caret-position="197">
+              <caret line="172" column="39" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
               <folding>
-                <marker date="1541786989698" expanded="true" signature="1473:1479" ph="..." />
-                <marker date="1541786989698" expanded="true" signature="1791:1868" ph="..." />
-                <marker date="1541786989698" expanded="true" signature="2180:2412" ph="..." />
-                <marker date="1541786989698" expanded="true" signature="3717:5229" ph="..." />
+                <marker date="1541791122640" expanded="true" signature="1473:1479" ph="..." />
+                <marker date="1541791122640" expanded="true" signature="1791:1868" ph="..." />
+                <marker date="1541791122640" expanded="true" signature="2189:2438" ph="..." />
+                <marker date="1541791122640" expanded="true" signature="3742:5383" ph="..." />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hw4/task4/game_logic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1541797970604" expanded="true" signature="146:152" ph="..." />
+                <marker date="1541797970604" expanded="true" signature="405:687" ph="..." />
+                <marker date="1541797970604" expanded="true" signature="1327:1333" ph="..." />
+                <marker date="1541797970604" expanded="true" signature="2915:3470" ph="..." />
+                <marker date="1541797970604" expanded="true" signature="3491:3497" ph="..." />
+                <marker date="1541797970604" expanded="true" signature="3491:3507" ph="..." />
+                <marker date="1541797970604" expanded="true" signature="3491:3512" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw4/task4/actors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+              <folding>
+                <marker date="1541797423742" expanded="true" signature="49:50" ph="..." />
+                <marker date="1541797423742" expanded="true" signature="49:55" ph="..." />
+                <marker date="1541797423742" expanded="true" signature="304:305" ph="..." />
+                <marker date="1541797423742" expanded="true" signature="544:545" ph="..." />
+                <marker date="1541797423742" expanded="true" signature="1099:1183" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw4/task4/game.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+              <folding>
+                <marker date="1541797703010" expanded="true" signature="46:51" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw4/task4/game_test.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -266,6 +323,11 @@
         <option value="$PROJECT_DIR$/hw4/task2/poly_test.py" />
         <option value="$PROJECT_DIR$/hw4/task3/trades.py" />
         <option value="$PROJECT_DIR$/hw4/task3/trades_logic.py" />
+        <option value="$PROJECT_DIR$/hw4/task4.py" />
+        <option value="$PROJECT_DIR$/hw4/task4/game_test.py" />
+        <option value="$PROJECT_DIR$/hw4/task4/actors.py" />
+        <option value="$PROJECT_DIR$/hw4/task4/game.py" />
+        <option value="$PROJECT_DIR$/hw4/task4/game_logic.py" />
       </list>
     </option>
   </component>
@@ -275,7 +337,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="797" />
@@ -350,6 +412,12 @@
               <item name="hw4" type="462c0819:PsiDirectoryNode" />
               <item name="task3" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework" type="462c0819:PsiDirectoryNode" />
+              <item name="hw4" type="462c0819:PsiDirectoryNode" />
+              <item name="task4" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -382,7 +450,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.trades">
+  <component name="RunManager" selected="Python.game">
     <configuration name="Game" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hw01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -417,6 +485,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson_20_10_18/GameFuncs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="game" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="hw01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hw4/task4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hw4/task4/game.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -460,34 +549,20 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in balls_collide_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="hw01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HW3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/HW3/balls_collide_test.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests in balls_collide_test.py" />
       <item itemvalue="Python tests.Unittests in UninTests.py" />
       <item itemvalue="Python.Game" />
       <item itemvalue="Python.GameFuncs" />
       <item itemvalue="Python.trades" />
+      <item itemvalue="Python.game" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.game" />
         <item itemvalue="Python.trades" />
         <item itemvalue="Python.Game" />
         <item itemvalue="Python.GameFuncs" />
         <item itemvalue="Python tests.Unittests in UninTests.py" />
-        <item itemvalue="Python tests.Unittests in balls_collide_test.py" />
       </list>
     </recent_temporary>
   </component>
@@ -836,15 +911,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hw4/task4.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw4/task4/game_test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/hw4/task3/trades_logic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="181" column="36" lean-forward="true" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
+        <state relative-caret-position="197">
+          <caret line="172" column="39" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
           <folding>
-            <marker date="1541786989698" expanded="true" signature="1473:1479" ph="..." />
-            <marker date="1541786989698" expanded="true" signature="1791:1868" ph="..." />
-            <marker date="1541786989698" expanded="true" signature="2180:2412" ph="..." />
-            <marker date="1541786989698" expanded="true" signature="3717:5229" ph="..." />
+            <marker date="1541791122640" expanded="true" signature="1473:1479" ph="..." />
+            <marker date="1541791122640" expanded="true" signature="1791:1868" ph="..." />
+            <marker date="1541791122640" expanded="true" signature="2189:2438" ph="..." />
+            <marker date="1541791122640" expanded="true" signature="3742:5383" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw4/task4/actors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <marker date="1541797423742" expanded="true" signature="49:50" ph="..." />
+            <marker date="1541797423742" expanded="true" signature="49:55" ph="..." />
+            <marker date="1541797423742" expanded="true" signature="304:305" ph="..." />
+            <marker date="1541797423742" expanded="true" signature="544:545" ph="..." />
+            <marker date="1541797423742" expanded="true" signature="1099:1183" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw4/task4/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding>
+            <marker date="1541797703010" expanded="true" signature="46:51" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw4/task4/game_logic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1541797970604" expanded="true" signature="146:152" ph="..." />
+            <marker date="1541797970604" expanded="true" signature="405:687" ph="..." />
+            <marker date="1541797970604" expanded="true" signature="1327:1333" ph="..." />
+            <marker date="1541797970604" expanded="true" signature="2915:3470" ph="..." />
+            <marker date="1541797970604" expanded="true" signature="3491:3497" ph="..." />
+            <marker date="1541797970604" expanded="true" signature="3491:3507" ph="..." />
+            <marker date="1541797970604" expanded="true" signature="3491:3512" ph="..." />
           </folding>
         </state>
       </provider>

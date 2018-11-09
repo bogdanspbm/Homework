@@ -170,7 +170,7 @@ class Trader:
             char = places[i]
             self.get_end(char)
             if self.max_res[2] != 0:
-                print('     PLACE: ' + char)
+                print('     PLACE: ALL.' + char)
                 print('     WINDOW SIZE: ' + str(self.max_res[2]))
                 print('     START: ' + self.rows[self.max_res[0]][0])
                 print('     END: ' + self.rows[self.max_res[1]][0])
