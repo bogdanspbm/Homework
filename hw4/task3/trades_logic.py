@@ -37,7 +37,7 @@ class Trader:
 
     def __init__(self):
         self.rows = []
-        self.max_res = [0, 0]
+        self.max_res = [0, 0, 0]
         self.window_size = [0, 0]
 
     def csv_reader(self, file):
@@ -50,6 +50,7 @@ class Trader:
             row.append(line["Time"])  # Time - 0 element
             row.append(line["Proce"])  # Price - 1 element
             row.append(line["Exchange"])  # Exchange - 2 element
+            row.append(len(self.rows))  # ID - 3 element
 
             self.rows.append(row)
 
@@ -87,8 +88,9 @@ class Trader:
 
     def get_end(self, allowed_places):
 
-        self.max_res = [0, 0]
+        self.max_res = [0, 0, 0]
         dif_time = Time(0, 0, 1)
+        max_k = 0
 
         array = self.get_window()
         array = self.remove_not_allowed(allowed_places, array)
@@ -99,23 +101,62 @@ class Trader:
             st_time = Time(time_arr[0], time_arr[1], time_arr[2])
             end_time = Time(time_arr[0], time_arr[1], time_arr[2])
             delta = end_time - st_time
-            k = self.max_res[1]
 
-            while delta <= dif_time and i + k < len(array) - 1:
+            if max_k > 1:
+                k = max_k - 1
+            else:
+                k = 0
 
-                if k >= 516:
-                    print(k)
+            while delta <= dif_time and i + k < len(array):
+
                 k += 1
 
-                sec_arr = self.split_time(array[i + k][0])
+                sec_arr = self.split_time(array[i + k - 2][0])
                 end_time = Time(sec_arr[0], sec_arr[1], sec_arr[2])
                 delta = end_time - st_time
 
             k -= 1
 
-            if k > self.max_res[1]:
-                self.max_res[1] = k
-                self.max_res[0] = i + self.window_size[0]
+            if k >= max_k:
+                max_k = k + 1
+                self.max_res[0] = array[i][3]
+                self.max_res[1] = array[i + k][3]
+                self.max_res[2] = k + 1
+
+    def start_trader(self):
+
+        places = 'QWERTYUIOPASDFGHKLZXCVBNM'
+
+        self.csv_reader("trades.csv")
+        self.get_end(places)
+
+        print(self.max_res[0])
+        print(self.max_res[1])
+
+        print()
+
+        print('ALL')
+        print(self.max_res[2])
+        print(self.max_res[0] + 2)
+        print(self.max_res[1] + 2)
+        print(self.rows[self.max_res[0]][0])
+        print(self.rows[self.max_res[1]][0])
+
+        print()
+
+        self.set_window_size(self.max_res[0], self.max_res[1])
+
+        for i in range(len(places)):
+            char = places[i]
+            self.get_end(char)
+            if self.max_res[2] != 0:
+                print(char)
+                print(self.max_res[2])
+                print(self.max_res[0] + 2)
+                print(self.max_res[1] + 2)
+                print(self.rows[self.max_res[0]][0])
+                print(self.rows[self.max_res[1]][0])
+                print()
 
     @staticmethod
     def split_time(time_string):
