@@ -1,8 +1,9 @@
 from hw4.task4 import actors
-import random, time
+import random
+import time
+
 
 class Engine:
-
     actors_lib = {
         'bear': actors.Bear,
         'fish': actors.Fish
@@ -99,7 +100,6 @@ class Engine:
                 elif act_b.type == 'bear':
                     act_b.life = 0
                     act_a.destroy_actor('Killed by ' + str(act_a.type))
-
 
     def get_actor_index_with_id(self, actor_id):
 

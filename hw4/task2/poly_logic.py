@@ -63,7 +63,8 @@ class Poly:
                 if int(degree) == 1:
                     res += str(new_coef)
                 else:
-                    res += str(new_coef) + 'x^' + str((int(degree) - 1)) + ' ' + symb + ' '
+                    res += str(new_coef) + 'x^'
+                    res += str((int(degree) - 1)) + ' ' + symb + ' '
             else:
                 if degree > 1:
                     res += str(new_coef) + 'x^' + str((int(degree) - 1))
@@ -78,7 +79,3 @@ class Poly:
 
         self.read_coeff(string)
         return self.upgrade_coeff_arr()
-
-
-
-

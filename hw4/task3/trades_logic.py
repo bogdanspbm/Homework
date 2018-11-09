@@ -101,8 +101,6 @@ class Trader:
 
         return money
 
-
-
     def get_end(self, allowed_places):
 
         self.max_res = [0, 0, 0, 0]
@@ -196,5 +194,5 @@ class Trader:
 
     @staticmethod
     def split_time(time_string):
-        vars = time_string.split(':')
-        return vars
+        variables = time_string.split(':')
+        return variables

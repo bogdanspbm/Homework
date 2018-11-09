@@ -61,6 +61,3 @@ class Fish(Animal):
     def begin_play(self):
         self.type = 'fish'
         self.image = '🐟'
-
-
-

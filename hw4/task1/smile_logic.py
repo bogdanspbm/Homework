@@ -19,7 +19,7 @@ class SmileLogic:
             '>': '_'
         }
 
-        brackets_open = ['[', '(',  '<', '{']
+        brackets_open = ['[', '(', '<', '{']
         brackets_close = [']', ')', '>', '}']
 
         for char in string:
@@ -41,7 +41,7 @@ class SmileLogic:
                 if not tmp_bool:
                     return False
                 else:
-                    self.brackets_array.pop(size-1)
+                    self.brackets_array.pop(size - 1)
 
         return len(self.brackets_array) == 0
 
@@ -55,8 +55,3 @@ class SmileLogic:
             string = input('Enter text: ')
 
         return self.get_brackets(string)
-
-
-
-
-
