@@ -14,11 +14,11 @@ class Validator(TestCase):
 
     def test_3(self):
         test_app = sl.SmileLogic()
-        self.assertTrue(test_app.start_check('[<asd>(31)<as>31(asd)312<as[af]412(as)12>as]'))
+        self.assertTrue(test_app.start_check('[<a>(3)<a>3()<as[a]42(s)12>s]'))
 
     def test_4(self):
         test_app = sl.SmileLogic()
-        self.assertTrue(test_app.start_check('[[][][][][][][][][]][][][][][][]'))
+        self.assertTrue(test_app.start_check('[[][][][][][][][][]][][][][][]'))
 
     def test_5(self):
         test_app = sl.SmileLogic()
@@ -26,15 +26,15 @@ class Validator(TestCase):
 
     def test_6(self):
         test_app = sl.SmileLogic()
-        self.assertFalse(test_app.start_check('[[][][][][][][][][]][][][][][][](((('))
+        self.assertFalse(test_app.start_check('[[][][][][][][][][](((('))
 
     def test_7(self):
         test_app = sl.SmileLogic()
-        self.assertFalse(test_app.start_check('[<asd(>)(31)<as>31(asd)312<as[af]412(as)12>as]'))
+        self.assertFalse(test_app.start_check('[<s(>)(3)<a>3()1<a[a]4(a)1>a]'))
 
     def test_8(self):
         test_app = sl.SmileLogic()
-        self.assertFalse(test_app.start_check('[[<]>[][][][][][][][]][][][][][][]'))
+        self.assertFalse(test_app.start_check('[[<]>[][][][][][][][]][][][]'))
 
     def test_9(self):
         test_app = sl.SmileLogic()

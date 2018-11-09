@@ -38,6 +38,7 @@ class Trader:
     def __init__(self):
         self.rows = []
         self.max_res = [0, 0]
+        self.window_size = [0, 0]
 
     def csv_reader(self, file):
         file_obj = open(file, 'r')
@@ -46,22 +47,40 @@ class Trader:
 
             row = []
 
-            row.append(line["Time"]) #  Time - 0 element
-            row.append(line["Proce"]) #  Price - 1 element
-            row.append(line["Exchange"]) #  Exchange - 2 element
+            row.append(line["Time"])  # Time - 0 element
+            row.append(line["Proce"])  # Price - 1 element
+            row.append(line["Exchange"])  # Exchange - 2 element
 
             self.rows.append(row)
 
-    def remove_not_allowed(self, allowed_places):
+        self.set_window_size(0, len(self.rows))
+
+    def remove_not_allowed(self, allowed_places, array):
 
         i = 0
         result = []
 
-        while i < len(self.rows):
+        while i < len(array):
 
-            if allowed_places.count(self.rows[i][2]) > 0:
-                result.append(self.rows[i])
+            if allowed_places.count(array[i][2]) > 0:
+                result.append(array[i])
 
+            i += 1
+
+        return result
+
+    def set_window_size(self, start, end):
+
+        self.window_size[0] = start
+        self.window_size[1] = end
+
+    def get_window(self):
+
+        i = self.window_size[0]
+        result = []
+
+        while i <= self.window_size[1] and i < len(self.rows):
+            result.append(self.rows[i])
             i += 1
 
         return result
@@ -71,7 +90,8 @@ class Trader:
         self.max_res = [0, 0]
         dif_time = Time(0, 0, 1)
 
-        array = self.remove_not_allowed(allowed_places)
+        array = self.get_window()
+        array = self.remove_not_allowed(allowed_places, array)
 
         for i in range(len(array)):
 
@@ -95,7 +115,7 @@ class Trader:
 
             if k > self.max_res[1]:
                 self.max_res[1] = k
-                self.max_res[0] = i
+                self.max_res[0] = i + self.window_size[0]
 
     @staticmethod
     def split_time(time_string):

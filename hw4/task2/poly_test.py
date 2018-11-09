@@ -4,8 +4,9 @@ from unittest import TestCase, main
 class Validator(TestCase):
 
     def test_1(self):
+        ans = '20x^3 - 24x^1 + 3'
         app = poly.Poly()
-        self.assertEqual(app.start_app('5x^4 - 12x^2 + 3x'), '20x^3 - 24x^1 + 3')
+        self.assertEqual(app.start_app('5x^4 - 12x^2 + 3x'), ans)
 
     def test_2(self):
         app = poly.Poly()
