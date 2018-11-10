@@ -102,11 +102,11 @@ class Trader:
 
         return money
 
-    def get_end(self, allowed_places):
+    def get_end(self, allowed_places, delay=[0, 0, 1]):
 
         self.max_res = [0, 0, 0, 0]
 
-        dif_time = Time(0, 0, 1)
+        dif_time = Time(delay[0], delay[1], delay[2])
 
         max_count = 0
 

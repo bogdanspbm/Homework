@@ -29,6 +29,13 @@ class Validator(TestCase):
         app = trades.Trader()
         app.csv_reader("trades.csv")
         app.set_window_size(10, 20)
+        app.get_end('Y', [0, 0, 2])
+        self.assertEqual(app.max_res[2], 3)
+
+    def test_5(self):
+        app = trades.Trader()
+        app.csv_reader("trades.csv")
+        app.set_window_size(10, 20)
         app.get_end('YVB')
         self.assertEqual(app.max_res[2], 4)
 
