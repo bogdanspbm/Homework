@@ -75,12 +75,10 @@ class Engine:
 
     def check_all_coords(self):
 
-        old_actors = self.actors.copy()
+        for i in range(self.field_size):
 
-        for i in range(len(old_actors)):
-
-            coord = old_actors[i].x
-            actors_on_coord = self.get_actors_with_coord(coord, old_actors)
+            coord = i
+            actors_on_coord = self.get_actors_with_coord(coord, self.actors)
 
             if len(actors_on_coord) == 0:
                 pass
@@ -91,9 +89,15 @@ class Engine:
             if len(actors_on_coord) == 2:
                 act_a = actors_on_coord[0]
                 act_b = actors_on_coord[1]
-                f_coord = self.get_rand_free_coord()
+                # f_coord = self.get_rand_free_coord()
+                f_x = act_a.x
                 if act_a.type == act_b.type:
-                    self.add_actor(self.actors_lib[act_a.type](f_coord, self))
+                    if act_a.action == 1 and act_b.action == 1:
+                        self.add_actor(self.actors_lib[act_a.type](f_x, self))
+                        act_a.go_back()
+                        act_a.set_disable_actions_for_turn(0)
+                        act_b.go_back()
+                        act_b.set_disable_actions_for_turn(0)
                 elif act_a.type == 'bear':
                     act_a.life = 0
                     act_b.destroy_actor('Killed by ' + str(act_a.type))

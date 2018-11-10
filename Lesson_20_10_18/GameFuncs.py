@@ -66,8 +66,6 @@ def isIntInRange(var):
 
 def readFile(fname):
     input_file = open(fname, 'wb+')
-<<<<<<< HEAD
-
 
 def saveResult(result):
     Name = input('Enter name: ')

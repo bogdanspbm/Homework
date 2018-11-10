@@ -31,7 +31,13 @@ class Actor:
 
 class Animal(Actor):
 
+    old_x = -1
+    action = 1
+
     def goto_event(self):
+
+        self.old_x = self.x
+
         if self.x == 0:
             self.x += 1
         elif self.x == self.parent.field_size - 1:
@@ -40,7 +46,16 @@ class Animal(Actor):
             self.x += random.choice([-1, 1])
 
     def tick_event(self):
+
+        self.set_disable_actions_for_turn(1)
+
         self.goto_event()
+
+    def go_back(self):
+        self.x = self.old_x
+
+    def set_disable_actions_for_turn(self, bool_var):
+        self.action = bool_var
 
 
 class Bear(Animal):
@@ -50,6 +65,9 @@ class Bear(Animal):
         self.image = '🐻'
 
     def tick_event(self):
+
+        self.set_disable_actions_for_turn(1)
+
         self.goto_event()
         self.life += 1
         if self.life > self.parent.max_hungry:
