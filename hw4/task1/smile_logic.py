@@ -1,57 +1,61 @@
-class SmileLogic:
+brackets_array = []
 
-    def __init__(self):
-        self.brackets_array = []
 
-    def add_bracket(self, char):
-        self.brackets_array.append(char)
+def add_bracket(char):
+    global brackets_array
+    brackets_array.append(char)
 
-    def get_brackets(self, string):
 
-        symetric_list = {
-            '[': ']',
-            '{': '}',
-            '(': ')',
-            '<': '>',
-            ']': '_',
-            ')': '_',
-            '}': '_',
-            '>': '_'
-        }
+def get_brackets(string):
 
-        brackets_open = ['[', '(', '<', '{']
-        brackets_close = [']', ')', '>', '}']
+    global brackets_array
 
-        for char in string:
-            tmp_open = brackets_open.count(char) > 0
-            tmp_close = brackets_close.count(char) > 0
+    symetric_list = {
+        '[': ']',
+        '{': '}',
+        '(': ')',
+        '<': '>',
+        ']': '_',
+        ')': '_',
+        '}': '_',
+        '>': '_'
+    }
 
-            if tmp_open:
-                self.add_bracket(char)
+    brackets_open = ['[', '(', '<', '{']
+    brackets_close = [']', ')', '>', '}']
 
-            if tmp_close:
-                size = len(self.brackets_array)
+    for char in string:
+        tmp_open = brackets_open.count(char) > 0
+        tmp_close = brackets_close.count(char) > 0
 
-                if size == 0:
-                    return False
+        if tmp_open:
+            add_bracket(char)
 
-                last_char = self.brackets_array[size - 1]
-                tmp_bool = symetric_list[last_char] == char
+        if tmp_close:
+            size = len(brackets_array)
 
-                if not tmp_bool:
-                    return False
-                else:
-                    self.brackets_array.pop(size - 1)
+            if size == 0:
+                return False
 
-        return len(self.brackets_array) == 0
+            last_char = brackets_array[size - 1]
+            tmp_bool = symetric_list[last_char] == char
 
-    def start_check(self, string=''):
-        self.brackets_array = []
+            if not tmp_bool:
+                return False
+            else:
+                brackets_array.pop(size - 1)
 
-        if type(string) != str:
-            raise TypeError('Use only string')
+    return len(brackets_array) == 0
 
-        while string == '':
-            string = input('Enter text: ')
 
-        return self.get_brackets(string)
+def start_check(string=''):
+    global brackets_array
+    brackets_array = []
+
+    if type(string) != str:
+        raise TypeError('Use only string')
+
+    while string == '':
+        string = input('Enter text: ')
+
+    return get_brackets(string)

@@ -1,9 +1,8 @@
-from hw4.task1 import smile_logic as sl
+from hw4.task1.smile_logic import start_check
 
 
 def main():
-    app = sl.SmileLogic()
-    print(app.start_check())
+    print(start_check())
 
 
 if __name__ == '__main__':
