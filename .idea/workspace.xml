@@ -27,9 +27,10 @@
     <SUITE FILE_PATH="coverage/Homework$hangman.coverage" NAME="hangman Coverage Results" MODIFIED="1540063131558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_for_caesar_test_Validator.coverage" NAME="Unittests for caesar_test.Validator Coverage Results" MODIFIED="1540059469930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_for_poly_test_Validator_test_4.coverage" NAME="Unittests for poly_test.Validator.test_4 Coverage Results" MODIFIED="1541868752048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task2" />
-    <SUITE FILE_PATH="coverage/Homework$smile.coverage" NAME="smile Coverage Results" MODIFIED="1541872310414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task1" />
+    <SUITE FILE_PATH="coverage/Homework$smile.coverage" NAME="smile Coverage Results" MODIFIED="1541872560294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task1" />
     <SUITE FILE_PATH="coverage/hw01$PascalTriangle.coverage" NAME="PascalTriangle Coverage Results" MODIFIED="1539409661489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW2" />
     <SUITE FILE_PATH="coverage/Homework$trades.coverage" NAME="trades Coverage Results" MODIFIED="1541871450219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task3" />
+    <SUITE FILE_PATH="coverage/Homework$smile_logic.coverage" NAME="smile_logic Coverage Results" MODIFIED="1541872557510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task1" />
     <SUITE FILE_PATH="coverage/Homework$caesar.coverage" NAME="caesar Coverage Results" MODIFIED="1540060256628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/hw01$PerfectNum.coverage" NAME="PerfectNum Coverage Results" MODIFIED="1539365516612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW2" />
     <SUITE FILE_PATH="coverage/Homework$balls_collide.coverage" NAME="balls_collide Coverage Results" MODIFIED="1540057164859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
@@ -40,7 +41,7 @@
     <SUITE FILE_PATH="coverage/Homework$Unittests_in_caesar_test_py.coverage" NAME="Unittests in caesar_test.py Coverage Results" MODIFIED="1540059091349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_for_poly_test_Validator_test_1.coverage" NAME="Unittests for poly_test.Validator.test_1 Coverage Results" MODIFIED="1541868335062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task2" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_in_handman_tests_py.coverage" NAME="Unittests in handman_tests.py Coverage Results" MODIFIED="1540063244430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
-    <SUITE FILE_PATH="coverage/Homework$Unittests_in_smile_test_py.coverage" NAME="Unittests in smile_test.py Coverage Results" MODIFIED="1541872366665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task1" />
+    <SUITE FILE_PATH="coverage/Homework$Unittests_in_smile_test_py.coverage" NAME="Unittests in smile_test.py Coverage Results" MODIFIED="1541872564069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task1" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_in_balls_collide_test_py.coverage" NAME="Unittests in balls_collide_test.py Coverage Results" MODIFIED="1540058127756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_in_game_test_py.coverage" NAME="Unittests in game_test.py Coverage Results" MODIFIED="1541863288053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task4" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_for_caesar_test_Validator_test1.coverage" NAME="Unittests for caesar_test.Validator.test1 Coverage Results" MODIFIED="1540059261263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
@@ -496,7 +497,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in poly_test.py">
+  <component name="RunManager" selected="Python tests.Unittests in smile_test.py">
     <configuration name="smile" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hw01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -511,6 +512,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hw4/task1/smile.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="smile_logic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="hw01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hw4/task1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hw4/task1/smile_logic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -564,35 +587,20 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in trades_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="hw01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hw4/task3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/hw4/task3/trades_test.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests in trades_test.py" />
       <item itemvalue="Python tests.Unittests in smile_test.py" />
       <item itemvalue="Python tests.Unittests in poly_test.py" />
       <item itemvalue="Python.smile" />
       <item itemvalue="Python tests.Unittests for smile_test.Validator.test_1" />
+      <item itemvalue="Python.smile_logic" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in poly_test.py" />
         <item itemvalue="Python tests.Unittests in smile_test.py" />
-        <item itemvalue="Python tests.Unittests for smile_test.Validator.test_1" />
         <item itemvalue="Python.smile" />
-        <item itemvalue="Python tests.Unittests in trades_test.py" />
+        <item itemvalue="Python.smile_logic" />
+        <item itemvalue="Python tests.Unittests in poly_test.py" />
+        <item itemvalue="Python tests.Unittests for smile_test.Validator.test_1" />
       </list>
     </recent_temporary>
   </component>
