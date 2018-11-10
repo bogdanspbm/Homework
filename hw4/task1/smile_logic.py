@@ -1,14 +1,12 @@
-brackets_array = []
+def start_check(string=''):
 
+    if type(string) != str:
+        raise TypeError('Use only string')
 
-def add_bracket(char):
-    global brackets_array
-    brackets_array.append(char)
+    while string == '':
+        string = input('Enter text: ')
 
-
-def get_brackets(string):
-
-    global brackets_array
+    brackets_array = []
 
     symetric_list = {
         '[': ']',
@@ -29,7 +27,7 @@ def get_brackets(string):
         tmp_close = brackets_close.count(char) > 0
 
         if tmp_open:
-            add_bracket(char)
+            brackets_array.append(char)
 
         if tmp_close:
             size = len(brackets_array)
@@ -46,16 +44,3 @@ def get_brackets(string):
                 brackets_array.pop(size - 1)
 
     return len(brackets_array) == 0
-
-
-def start_check(string=''):
-    global brackets_array
-    brackets_array = []
-
-    if type(string) != str:
-        raise TypeError('Use only string')
-
-    while string == '':
-        string = input('Enter text: ')
-
-    return get_brackets(string)
