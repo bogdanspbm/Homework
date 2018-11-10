@@ -18,6 +18,9 @@ class Engine:
         self.fish = fish_count
         self.max_hungry = max_hungry
 
+        if field_size < bears_count + fish_count:
+            raise ValueError
+
     def spawn_actors(self):
 
         for i in range(self.bears):
