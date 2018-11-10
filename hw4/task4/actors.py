@@ -39,11 +39,11 @@ class Animal(Actor):
         self.old_x = self.x
 
         if self.x == 0:
-            self.x += 1
+            self.x += random.choice([1, 0])
         elif self.x == self.parent.field_size - 1:
-            self.x -= 1
+            self.x += random.choice([-1, 0])
         else:
-            self.x += random.choice([-1, 1])
+            self.x += random.choice([-1, 1, 0])
 
     def tick_event(self):
 
