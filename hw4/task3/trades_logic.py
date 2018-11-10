@@ -100,6 +100,10 @@ class Trader:
                 money += a * b
             i += 1
 
+        money *= 100
+        money = int(money)
+        money = float(money) / 100
+
         return money
 
     def get_end(self, allowed_places, delay=[0, 0, 1]):

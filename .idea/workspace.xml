@@ -15,7 +15,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Homework$poly.coverage" NAME="poly Coverage Results" MODIFIED="1541869203016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task2" />
     <SUITE FILE_PATH="coverage/Homework$poly_logic.coverage" NAME="poly_logic Coverage Results" MODIFIED="1541869267089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task2" />
-    <SUITE FILE_PATH="coverage/Homework$Unittests_in_trades_test_py.coverage" NAME="Unittests in trades_test.py Coverage Results" MODIFIED="1541872622550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task3" />
+    <SUITE FILE_PATH="coverage/Homework$Unittests_in_trades_test_py.coverage" NAME="Unittests in trades_test.py Coverage Results" MODIFIED="1541874467980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task3" />
     <SUITE FILE_PATH="coverage/Homework$game.coverage" NAME="game Coverage Results" MODIFIED="1541871891422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task4" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_in_poly_test_py.coverage" NAME="Unittests in poly_test.py Coverage Results" MODIFIED="1541872620643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task2" />
     <SUITE FILE_PATH="coverage/hw01$Factorial.coverage" NAME="Factorial Coverage Results" MODIFIED="1539409358899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW2" />
@@ -29,8 +29,8 @@
     <SUITE FILE_PATH="coverage/Homework$Unittests_for_poly_test_Validator_test_4.coverage" NAME="Unittests for poly_test.Validator.test_4 Coverage Results" MODIFIED="1541868752048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task2" />
     <SUITE FILE_PATH="coverage/Homework$smile.coverage" NAME="smile Coverage Results" MODIFIED="1541872560294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task1" />
     <SUITE FILE_PATH="coverage/hw01$PascalTriangle.coverage" NAME="PascalTriangle Coverage Results" MODIFIED="1539409661489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW2" />
-    <SUITE FILE_PATH="coverage/Homework$trades.coverage" NAME="trades Coverage Results" MODIFIED="1541871450219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task3" />
     <SUITE FILE_PATH="coverage/Homework$smile_logic.coverage" NAME="smile_logic Coverage Results" MODIFIED="1541872557510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task1" />
+    <SUITE FILE_PATH="coverage/Homework$trades.coverage" NAME="trades Coverage Results" MODIFIED="1541874472778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task3" />
     <SUITE FILE_PATH="coverage/Homework$caesar.coverage" NAME="caesar Coverage Results" MODIFIED="1540060256628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/hw01$PerfectNum.coverage" NAME="PerfectNum Coverage Results" MODIFIED="1539365516612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW2" />
     <SUITE FILE_PATH="coverage/Homework$balls_collide.coverage" NAME="balls_collide Coverage Results" MODIFIED="1540057164859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
@@ -43,11 +43,11 @@
     <SUITE FILE_PATH="coverage/Homework$Unittests_in_handman_tests_py.coverage" NAME="Unittests in handman_tests.py Coverage Results" MODIFIED="1540063244430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_in_smile_test_py.coverage" NAME="Unittests in smile_test.py Coverage Results" MODIFIED="1541872617646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task1" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_in_balls_collide_test_py.coverage" NAME="Unittests in balls_collide_test.py Coverage Results" MODIFIED="1540058127756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
-    <SUITE FILE_PATH="coverage/Homework$Unittests_in_game_test_py.coverage" NAME="Unittests in game_test.py Coverage Results" MODIFIED="1541872624930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task4" />
+    <SUITE FILE_PATH="coverage/Homework$Unittests_in_game_test_py.coverage" NAME="Unittests in game_test.py Coverage Results" MODIFIED="1541874313598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task4" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_for_caesar_test_Validator_test1.coverage" NAME="Unittests for caesar_test.Validator.test1 Coverage Results" MODIFIED="1540059261263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_for_handman_tests_Validator_test1.coverage" NAME="Unittests for handman_tests.Validator.test1 Coverage Results" MODIFIED="1540063492448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_for_poly_test_Validator_test_3.coverage" NAME="Unittests for poly_test.Validator.test_3 Coverage Results" MODIFIED="1541868119200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task2" />
-    <SUITE FILE_PATH="coverage/Homework$trades_logic.coverage" NAME="trades_logic Coverage Results" MODIFIED="1541871440462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task3" />
+    <SUITE FILE_PATH="coverage/Homework$trades_logic.coverage" NAME="trades_logic Coverage Results" MODIFIED="1541874471451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task3" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1171218306">
@@ -181,12 +181,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="9135" />
+          <entry key="py" value="9143" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="9135" />
+          <entry key="Python" value="9143" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -198,8 +198,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw4/task1/smile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="68">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -216,16 +216,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw4/task1/smile_logic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="469">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw4/task3/trades_logic.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1156">
@@ -359,10 +359,10 @@
         <option value="$PROJECT_DIR$/hw4/task3/trades_test.py" />
         <option value="$PROJECT_DIR$/hw4/task4/actors.py" />
         <option value="$PROJECT_DIR$/hw4/task4/game_logic.py" />
-        <option value="$PROJECT_DIR$/hw4/task1/smile_logic.py" />
         <option value="$PROJECT_DIR$/hw4/task1/smile.py" />
         <option value="$PROJECT_DIR$/hw4/task1/smile_test.py" />
         <option value="$PROJECT_DIR$/hw4/task2/poly_logic.py" />
+        <option value="$PROJECT_DIR$/hw4/task1/smile_logic.py" />
       </list>
     </option>
   </component>
@@ -497,8 +497,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in game_test.py">
-    <configuration name="smile" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.trades">
+    <configuration name="trades" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hw01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -506,12 +506,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hw4/task1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hw4/task3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hw4/task1/smile.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hw4/task3/trades.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="trades_logic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="hw01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hw4/task3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hw4/task3/trades_logic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -550,21 +572,6 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in smile_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="hw01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hw4/task1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/hw4/task1/smile_test.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests in trades_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="hw01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -581,19 +588,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests in smile_test.py" />
       <item itemvalue="Python tests.Unittests in poly_test.py" />
-      <item itemvalue="Python.smile" />
       <item itemvalue="Python tests.Unittests in trades_test.py" />
       <item itemvalue="Python tests.Unittests in game_test.py" />
+      <item itemvalue="Python.trades" />
+      <item itemvalue="Python.trades_logic" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in game_test.py" />
+        <item itemvalue="Python.trades" />
+        <item itemvalue="Python.trades_logic" />
         <item itemvalue="Python tests.Unittests in trades_test.py" />
+        <item itemvalue="Python tests.Unittests in game_test.py" />
         <item itemvalue="Python tests.Unittests in poly_test.py" />
-        <item itemvalue="Python tests.Unittests in smile_test.py" />
-        <item itemvalue="Python.smile" />
       </list>
     </recent_temporary>
   </component>
@@ -611,24 +618,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_poly_test_py - 2018.11.10 at 20h 00m 16s.xml">
-      <configuration name="Unittests in poly_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_poly_test_py - 2018.11.10 at 20h 01m 10s.xml">
-      <configuration name="Unittests in poly_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_poly_test_py - 2018.11.10 at 20h 01m 34s.xml">
-      <configuration name="Unittests in poly_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_trades_test_py - 2018.11.10 at 20h 37m 25s.xml">
-      <configuration name="Unittests in trades_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_smile_test_py - 2018.11.10 at 20h 47m 54s.xml">
-      <configuration name="Unittests in smile_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_poly_test_py - 2018.11.10 at 20h 47m 58s.xml">
-      <configuration name="Unittests in poly_test.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_trades_test_py - 2018.11.10 at 20h 48m 01s.xml">
       <configuration name="Unittests in trades_test.py" configurationId="tests" />
     </history-entry>
@@ -640,6 +629,24 @@
     </history-entry>
     <history-entry file="Unittests_in_poly_test_py - 2018.11.10 at 20h 53m 23s.xml">
       <configuration name="Unittests in poly_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_smile_test_py - 2018.11.10 at 20h 55m 40s.xml">
+      <configuration name="Unittests in smile_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_smile_test_py - 2018.11.10 at 20h 56m 04s.xml">
+      <configuration name="Unittests in smile_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_smile_test_py - 2018.11.10 at 20h 56m 57s.xml">
+      <configuration name="Unittests in smile_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_poly_test_py - 2018.11.10 at 20h 57m 00s.xml">
+      <configuration name="Unittests in poly_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_trades_test_py - 2018.11.10 at 20h 57m 03s.xml">
+      <configuration name="Unittests in trades_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_game_test_py - 2018.11.10 at 20h 57m 05s.xml">
+      <configuration name="Unittests in game_test.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -924,44 +931,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/task1/smile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/task1/smile_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/task1/smile_logic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hw4/task2/poly.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw4/task2/poly_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -989,6 +962,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
           <caret line="98" column="42" selection-start-line="98" selection-start-column="42" selection-end-line="98" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw4/task1/smile_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw4/task2/poly_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw4/task1/smile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw4/task1/smile_logic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
