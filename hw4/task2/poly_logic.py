@@ -147,3 +147,18 @@ class Poly:
             return '0'
         else:
             return result
+
+    def start_poly(self):
+
+        allowed = '1234567890+-x^ '
+        flag = 1
+
+        while flag == 1:
+            string = input('Введите вверный полином:')
+            flag = 0
+
+            for i in range(len(string)):
+                if allowed.count(string[i]) < 1:
+                    flag = 1
+
+        return self.calc_derivate(string)
