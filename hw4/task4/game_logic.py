@@ -101,6 +101,11 @@ class Engine:
                         act_a.set_disable_actions_for_turn(0)
                         act_b.go_back()
                         act_b.set_disable_actions_for_turn(0)
+                    else:
+                        act_a.go_back()
+                        act_a.set_disable_actions_for_turn(0)
+                        act_b.go_back()
+                        act_b.set_disable_actions_for_turn(0)
                 elif act_a.type == 'bear':
                     act_a.life = 0
                     act_b.destroy_actor('Killed by ' + str(act_a.type))
