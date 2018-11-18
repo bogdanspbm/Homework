@@ -179,6 +179,6 @@ class Engine:
         self.draw_field()
 
         while True:
-            time.sleep(0.001)
+            time.sleep(1.0)
             self.tick_event()
             self.draw_field()
