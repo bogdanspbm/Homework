@@ -52,7 +52,10 @@ class Animal(Actor):
         self.goto_event()
 
     def go_back(self):
-        self.x = self.old_x
+        if self.old_x != -1:
+            self.x = self.old_x
+        else:
+            self.x = self.parent.get_rand_free_coord()
 
     def set_disable_actions_for_turn(self, bool_var):
         self.action = bool_var

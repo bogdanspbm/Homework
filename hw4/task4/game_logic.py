@@ -96,11 +96,11 @@ class Engine:
                 f_x = act_a.x
                 if act_a.type == act_b.type:
                     if act_a.action == 1 and act_b.action == 1:
-                        self.add_actor(self.actors_lib[act_a.type](f_x, self))
                         act_a.go_back()
                         act_a.set_disable_actions_for_turn(0)
                         act_b.go_back()
                         act_b.set_disable_actions_for_turn(0)
+                        self.add_actor(self.actors_lib[act_a.type](f_x, self))
                     else:
                         act_a.go_back()
                         act_a.set_disable_actions_for_turn(0)
@@ -112,6 +112,18 @@ class Engine:
                 elif act_b.type == 'bear':
                     act_b.life = 0
                     act_a.destroy_actor('Killed by ' + str(act_a.type))
+
+    def go_back_for_all(self):
+
+        flag = True
+        while flag:
+            flag = False
+            for i in range(self.field_size):
+                coord = i
+                actors_coord = self.get_actors_with_coord(coord, self.actors)
+                if len(actors_coord) == 2:
+                    actors_coord[0].go_back()
+                    actors_coord[1].go_back()
 
     def get_actor_index_with_id(self, actor_id):
 
@@ -156,6 +168,7 @@ class Engine:
         while i < len(self.actors):
             self.actors[i].tick_event()
             self.check_all_coords()
+            self.go_back_for_all()
             i += 1
             if len(self.actors) <= 1:
                 self.stop_game()
@@ -166,6 +179,6 @@ class Engine:
         self.draw_field()
 
         while True:
-            time.sleep(1)
+            time.sleep(0.001)
             self.tick_event()
             self.draw_field()
