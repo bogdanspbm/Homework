@@ -57,7 +57,7 @@ class Editor():
             actions[input('Editor: ')]()
 
 
-
-app = Editor()
-app.editorMenu()
+if __name__ == "__main__":
+    app = Editor()
+    app.editorMenu()
 
