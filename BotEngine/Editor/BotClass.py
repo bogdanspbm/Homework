@@ -18,7 +18,7 @@ class ChatBot:
 
 
     def addBlueprint(self):
-        self.bot_blueprints.append(Blueprint(len(self.bot_blueprints))) # Add clear blueprint to list
+        self.bot_blueprints.append(Blueprint(len(self.bot_blueprints), self.Parent)) # Add clear blueprint to list
 
     def runBot(self):
         pass
@@ -31,7 +31,7 @@ class ChatBot:
 
         self.Parent.saveBot()
 
-    def editBlueprint(self, id = 0):
+    def editBlueprint(self, id=0):
 
         if id == 0:
             id = int(input('Enter ID: '))

@@ -2,15 +2,15 @@ from BotEngine.Editor.FuncLabClass import *
 
 class Blueprint():
 
-
-    def __init__(self, id):
+    def __init__(self, id, parent):
         self.ID = id
         self.blueprint_lib = {
     }
+        self.ParentBot = parent
 
     def closeBlueprint(self):
 
-        self.ParentBot.botMenu()
+        self.ParentBot.botMenu(self.ParentBot.Parent)
 
     def addFunc(self, type = '', inputv = '', output = '', goto = -1):
 
@@ -47,7 +47,7 @@ class Blueprint():
         'test': self.testBluerpint
         }
 
-        self.ParentBot = parentBot
+        #self.ParentBot = parentBot
 
         while True:
             actions[input('Blueprint: ')]()

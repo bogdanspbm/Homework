@@ -50,7 +50,7 @@ class Editor():
         actions = {
         'create': self.createBot,
         'load': self.loadBot,
-        'sace': self.saveBot
+        'save': self.saveBot
         }
 
         while True:
