@@ -19,6 +19,8 @@ class Editor():
 
     def loadBot(self, name = ''):
 
+        startname = name
+
         if name == '':
             name = input('Enter bot name: ')
 
@@ -30,7 +32,10 @@ class Editor():
 
         BotFile.close() # Closes file
 
-        self.CurrentBot.botMenu(self)
+        self.CurrentBot.Parent = self
+
+        if startname == '':
+            self.CurrentBot.botMenu(self)
 
 
     def saveBot(self, bot = 0):

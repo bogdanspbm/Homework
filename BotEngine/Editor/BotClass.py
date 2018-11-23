@@ -7,6 +7,7 @@ class ChatBot:
         self.Token = Token
         self.bot_blueprints = []
         self.CurrentBP = 0
+        self.Parent
 
 
     def selectCurrentBP(self, bp = -1):
