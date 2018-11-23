@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9057142-7147-45bd-9f0c-910f4c07b5e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BotEngine/GUI/BotIcon.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BotEngine/GUI/CreateBotWindow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BotEngine/GUI/HUD.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BotEngine/GUI/BlueprintIcon.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Bots/A" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Bots/B" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Bots/C" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Bots/T" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Bots/Test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BotEngine/Bots/21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BotEngine/Bots/AAффффффффффф" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BotEngine/Editor/EditorClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/EditorClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Editor/HUD.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BotEngine/Editor/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Button_Test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BotEngine/GUI/BotIcon.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/GUI/BotIcon.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BotEngine/GUI/HUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/GUI/HUD.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,13 +139,13 @@
         <counts>
           <entry key="bac" value="1" />
           <entry key="dummy" value="11" />
-          <entry key="py" value="26026" />
+          <entry key="py" value="26660" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="26026" />
+          <entry key="Python" value="26660" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -157,7 +153,7 @@
           <entry key="FactorialResult" value="1" />
           <entry key="bac" value="2" />
           <entry key="csv" value="2" />
-          <entry key="py" value="63" />
+          <entry key="py" value="65" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -165,7 +161,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="63" />
+          <entry key="Python" value="65" />
         </counts>
       </usages-collector>
     </session>
@@ -211,8 +207,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/Editor/EditorClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="45">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <marker date="1543004283885" expanded="true" signature="70:76" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -220,8 +220,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BotClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="226">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -229,8 +229,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="761">
-              <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+            <state relative-caret-position="-225">
+              <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -238,33 +238,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/Editor/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BotEngine/GUI/HUD.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-                <marker date="1543002719869" expanded="true" signature="165:171" ph="..." />
-                <marker date="1543002719869" expanded="true" signature="1543:1716" ph="..." />
-                <marker date="1543002719869" expanded="true" signature="1749:1770" ph="..." />
-                <marker date="1543002719869" expanded="true" signature="1955:2055" ph="..." />
-                <marker date="1543002719869" expanded="true" signature="2055:2061" ph="..." />
-                <marker date="1543002719869" expanded="true" signature="2087:2097" ph="..." />
-                <marker date="1543002719869" expanded="true" signature="2184:2185" ph="..." />
-                <marker date="1543002719869" expanded="true" signature="2217:2412" ph="..." />
-                <marker date="1543002719869" expanded="true" signature="2248:2253" ph="..." />
-                <marker date="1543002719869" expanded="true" signature="2398:2407" ph="..." />
-              </folding>
+            <state>
+              <caret column="40" selection-start-column="40" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -272,11 +247,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/GUI/BotIcon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1543002253470" expanded="true" signature="159:160" ph="..." />
+                <marker date="1543003838718" expanded="true" signature="159:160" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BotEngine/GUI/BlueprintIcon.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -300,6 +287,30 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
               <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BotEngine/GUI/HUD.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="72" column="56" selection-start-line="72" selection-start-column="56" selection-end-line="72" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+                <marker date="1543004837612" expanded="true" signature="213:219" ph="..." />
+                <marker date="1543004837612" expanded="true" signature="1646:1819" ph="..." />
+                <marker date="1543004837612" expanded="true" signature="2129:2232" ph="..." />
+                <marker date="1543004837612" expanded="true" signature="2223:2232" ph="..." />
+                <marker date="1543004837612" expanded="true" signature="2250:2259" ph="..." />
+                <marker date="1543004837612" expanded="true" signature="2417:2518" ph="..." />
+                <marker date="1543004837612" expanded="true" signature="2518:2524" ph="..." />
+                <marker date="1543004837612" expanded="true" signature="2550:2560" ph="..." />
+                <marker date="1543004837612" expanded="true" signature="2647:2648" ph="..." />
+                <marker date="1543004837612" expanded="true" signature="2680:2875" ph="..." />
+                <marker date="1543004837612" expanded="true" signature="2711:2716" ph="..." />
+                <marker date="1543004837612" expanded="true" signature="2861:2870" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -330,7 +341,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Palindrome.py" />
         <option value="$PROJECT_DIR$/MoveArray.py" />
         <option value="$PROJECT_DIR$/Calculator.py" />
         <option value="$PROJECT_DIR$/Prime.py" />
@@ -371,15 +381,16 @@
         <option value="$PROJECT_DIR$/hw4/task2/poly.py" />
         <option value="$PROJECT_DIR$/hw4/task4/actors.py" />
         <option value="$PROJECT_DIR$/hw4/task4/game_logic.py" />
-        <option value="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/HUD.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/CreateBotWindow.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/GUI.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/CreateBotWindow.py" />
-        <option value="$PROJECT_DIR$/BotEngine/GUI/BotIcon.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/Main.py" />
-        <option value="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" />
+        <option value="$PROJECT_DIR$/BotEngine/GUI/BotIcon.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/EditorClass.py" />
+        <option value="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" />
+        <option value="$PROJECT_DIR$/BotEngine/GUI/BlueprintIcon.py" />
+        <option value="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/HUD.py" />
       </list>
     </option>
@@ -578,8 +589,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Main" />
-        <item itemvalue="Python.HUD" />
         <item itemvalue="Python.EditorClass" />
+        <item itemvalue="Python.HUD" />
         <item itemvalue="Python.game" />
         <item itemvalue="Python tests.Unittests in trades_test.py" />
       </list>
@@ -665,29 +676,6 @@
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="4" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.85490197" visible="true" weight="0.16490486" />
-      <window_info id="Structure" order="1" sideWeight="0.14509805" side_tool="true" visible="true" weight="0.16490486" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27659574" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39804772" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32765958" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.329718" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="4" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -971,10 +959,28 @@
     <entry file="file://$PROJECT_DIR$/BotEngine/Editor/GUI.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/Editor/EditorClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1543004283885" expanded="true" signature="70:76" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/Editor/FuncLabClass.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BotClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -989,64 +995,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/Editor/Main.py">
+    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/BlueprintIcon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="240">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/GUI/BotIcon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1543002253470" expanded="true" signature="159:160" ph="..." />
+            <marker date="1543003838718" expanded="true" signature="159:160" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/Editor/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BotClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/Editor/EditorClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        <state relative-caret-position="-225">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/GUI/HUD.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+        <state relative-caret-position="326">
+          <caret line="72" column="56" selection-start-line="72" selection-start-column="56" selection-end-line="72" selection-end-column="56" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1543002719869" expanded="true" signature="165:171" ph="..." />
-            <marker date="1543002719869" expanded="true" signature="1543:1716" ph="..." />
-            <marker date="1543002719869" expanded="true" signature="1749:1770" ph="..." />
-            <marker date="1543002719869" expanded="true" signature="1955:2055" ph="..." />
-            <marker date="1543002719869" expanded="true" signature="2055:2061" ph="..." />
-            <marker date="1543002719869" expanded="true" signature="2087:2097" ph="..." />
-            <marker date="1543002719869" expanded="true" signature="2184:2185" ph="..." />
-            <marker date="1543002719869" expanded="true" signature="2217:2412" ph="..." />
-            <marker date="1543002719869" expanded="true" signature="2248:2253" ph="..." />
-            <marker date="1543002719869" expanded="true" signature="2398:2407" ph="..." />
+            <marker date="1543004837612" expanded="true" signature="213:219" ph="..." />
+            <marker date="1543004837612" expanded="true" signature="1646:1819" ph="..." />
+            <marker date="1543004837612" expanded="true" signature="2129:2232" ph="..." />
+            <marker date="1543004837612" expanded="true" signature="2223:2232" ph="..." />
+            <marker date="1543004837612" expanded="true" signature="2250:2259" ph="..." />
+            <marker date="1543004837612" expanded="true" signature="2417:2518" ph="..." />
+            <marker date="1543004837612" expanded="true" signature="2518:2524" ph="..." />
+            <marker date="1543004837612" expanded="true" signature="2550:2560" ph="..." />
+            <marker date="1543004837612" expanded="true" signature="2647:2648" ph="..." />
+            <marker date="1543004837612" expanded="true" signature="2680:2875" ph="..." />
+            <marker date="1543004837612" expanded="true" signature="2711:2716" ph="..." />
+            <marker date="1543004837612" expanded="true" signature="2861:2870" ph="..." />
           </folding>
         </state>
       </provider>

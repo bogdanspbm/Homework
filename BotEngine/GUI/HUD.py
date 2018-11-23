@@ -1,7 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 from BotEngine.GUI import CreateBotWindow as cw
-from BotEngine.GUI import BotIcon as bc
+from BotEngine.GUI import BotIcon as boc
+from BotEngine.GUI import BlueprintIcon as blc
 import os
 
 class Main(tk.Frame):
@@ -10,6 +11,7 @@ class Main(tk.Frame):
         super().__init__(root)
         self.parent = root
         self.bots_arr = []
+        self.bp_arr = []
         self.engine = engine
 
         self.init_main()
@@ -50,19 +52,39 @@ class Main(tk.Frame):
         self.editor_bar.pack(side=tk.LEFT, fill=tk.BOTH)
 
         self.spawn_editor_menu()
+        self.fill_blueprint()
 
 
     def spawn_editor_menu(self):
 
-        button_add_bp = ttk.Button(self.editor_bar, text='Add Blueprint', command = self.engine.CurrentBot.addBlueprint)
+        button_add_bp = ttk.Button(self.editor_bar, text='Add Blueprint', command = self.add_bp)
         button_add_bp.pack(side=tk.BOTTOM)
 
 
 
-    def fill_blueprint(self, field):
+    def fill_blueprint(self):
 
-        pass
+        self.bp_arr = []
 
+        for bp in range(len(self.engine.CurrentBot.bot_blueprints)):
+            self.bp_arr.append(blc.BlueprintItem(self, bp))
+            print(bp)
+
+        print(len(self.engine.CurrentBot.bot_blueprints))
+
+
+
+    def update_bp(self):
+
+        for bp in self.bp_arr:
+            bp.frame.destroy()
+
+        self.fill_blueprint()
+
+
+    def add_bp(self):
+        self.engine.CurrentBot.addBlueprint()
+        self.update_bp()
 
 
     def on_exit(self):
@@ -78,7 +100,7 @@ class Main(tk.Frame):
     def fill_bot_bar(self):
 
         for bot in os.listdir('../Bots'):
-            self.bots_arr.append(bc.BotItem(self, bot))
+            self.bots_arr.append(boc.BotItem(self, bot))
 
 
     def update_combobox(self):

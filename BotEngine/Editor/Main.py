@@ -1,6 +1,7 @@
 from BotEngine.Editor import EditorClass
 from BotEngine.GUI import HUD
 
+
 if __name__ == '__main__':
     editor = EditorClass.Editor()
 

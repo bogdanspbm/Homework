@@ -3,6 +3,7 @@ from BotEngine.Editor.FuncLabClass import *
 class Blueprint():
 
     def __init__(self, id, parent):
+
         self.ID = id
         self.blueprint_lib = {
     }

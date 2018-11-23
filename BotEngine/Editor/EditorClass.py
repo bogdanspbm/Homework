@@ -11,7 +11,7 @@ class Editor():
         if token == '':
             token = input('Enter bot token: ')
 
-        self.CurrentBot = ChatBot(name, token) # Creating bot
+        self.CurrentBot = ChatBot(name, token, self) # Creating bot
 
         self.saveBot(self.CurrentBot) # Saving bot
 
@@ -26,7 +26,9 @@ class Editor():
 
         BotFile = open('../Bots/' + name, 'rb+')
 
-        self.CurrentBot = pickle.load(BotFile)
+        bot = pickle.load(BotFile)
+
+        self.CurrentBot = bot
 
         print(self.CurrentBot.Name)
 
@@ -55,7 +57,8 @@ class Editor():
         actions = {
         'create': self.createBot,
         'load': self.loadBot,
-        'save': self.saveBot
+        'save': self.saveBot,
+        'exit': exit
         }
 
         while True:
