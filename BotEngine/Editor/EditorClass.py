@@ -1,5 +1,6 @@
 from BotEngine.Editor.BotClass import *
 import pickle
+import os
 
 class Editor():
 
@@ -15,6 +16,10 @@ class Editor():
 
         self.saveBot(self.CurrentBot) # Saving bot
 
+    def delete_cur_bot(self):
+        os.remove('../Bots/' + self.CurrentBot.Name)
+        self.CurrentBot = -1
+        print('Removed')
 
 
     def loadBot(self, name = ''):

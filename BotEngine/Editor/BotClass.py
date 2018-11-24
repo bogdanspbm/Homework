@@ -9,7 +9,6 @@ class ChatBot:
         self.CurrentBP = -1
         self.Parent = root
 
-
     def selectCurrentBP(self, bp = -1):
 
         if bp == -1:
@@ -17,9 +16,8 @@ class ChatBot:
 
         self.CurrentBP = bp
 
-
-    def addBlueprint(self):
-        self.bot_blueprints.append(Blueprint(len(self.bot_blueprints), self.Parent)) # Add clear blueprint to list
+    def addBlueprint(self, name = ''):
+        self.bot_blueprints.append(Blueprint(len(self.bot_blueprints), name, self.Parent)) # Add clear blueprint to list
         print(len(self.bot_blueprints))
         self.saveBot()
 
@@ -27,7 +25,6 @@ class ChatBot:
         pass
 
     def closeBot(self):
-
         self.Parent.editorMenu()
 
     def saveBot(self):

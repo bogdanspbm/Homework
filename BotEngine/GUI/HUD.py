@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 from BotEngine.GUI import CreateBotWindow as cw
+from BotEngine.GUI import CreateBlueprintWindow as cbp
+from BotEngine.GUI import EditFuncWindow as efw
 from BotEngine.GUI import BotIcon as boc
 from BotEngine.GUI import BlueprintIcon as blc
 import os
@@ -54,11 +56,42 @@ class Main(tk.Frame):
         self.spawn_editor_menu()
         self.fill_blueprint()
 
-
     def spawn_editor_menu(self):
 
-        button_add_bp = ttk.Button(self.editor_bar, text='Add Blueprint', command = self.add_bp)
+        button_add_bp = ttk.Button(self.editor_bar, text='Add Blueprint', command=self.create_bp)
         button_add_bp.pack(side=tk.BOTTOM)
+
+        button_del_bot = ttk.Button(self.editor_bar, text='Delete Bot', command=self.delete_bot)
+        button_del_bot.pack(side=tk.BOTTOM)
+
+    def delete_bot(self):
+        self.engine.delete_cur_bot()
+
+        self.update_combobox()
+
+    def del_bp(self):
+        pass
+
+    def add_func(self):
+        efw.Child(self)
+
+
+    def fill_funcs(self):
+
+        self.editor_bar.destroy()
+
+        self.editor_bar = tk.Frame(bg='#DDDDDD', width=300)
+        self.editor_bar.pack(side=tk.LEFT, fill=tk.BOTH)
+
+        button_back = ttk.Button(self.editor_bar, text='Back', command=self.select_bot)
+        button_back.pack(side=tk.BOTTOM)
+
+        button_add_func = ttk.Button(self.editor_bar, text='Add Func', command=self.add_func)
+        button_add_func.pack(side=tk.BOTTOM)
+
+        button_del_bp = ttk.Button(self.editor_bar, text='Delete Func', command=self.del_bp)
+        button_del_bp.pack(side=tk.BOTTOM)
+
 
 
 
@@ -67,12 +100,11 @@ class Main(tk.Frame):
         self.bp_arr = []
 
         for bp in range(len(self.engine.CurrentBot.bot_blueprints)):
-            self.bp_arr.append(blc.BlueprintItem(self, bp))
+            bot = self.engine.CurrentBot.bot_blueprints[bp]
+            self.bp_arr.append(blc.BlueprintItem(self, bp, bot.name))
             print(bp)
 
         print(len(self.engine.CurrentBot.bot_blueprints))
-
-
 
     def update_bp(self):
 
@@ -81,17 +113,18 @@ class Main(tk.Frame):
 
         self.fill_blueprint()
 
-
     def add_bp(self):
         self.engine.CurrentBot.addBlueprint()
         self.update_bp()
-
 
     def on_exit(self):
         self.quit()
 
     def create_bot(self):
-        cw.Child(self)
+        cw.Child(self)  # Spawn create bot menu
+
+    def create_bp(self):
+        cbp.Child(self)  # Spawn create bp menu
 
     def save_bot(self):
         self.engine.saveBot()
