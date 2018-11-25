@@ -39,3 +39,4 @@ class Child(tk.Toplevel):
         #self.root.engine.CurrentBot.addBlueprint(self.enter_name.get())
         #self.root.update_bp()
         self.destroy()
+

@@ -8,6 +8,7 @@ class Blueprint():
         self.name = name
         self.blueprint_lib = {
     }
+        self.funcs = []
         self.ParentBot = parent
 
     def closeBlueprint(self):
@@ -28,42 +29,20 @@ class Blueprint():
         if goto == -1 and type != 'print':
             goto = int(input('Enter goto: '))
 
-        if inputv[len(inputv) - 2] != ';':
-            inputv += ';'
+        self.funcs.append(BlueprintFunctions(type, inputv, output, goto))
 
-        if inputv[len(inputv) - 2] != ';':
-            inputv += ';'
+    def find_func_by_output(self, output):
 
-        words = inputv.split(';')
+        for func in self.funcs:
+            if func.output == output:
+                return func
 
-        print(words)
+        return -1
 
-        for i in range(len(words)):
-
-                flag = 0
-
-                if i < len(words) - 1 and len(words[i]) > 0:
-                    if words[i][len(words[i]) - 1] == '%' and words[i + 1][0] == '%':
-                        word = words[i] + ';' + words[i+1]
-                        flag = 1
-
-                if i > 0 and len(words[i-1]) > 0:
-                    if words[i-1][len(words[i-1]) - 1] == '%' and words[i][0] == '%':
-                        word = words[i-1] + ';' + words[i]
-                        flag = 1
-
-
-
-                if flag == 0:
-                    word = words[i]
-
-                word = word.replace('%;%', ';')
-
-                print(word)
-                self.blueprint_lib[word] = BlueprintFunctions(type, word, output, goto, self)
-
-
-
+    def find_output_by_input(self, input):
+        for func in self.funcs:
+            if func.try_to_input(input):
+                return 1
 
     def testBluerpint(self):
         while True:
@@ -72,7 +51,7 @@ class Blueprint():
             if inp == 'stop':
                 return
 
-            self.blueprint_lib[inp].result(self.blueprint_lib[inp])
+            self.find_output_by_input(inp)
 
     def bpEditor(self, parentBot):
 

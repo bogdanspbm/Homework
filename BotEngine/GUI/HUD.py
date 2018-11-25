@@ -144,8 +144,6 @@ class Main(tk.Frame):
         self.fill_bot_bar()
 
 
-
-
 class BotEditor(tk.Toplevel):
 
     def __init__(self, root):

@@ -23,6 +23,14 @@ class BlueprintFunctions():
         print(self.ouptut)
         self.parent.ParentBot.selectCurrentBP(self.goto)
 
+    def try_to_input(self, input):
+
+        for i in self.input.split(';'):
+            if i == input:
+                self.result(self)
+                return 1
+        return 0
+
     funcs = {
         'print': printMessage,
         'printgoto': printMessageAndGoTo
