@@ -29,7 +29,10 @@ class Blueprint():
         if goto == -1 and type != 'print':
             goto = int(input('Enter goto: '))
 
-        self.funcs.append(BlueprintFunctions(type, inputv, output, goto))
+        fc = BlueprintFunctions(type, inputv, output, goto)
+        self.funcs.append(fc)
+
+        return fc
 
     def find_func_by_output(self, output):
 

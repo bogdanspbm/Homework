@@ -54,6 +54,7 @@ class Editor():
 
         BotFile.truncate() # Clear File
         pickle.dump(bot, BotFile, protocol=pickle.HIGHEST_PROTOCOL) # Write Bot Class
+          # Write Bot Class
 
         BotFile.close() # Close file
 

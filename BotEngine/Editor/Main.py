@@ -1,13 +1,13 @@
 from BotEngine.Editor import EditorClass
-from BotEngine.GUI import HUD
+from BotEngine.GUI import App
 
 
 if __name__ == '__main__':
     editor = EditorClass.Editor()
 
-    root = HUD.tk.Tk()
+    root = App.tk.Tk()
 
-    app = HUD.Main(root, editor)
+    app = App.Main(root, editor)
     app.pack()
 
     root.title('Bot Engine')

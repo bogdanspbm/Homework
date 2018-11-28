@@ -11,5 +11,6 @@ class BlueprintItem:
         self.frame.pack(side=tk.TOP, fill=tk.X)
 
     def load_bp(self):
+        self.root.cur_bp = self.id
         self.root.engine.CurrentBot.selectCurrentBP(self.id)
         self.root.fill_funcs()

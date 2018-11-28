@@ -1,10 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
-from BotEngine.GUI import CreateBotWindow as cw
-from BotEngine.GUI import CreateBlueprintWindow as cbp
-from BotEngine.GUI import EditFuncWindow as efw
-from BotEngine.GUI import BotIcon as boc
-from BotEngine.GUI import BlueprintIcon as blc
+from BotEngine.GUI.Windows import CreateBlueprintWindow as cbp, \
+    CreateBotWindow as cw, EditFuncWindow as efw
+from BotEngine.GUI.Icons import BotIcon as boc, BlueprintIcon as blc, \
+    FunctionIcon as fuc
 import os
 
 class Main(tk.Frame):
@@ -14,6 +13,8 @@ class Main(tk.Frame):
         self.parent = root
         self.bots_arr = []
         self.bp_arr = []
+        self.fc_arr = []
+        self.cur_bp = -1
         self.engine = engine
 
         self.init_main()
@@ -72,9 +73,11 @@ class Main(tk.Frame):
     def del_bp(self):
         pass
 
-    def add_func(self):
-        efw.Child(self)
+    def add_func(self, func = -1):
+        if func == -1:
+            func = self.engine.CurrentBot.bot_blueprints[self.cur_bp].addFunc(type='print', inputv=' ', output=' ', goto=-1)
 
+        efw.Child(self, func)
 
     def fill_funcs(self):
 
@@ -92,7 +95,19 @@ class Main(tk.Frame):
         button_del_bp = ttk.Button(self.editor_bar, text='Delete Func', command=self.del_bp)
         button_del_bp.pack(side=tk.BOTTOM)
 
+        self.update_func()
 
+    def update_func(self):
+
+        for fc in self.fc_arr:
+            fc.frame.destroy()
+
+        self.fc_arr = []
+        id = self.cur_bp
+
+        for fc in range(len(self.engine.CurrentBot.bot_blueprints[id].funcs)):
+            func = self.engine.CurrentBot.bot_blueprints[id].funcs[fc]
+            self.fc_arr.append(fuc.FuncItem(self, func))
 
 
     def fill_blueprint(self):

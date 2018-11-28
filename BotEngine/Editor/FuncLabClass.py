@@ -7,6 +7,7 @@ class BlueprintFunctions():
         #self.funclink
         self.input = input
         self.output = output
+        self.type = type
 
         if type == 'printgoto':
           self.goto = goto
