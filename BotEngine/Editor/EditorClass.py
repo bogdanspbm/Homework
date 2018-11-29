@@ -12,7 +12,7 @@ class Editor():
         if token == '':
             token = input('Enter bot token: ')
 
-        self.CurrentBot = ChatBot(name, token, self) # Creating bot
+        self.CurrentBot = ChatBot(name, token) # Creating bot
 
         self.saveBot(self.CurrentBot) # Saving bot
 

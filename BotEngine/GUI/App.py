@@ -142,7 +142,7 @@ class Main(tk.Frame):
         cbp.Child(self)  # Spawn create bp menu
 
     def save_bot(self):
-        self.engine.saveBot()
+        self.engine.saveBot(self.engine)
         pass
 
     def fill_bot_bar(self):

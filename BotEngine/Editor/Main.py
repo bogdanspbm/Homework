@@ -3,11 +3,11 @@ from BotEngine.GUI import App
 
 
 if __name__ == '__main__':
-    editor = EditorClass.Editor()
+    bot_editor = EditorClass.Editor()
 
     root = App.tk.Tk()
 
-    app = App.Main(root, editor)
+    app = App.Main(root, bot_editor)
     app.pack()
 
     root.title('Bot Engine')

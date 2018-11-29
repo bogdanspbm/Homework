@@ -2,12 +2,11 @@ from BotEngine.Editor.BlueprintClass import *
 
 class ChatBot:
 
-    def __init__(self, Name, Token, root):
+    def __init__(self, Name, Token):
         self.Name = Name
         self.Token = Token
         self.bot_blueprints = []
         self.CurrentBP = -1
-        self.Parent = root
 
     def selectCurrentBP(self, bp = -1):
 
@@ -24,12 +23,14 @@ class ChatBot:
     def runBot(self):
         pass
 
-    def closeBot(self):
-        self.Parent.editorMenu()
+    @staticmethod
+    def closeBot(root):
+        root.editorMenu()
 
-    def saveBot(self):
+    @staticmethod
+    def saveBot(root):
 
-        self.Parent.saveBot()
+        root.saveBot()
 
     def editBlueprint(self, id=0):
 
