@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from BotEngine.GUI.MyWidgets.MyButton import MyButton
 
 
 class Child(tk.Toplevel):
@@ -7,7 +8,8 @@ class Child(tk.Toplevel):
         super().__init__(root)
         self.root = root
         self.bot = bot
-        self.button_image = tk.PhotoImage(file='../Sprites/Button_Green.png')
+        self.button_image = tk.PhotoImage(file='../Sprites/Button_0.png')
+        self.button_image_clicked = tk.PhotoImage(file='../Sprites/Button_1.png')
         self.init_child()
 
     def init_child(self):
@@ -30,9 +32,8 @@ class Child(tk.Toplevel):
         self.enter_name.grid(row=0, column=1, sticky=tk.W)
 
 
-        self.enter_label = ttk.Label(self.frame, image = self.button_image)
-        self.enter_label.bind('<Button-1>', self.create_bot)
-        self.enter_label.grid(row=1, column=0)
+        self.enter_button = MyButton(self.frame, image1=self.button_image, image2=self.button_image_clicked, mytext='Enter', mycommand=self.create_bot)
+        self.enter_button.grid(row=1, column=0)
 
         #self.btn_enter = tk.Button(self.frame,borderwidth=0,
         #                           command=self.create_bot, image = self.button_image)
@@ -42,7 +43,13 @@ class Child(tk.Toplevel):
         # self.grab_set()
         self.focus_set()
 
-    def create_bot(self, event=''):
+    def button_start_overlap(self, event, button):
+        button.configure(image=self.button_image_clicked)
+
+    def button_stop_overlap(self, event, button):
+        button.configure(image=self.button_image)
+
+    def create_bot(self):
         self.root.engine.createBot(self.enter_name.get(), 'TOKEN')
         self.root.update_combobox()
         self.destroy()
