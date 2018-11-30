@@ -1,16 +1,25 @@
 from BotEngine.Editor.BlueprintClass import *
 
+
 class BlueprintFunctions():
 
-    def __init__(self, type = '', input = '', output = '', goto = -1, parentbp = 'add bot link'):
+    def __init__(self, type='print', input='', output='', goto=-1,
+                 parentbp='add bot link'):
 
-        #self.funclink
-        self.input = input
-        self.output = output
+        # self.funclink
+        if input != '':
+            self.input = input.translate()
+        else:
+            self.input = input
+        if output != '':
+            self.output = output.translate()
+        else:
+            self.output = output
+
         self.type = type
 
         if type == 'printgoto':
-          self.goto = goto
+            self.goto = goto
 
         self.parent = parentbp
         self.result = self.funcs[type]
@@ -29,11 +38,10 @@ class BlueprintFunctions():
         for i in self.input.split(';'):
             if i == input:
                 self.result(self)
-                return 1
+                return self.output
         return 0
 
     funcs = {
         'print': printMessage,
         'printgoto': printMessageAndGoTo
     }
-

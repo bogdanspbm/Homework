@@ -1,5 +1,6 @@
 from BotEngine.Editor.FuncLabClass import *
 
+
 class Blueprint():
 
     def __init__(self, id, name, parent):
@@ -7,7 +8,7 @@ class Blueprint():
         self.ID = id
         self.name = name
         self.blueprint_lib = {
-    }
+        }
         self.funcs = []
         self.ParentBot = parent
 
@@ -15,7 +16,7 @@ class Blueprint():
 
         self.ParentBot.botMenu(self.ParentBot.Parent)
 
-    def addFunc(self, type = '', inputv = '', output = '', goto = -1):
+    def addFunc(self, type='', inputv='', output='', goto=-1):
 
         if inputv == '':
             inputv = input('Enter input: ')
@@ -34,6 +35,11 @@ class Blueprint():
 
         return fc
 
+    def display_funcs(self):
+
+        for func in self.funcs:
+            print(func.input)
+
     def find_func_by_output(self, output):
 
         for func in self.funcs:
@@ -44,8 +50,8 @@ class Blueprint():
 
     def find_output_by_input(self, input):
         for func in self.funcs:
-            if func.try_to_input(input):
-                return 1
+            if func.try_to_input(input) != 0:
+                return func.try_to_input(input)
 
     def testBluerpint(self):
         while True:
@@ -59,13 +65,13 @@ class Blueprint():
     def bpEditor(self, parentBot):
 
         actions = {
-        'add': self.addFunc,
-        'close': self.closeBlueprint,
-        'test': self.testBluerpint
+            'add': self.addFunc,
+            'close': self.closeBlueprint,
+            'test': self.testBluerpint,
+            'funcs': self.display_funcs
         }
 
-        #self.ParentBot = parentBot
+        # self.ParentBot = parentBot
 
         while True:
             actions[input('Blueprint: ')]()
-

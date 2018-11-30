@@ -33,15 +33,16 @@ class Child(tk.Toplevel):
         self.type_box.place(x=30, y=80)
         self.type_box.current(0)
 
-        self.btn_enter = ttk.Button(self, text='Accept', command=self.save_change)
+        self.btn_enter = ttk.Button(self, text='Accept',
+                                    command=self.save_change)
         self.btn_enter.place(x=30, y=130)
 
-        #self.grab_set()
+        # self.grab_set()
         self.focus_set()
 
     def save_change(self):
-        #self.root.engine.CurrentBot.addBlueprint(self.enter_name.get())
-        #self.root.update_bp()
+        # self.root.engine.CurrentBot.addBlueprint(self.enter_name.get())
+        # self.root.update_bp()
         self.function.input = self.enter_input.get()
         self.function.output = self.enter_output.get()
         self.function.type = self.type_box.get()
@@ -49,4 +50,3 @@ class Child(tk.Toplevel):
         self.root.update_func()
         self.root.save_bot()
         self.destroy()
-

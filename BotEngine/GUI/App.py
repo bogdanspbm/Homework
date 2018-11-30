@@ -1,10 +1,13 @@
 import tkinter as tk
 from tkinter import ttk
 from BotEngine.GUI.Windows import CreateBlueprintWindow as cbp, \
-    CreateBotWindow as cw, EditFuncWindow as efw
+    CreateBotWindow as cw, EditFuncWindow as efw, CreateBotSettings as cbs
 from BotEngine.GUI.Icons import BotIcon as boc, BlueprintIcon as blc, \
     FunctionIcon as fuc
+from BotEngine.Editor.FuncLabClass import BlueprintFunctions
 import os
+from BotEngine.BotsAPI.Telegram.Bot import TelegramBot
+
 
 class Main(tk.Frame):
 
@@ -20,12 +23,12 @@ class Main(tk.Frame):
         self.init_main()
 
     def init_main(self):
-        self.toolbar = tk.Frame(bg='#aaaaaa', width = 200, bd=2)
-        #self.toolbar.grid(column=0)
+        self.toolbar = tk.Frame(bg='#aaaaaa', width=200, bd=2)
+        # self.toolbar.grid(column=0)
         self.toolbar.pack(side=tk.LEFT, fill=tk.Y)
 
         self.editor_bar = tk.Frame(bg='#DDDDDD', width=300)
-        #self.editor_bar.grid(column=1)
+        # self.editor_bar.grid(column=1)
         self.editor_bar.pack(side=tk.LEFT, fill=tk.BOTH)
 
         self.scroll = ttk.Scrollbar(self.toolbar)
@@ -47,6 +50,11 @@ class Main(tk.Frame):
         fileMenu.add_command(label="Exit", command=self.on_exit)
         menubar.add_cascade(label="Editor", menu=fileMenu)
 
+        if self.engine.CurrentBot != -1:
+            fileBot = tk.Menu(menubar)
+            fileBot.add_command(label="Settings", command=self.bot_settings)
+            menubar.add_cascade(label="Bot", menu=fileBot)
+
     def select_bot(self):
 
         self.editor_bar.destroy()
@@ -56,26 +64,36 @@ class Main(tk.Frame):
 
         self.spawn_editor_menu()
         self.fill_blueprint()
+        self.init_menu()
 
     def spawn_editor_menu(self):
 
-        button_add_bp = ttk.Button(self.editor_bar, text='Add Blueprint', command=self.create_bp)
+        button_add_bp = ttk.Button(self.editor_bar, text='Add Blueprint',
+                                   command=self.create_bp)
         button_add_bp.pack(side=tk.BOTTOM)
 
-        button_del_bot = ttk.Button(self.editor_bar, text='Delete Bot', command=self.delete_bot)
+        button_del_bot = ttk.Button(self.editor_bar, text='Delete Bot',
+                                    command=self.delete_bot)
         button_del_bot.pack(side=tk.BOTTOM)
+
+        button_run_bot = ttk.Button(self.editor_bar, text='Run Bot',
+                                    command=self.run_bot)
+        button_run_bot.pack(side=tk.BOTTOM)
 
     def delete_bot(self):
         self.engine.delete_cur_bot()
-
         self.update_combobox()
+        self.editor_bar.destroy()
+        self.init_menu()
 
     def del_bp(self):
         pass
 
-    def add_func(self, func = -1):
+    def add_func(self, func=-1):
         if func == -1:
-            func = self.engine.CurrentBot.bot_blueprints[self.cur_bp].addFunc(type='print', inputv=' ', output=' ', goto=-1)
+            func = BlueprintFunctions()
+            self.engine.CurrentBot.bot_blueprints[self.cur_bp].funcs.append(
+                func)
 
         efw.Child(self, func)
 
@@ -86,13 +104,16 @@ class Main(tk.Frame):
         self.editor_bar = tk.Frame(bg='#DDDDDD', width=300)
         self.editor_bar.pack(side=tk.LEFT, fill=tk.BOTH)
 
-        button_back = ttk.Button(self.editor_bar, text='Back', command=self.select_bot)
+        button_back = ttk.Button(self.editor_bar, text='Back',
+                                 command=self.select_bot)
         button_back.pack(side=tk.BOTTOM)
 
-        button_add_func = ttk.Button(self.editor_bar, text='Add Func', command=self.add_func)
+        button_add_func = ttk.Button(self.editor_bar, text='Add Func',
+                                     command=self.add_func)
         button_add_func.pack(side=tk.BOTTOM)
 
-        button_del_bp = ttk.Button(self.editor_bar, text='Delete Func', command=self.del_bp)
+        button_del_bp = ttk.Button(self.editor_bar, text='Delete Func',
+                                   command=self.del_bp)
         button_del_bp.pack(side=tk.BOTTOM)
 
         self.update_func()
@@ -108,7 +129,6 @@ class Main(tk.Frame):
         for fc in range(len(self.engine.CurrentBot.bot_blueprints[id].funcs)):
             func = self.engine.CurrentBot.bot_blueprints[id].funcs[fc]
             self.fc_arr.append(fuc.FuncItem(self, func))
-
 
     def fill_blueprint(self):
 
@@ -142,14 +162,21 @@ class Main(tk.Frame):
         cbp.Child(self)  # Spawn create bp menu
 
     def save_bot(self):
-        self.engine.saveBot(self.engine)
+        self.engine.saveBot()
         pass
+
+    def bot_settings(self):
+        cbs.Child(self, self.engine.CurrentBot)
+        pass
+
+    def run_bot(self):
+        bot = TelegramBot(self.engine.CurrentBot)
+        bot.start()
 
     def fill_bot_bar(self):
 
         for bot in os.listdir('../Bots'):
             self.bots_arr.append(boc.BotItem(self, bot))
-
 
     def update_combobox(self):
 
@@ -169,4 +196,3 @@ class BotEditor(tk.Toplevel):
     def init_child(self):
         self.geometry('400x200+400+300')
         pass
-

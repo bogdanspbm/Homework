@@ -7,7 +7,8 @@ class BlueprintItem:
         self.id = id
         self.name = name
         self.root = root
-        self.frame = ttk.Button(root.editor_bar, text=name, command=self.load_bp)
+        self.frame = ttk.Button(root.editor_bar, text=name,
+                                command=self.load_bp)
         self.frame.pack(side=tk.TOP, fill=tk.X)
 
     def load_bp(self):

@@ -12,5 +12,3 @@ class BotItem:
     def load_bot(self):
         self.root.engine.loadBot(self.name)
         self.root.select_bot()
-
-

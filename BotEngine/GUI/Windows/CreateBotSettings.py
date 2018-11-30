@@ -3,16 +3,15 @@ from tkinter import ttk
 
 
 class Child(tk.Toplevel):
-    def __init__(self, root):
+    def __init__(self, root, bot):
         super().__init__(root)
         self.root = root
-        self.enter_name = -1
-        self.btn_enter = -1
+        self.bot = bot
         self.init_child()
 
     def init_child(self):
         self.title('Create Bot')
-        self.geometry('400x200+400+300')
+        self.geometry('700x400+400+300')
         self.resizable(False, False)
 
         label_desc = tk.Label(self, text='Enter bot Name')

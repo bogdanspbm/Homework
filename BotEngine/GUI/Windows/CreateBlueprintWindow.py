@@ -22,13 +22,15 @@ class Child(tk.Toplevel):
         self.enter_name = ttk.Entry(self)
         self.enter_name.place(x=200, y=50)
 
-        self.btn_enter = ttk.Button(self, text='Accept', command=self.create_bp)
+        self.btn_enter = ttk.Button(self, text='Accept',
+                                    command=self.create_bp)
         self.btn_enter.place(x=100, y=80)
 
-        #self.grab_set()
+        # self.grab_set()
         self.focus_set()
 
     def create_bp(self):
-        self.root.engine.CurrentBot.addBlueprint(self.enter_name.get())
+        self.root.engine.CurrentBot.addBlueprint(self.enter_name.get(),
+                                                 self.root.engine)
         self.root.update_bp()
         self.destroy()

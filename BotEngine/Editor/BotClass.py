@@ -1,5 +1,6 @@
 from BotEngine.Editor.BlueprintClass import *
 
+
 class ChatBot:
 
     def __init__(self, Name, Token):
@@ -8,17 +9,20 @@ class ChatBot:
         self.bot_blueprints = []
         self.CurrentBP = -1
 
-    def selectCurrentBP(self, bp = -1):
+    def selectCurrentBP(self, bp=-1):
 
         if bp == -1:
             bp = int(input('Enter BP id: '))
 
         self.CurrentBP = bp
 
-    def addBlueprint(self, name = ''):
-        self.bot_blueprints.append(Blueprint(len(self.bot_blueprints), name, self.Parent)) # Add clear blueprint to list
+    def addBlueprint(self, name='', root=-1):
+        self.bot_blueprints.append(Blueprint(len(self.bot_blueprints), name,
+                                             self.Parent))  # Add clear blueprint to list
         print(len(self.bot_blueprints))
-        self.saveBot()
+
+        if root != -1:
+            self.saveBot(root)
 
     def runBot(self):
         pass
@@ -42,15 +46,14 @@ class ChatBot:
 
         print(len(self.bot_blueprints))
 
-
     def botMenu(self, ParentEditor):
         actions = {
-        'add': self.addBlueprint,
-        'run': self.runBot,
-        'save': self.saveBot,
-        'close': self.closeBot,
-        'display': self.displayBlueprints,
-        'edit': self.editBlueprint
+            'add': self.addBlueprint,
+            'run': self.runBot,
+            'save': self.saveBot,
+            'close': self.closeBot,
+            'display': self.displayBlueprints,
+            'edit': self.editBlueprint
         }
 
         self.Parent = ParentEditor
