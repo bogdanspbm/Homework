@@ -14,15 +14,16 @@ class Child(tk.Toplevel):
         self.geometry('700x400+400+300')
         self.resizable(False, False)
 
-        label_desc = tk.Label(self, text='Enter bot Name')
-        label_desc.place(x=50, y=50)
+        label_desc = tk.Label(self, text='Bot Name:')
+        label_desc.grid(row=0,column=0)
 
         self.enter_name = ttk.Entry(self)
-        self.enter_name.place(x=200, y=50)
+        self.enter_name.insert(tk.END, self.bot.Name)
+        self.enter_name.grid(row=0,column=1)
 
         self.btn_enter = ttk.Button(self, text='Accept',
                                     command=self.create_bot)
-        self.btn_enter.place(x=100, y=80)
+        self.btn_enter.grid(row=1,column=0)
 
         # self.grab_set()
         self.focus_set()

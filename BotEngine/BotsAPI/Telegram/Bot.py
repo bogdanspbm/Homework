@@ -1,6 +1,9 @@
 from BotEngine.BotsAPI.Telegram.BotHandler import BotHandler
 import datetime
+import sys
 from threading import Thread
+import threading
+from BotEngine.BotsAPI.KThread import StoppableThread
 
 
 class TelegramBot(Thread):
@@ -8,15 +11,18 @@ class TelegramBot(Thread):
     def __init__(self, bot=-1):
         Thread.__init__(self)
         self.bot = bot
+        self._stop_event = threading.Event()
+
+    def stop(self):
+        self._stop_event.set()
+
+    def stopped(self):
+        return self._stop_event.is_set()
 
     def run(self):
         telegarm_bot = BotHandler(
             '736605353:AAEufeJOHvEpwxvTCd2pKPaSEIVZFVJ_rMU')
-        greetings = ('здравствуй', 'привет', 'ку', 'здорово')
-        now = datetime.datetime.now()
         new_offset = None
-        today = now.day
-        hour = now.hour
         bot = self.bot
 
         while True:

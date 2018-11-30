@@ -17,6 +17,7 @@ class Main(tk.Frame):
         self.bots_arr = []
         self.bp_arr = []
         self.fc_arr = []
+        self.threads = []
         self.cur_bp = -1
         self.engine = engine
 
@@ -171,6 +172,7 @@ class Main(tk.Frame):
 
     def run_bot(self):
         bot = TelegramBot(self.engine.CurrentBot)
+        self.threads.append(bot)
         bot.start()
 
     def fill_bot_bar(self):
