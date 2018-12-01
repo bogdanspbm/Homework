@@ -5,11 +5,11 @@ from tkinter import ttk
 class MyButton(tk.Canvas):
 
     def __init__(self, root=None, image1=None, image2=None, mytext=None,
-                 mycommand=None, textsize = '15'):
+                 mycommand=None, textsize = '15', mybg = '#ffffff'):
         self.x = image1.width()
         self.y = image1.height()
         self.textsize = textsize
-        super().__init__(root, width = self.x, height = self.y, bd=0, highlightthickness=0,)
+        super().__init__(root, width = self.x, height = self.y, bd=0, highlightthickness=0, bg=mybg)
         #self.root = root
 
         #self.width = self.x/2
