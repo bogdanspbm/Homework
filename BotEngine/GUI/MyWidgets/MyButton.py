@@ -5,10 +5,11 @@ from tkinter import ttk
 class MyButton(tk.Canvas):
 
     def __init__(self, root=None, image1=None, image2=None, mytext=None,
-                 mycommand=None):
+                 mycommand=None, textsize = '15'):
         self.x = image1.width()
         self.y = image1.height()
-        super().__init__(root, width = self.x, height = self.y)
+        self.textsize = textsize
+        super().__init__(root, width = self.x, height = self.y, bd=0, highlightthickness=0,)
         #self.root = root
 
         #self.width = self.x/2
@@ -34,7 +35,7 @@ class MyButton(tk.Canvas):
             self.bind('<Leave>', self.button_end_overlap)
 
             if self.text != None:
-                self.create_text(self.x/2,self.y/2,text=self.text)
+                self.new_text = self.create_text(self.x/2,self.y/2,text=self.text,font=('Roboto',self.textsize))
                 #self.new_text = ttk.Label(self, text=self.text)
                 #self.new_text.pack()
                 pass

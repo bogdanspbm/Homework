@@ -18,7 +18,7 @@ if __name__ == '__main__':
     root.protocol("WM_DELETE_WINDOW", on_closing)
 
     app = App.Main(root, bot_editor)
-    app.pack()
+    #app.pack()
 
     root.title('Bot Engine')
     root.geometry("650x450+300+200")

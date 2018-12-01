@@ -7,6 +7,7 @@ from BotEngine.GUI.Icons import BotIcon as boc, BlueprintIcon as blc, \
 from BotEngine.Editor.FuncLabClass import BlueprintFunctions
 import os
 from BotEngine.BotsAPI.Telegram.Bot import TelegramBot
+from BotEngine.GUI.MyWidgets.MyFrame import MyFrame
 
 
 class Main(tk.Frame):
@@ -24,16 +25,21 @@ class Main(tk.Frame):
         self.init_main()
 
     def init_main(self):
-        self.toolbar = tk.Frame(bg='#aaaaaa', width=200, bd=2)
-        # self.toolbar.grid(column=0)
+
+        self.toolbar_image = tk.PhotoImage(file='../Sprites/ToolBar.png')
+        self.left_image = tk.PhotoImage(file='../Sprites/LeftBG2.png')
+        self.right_image = tk.PhotoImage(file='../Sprites/RightBG.png')
+
+        self.toolbar = tk.Label(image=self.toolbar_image)
+        #self.toolbar.grid(column=0, row=0, rowspan=2)
         self.toolbar.pack(side=tk.LEFT, fill=tk.Y)
 
-        self.editor_bar = tk.Frame(bg='#DDDDDD', width=300)
-        # self.editor_bar.grid(column=1)
+        self.editor_bar = tk.Label(image=self.left_image)
+        #self.editor_bar.grid(column=1, row=0)
         self.editor_bar.pack(side=tk.LEFT, fill=tk.BOTH)
 
-        self.scroll = ttk.Scrollbar(self.toolbar)
-        self.scroll.pack(side=tk.RIGHT, fill=tk.BOTH)
+        #self.scroll = ttk.Scrollbar(self.toolbar)
+        #self.scroll.pack(side=tk.RIGHT, fill=tk.BOTH)
 
         self.fill_bot_bar()
 
@@ -60,7 +66,8 @@ class Main(tk.Frame):
 
         self.editor_bar.destroy()
 
-        self.editor_bar = tk.Frame(bg='#DDDDDD', width=300)
+        self.editor_bar = tk.Label(image=self.left_image)
+        #self.editor_bar.grid(column=1, row=0)
         self.editor_bar.pack(side=tk.LEFT, fill=tk.BOTH)
 
         self.spawn_editor_menu()
@@ -102,7 +109,7 @@ class Main(tk.Frame):
 
         self.editor_bar.destroy()
 
-        self.editor_bar = tk.Frame(bg='#DDDDDD', width=300)
+        self.editor_bar = self.editor_bar = tk.Label(image=self.left_image)
         self.editor_bar.pack(side=tk.LEFT, fill=tk.BOTH)
 
         button_back = ttk.Button(self.editor_bar, text='Back',
