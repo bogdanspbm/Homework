@@ -21,6 +21,7 @@ class Main(tk.Frame):
         self.fc_arr = []
         self.threads = []
         self.cur_bp = -1
+        self.tabs= []
         self.cur_bot_name = -1
         self.rows=[]
         self.last_row = 0
@@ -37,52 +38,60 @@ class Main(tk.Frame):
         self.left_image = tk.PhotoImage(file='../Sprites/LeftBG2.png')
         self.right_image = tk.PhotoImage(file='../Sprites/RightBG.png')
 
+        self.tab = tk.Label(bg='#e3e4ee', bd=0, highlightthickness=0, height = 2)
+        self.tab.pack(side=tk.BOTTOM, fill=tk.X)
+
         self.toolbar = tk.Label(bg='#eeeeee')
         self.toolbar.pack(side=tk.LEFT, fill=tk.Y, padx=0, pady=0)
 
-        self.init_editor_bar()
 
+        self.editor_bar = tk.Label(bg='#ffffff', bd=0, highlightthickness=0)
+        self.editor_bar.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
+
+
+        self.init_editor_bar()
 
         self.fill_bot_bar()
 
         self.init_menu()
 
     def destroy_editor_bars(self):
-        self.tab.destroy()
+        #self.tab.destroy()
         self.bot_columns.destroy()
-        self.editor_bar.destroy()
 
     def init_editor_bar(self):
-        self.editor_bar = tk.Label(bg='#3344aa',bd=0, highlightthickness=0)
-        self.editor_bar.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
-
         self.bot_columns = tk.Label(self.editor_bar, bg='#aaaaaa',bd=0, highlightthickness=0)
         self.bot_columns.pack(side=tk.TOP,expand=True, fill=tk.BOTH)
-        self.tab = tk.Label(self.editor_bar, bg='#eeeeee',bd=0, highlightthickness=0)
-        self.tab.pack(side=tk.BOTTOM,fill=tk.BOTH)
 
-        self.rows = []
 
-        self.last_row = 0
 
-        for i in range(3):
-            row = tk.Label(self.bot_columns, bg='#123456',bd=0, highlightthickness=0)
-            row.pack(side=tk.LEFT, expand=True, fill=tk.BOTH)
-            self.rows.append(row)
 
     def init_bp_tab(self):
 
+
+        for tab in self.tabs:
+            tab.destroy()
+
+
         button_add_bp = ttk.Button(self.tab, text='Add Blueprint',
                                    command=self.create_bp)
-        button_add_bp.pack(side=tk.LEFT)
+        #button_add_bp.pack(side=tk.LEFT)
+        button_add_bp.place(y=0,x=0)
 
         button_del_bot = ttk.Button(self.tab, text='Delete Bot',
                                     command=self.delete_bot)
-        button_del_bot.pack(side=tk.LEFT)
+        #button_del_bot.pack(side=tk.LEFT)
+        button_del_bot.place(x=100,y=0)
 
         button_run_bot = ttk.Button(self.tab, text='Run Bot',
                                     command=self.run_bot)
-        button_run_bot.pack(side=tk.LEFT)
+        button_run_bot.place(x=200,y=0)
+        #button_run_bot.pack(side=tk.LEFT)
+
+        self.tabs.append(button_del_bot)
+        self.tabs.append(button_add_bp)
+        self.tabs.append(button_run_bot)
+
 
     def init_func_tab(self):
 
@@ -121,7 +130,7 @@ class Main(tk.Frame):
 
         self.destroy_editor_bars()
         self.init_editor_bar()
-        #self.init_bp_tab()
+        self.init_bp_tab()
 
         #self.fill_blueprint()
         #self.init_menu()
