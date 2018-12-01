@@ -8,6 +8,7 @@ from BotEngine.Editor.FuncLabClass import BlueprintFunctions
 import os
 from BotEngine.BotsAPI.Telegram.Bot import TelegramBot
 from BotEngine.GUI.MyWidgets.MyFrame import MyFrame
+from BotEngine.GUI.MyWidgets.MyBotButton import MyBotButton
 
 
 class Main(tk.Frame):
@@ -20,11 +21,15 @@ class Main(tk.Frame):
         self.fc_arr = []
         self.threads = []
         self.cur_bp = -1
+        self.cur_bot_name = -1
         self.rows=[]
         self.last_row = 0
         self.engine = engine
+        self.last_bot_button = None
 
         self.init_main()
+
+
 
     def init_main(self):
 
@@ -112,32 +117,15 @@ class Main(tk.Frame):
             fileBot.add_command(label="Settings", command=self.bot_settings)
             menubar.add_cascade(label="Bot", menu=fileBot)
 
-    def select_bot(self):
+    def select_bot(self): ################################################################################################################################
 
         self.destroy_editor_bars()
-
         self.init_editor_bar()
-        self.init_bp_tab()
+        #self.init_bp_tab()
 
-        self.fill_blueprint()
-        self.init_menu()
+        #self.fill_blueprint()
+        #self.init_menu()
 
-    '''=
-    def spawn_editor_menu(self):
-        
-
-        button_add_bp = ttk.Button(self.editor_bar_1, text='Add Blueprint',
-                                   command=self.create_bp)
-        button_add_bp.pack(side=tk.BOTTOM)
-
-        button_del_bot = ttk.Button(self.editor_bar_1, text='Delete Bot',
-                                    command=self.delete_bot)
-        button_del_bot.pack(side=tk.BOTTOM)
-
-        button_run_bot = ttk.Button(self.editor_bar_1, text='Run Bot',
-                                    command=self.run_bot)
-        button_run_bot.pack(side=tk.BOTTOM)
-    '''
 
     def delete_bot(self):
         self.engine.delete_cur_bot()
