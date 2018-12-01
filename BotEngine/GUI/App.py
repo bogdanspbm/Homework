@@ -34,11 +34,9 @@ class Main(tk.Frame):
 
     def init_main(self):
 
-        self.toolbar_image = tk.PhotoImage(file='../Sprites/ToolBar.png')
-        self.left_image = tk.PhotoImage(file='../Sprites/LeftBG2.png')
-        self.right_image = tk.PhotoImage(file='../Sprites/RightBG.png')
+        self.toolbar_image = tk.PhotoImage(file='../Sprites/tool_bar.png')
 
-        self.tab = tk.Label(bg='#e3e4ee', bd=0, highlightthickness=0, height = 2)
+        self.tab = tk.Label(image=self.toolbar_image, bd=0, highlightthickness=0)
         self.tab.pack(side=tk.BOTTOM, fill=tk.X)
 
         self.toolbar = tk.Label(bg='#eeeeee')
