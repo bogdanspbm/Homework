@@ -8,13 +8,17 @@ class FuncItem:
     def __init__(self, root, func):
         self.func = func
         self.root = root
-        self.image = tk.PhotoImage(file='../Sprites/TestButton.png')
-        self.image2 = tk.PhotoImage(file='../Sprites/TestButton_2.png')
-        self.frame = MyButton(root.bot_columns, image1=self.image, image2=self.image2, mytext=func.output, mycommand=self.edit_func,
-                              mybg='#eeeeee')
-        root.last_row+=1
-        self.frame.pack(side=tk.TOP, fill=tk.X, padx=0, pady=0)
+        self.image = root.bp_image
+        x0 = 134
+        y0 = 76
+        x = self.image.width()
+        y = self.image.height()
 
-    def edit_func(self):
+        root.canvas.create_image(x0 + (x + 10) * (root.last_row % 3), y0 + (y + 10) * int(root.last_row / 3),
+                                 image=self.image, tag=('bp' + str(root.last_row)))
+        root.canvas.tag_bind('bp' + str(root.last_row), '<Button-1>', self.edit_func)
+        root.last_row += 1
+
+    def edit_func(self,event=''):
         self.root.add_func(self.func)
         pass

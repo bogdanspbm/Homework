@@ -170,7 +170,7 @@ class Main(tk.Frame):
     def del_bp(self):
         pass
 
-    def add_func(self, func=-1):
+    def add_func(self, event='',func=-1):
         if func == -1:
             func = BlueprintFunctions()
             self.engine.CurrentBot.bot_blueprints[self.cur_bp].funcs.append(
@@ -180,8 +180,7 @@ class Main(tk.Frame):
 
     def update_func(self):
 
-        for fc in self.fc_arr:
-            fc.frame.destroy()
+        self.init_editor_bar()
 
         self.fc_arr = []
         id = self.cur_bp
@@ -204,6 +203,8 @@ class Main(tk.Frame):
         print(len(self.engine.CurrentBot.bot_blueprints))
 
     def fill_funcs(self):
+
+        self.last_row = 0
 
         self.destroy_editor_bars()
         self.init_editor_bar()
