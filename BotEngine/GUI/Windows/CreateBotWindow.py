@@ -19,6 +19,7 @@ class Child(tk.Toplevel):
     def init_child(self):
         self.title('Create Bot')
         self.geometry('400x200+400+300')
+        self.iconbitmap('../Sprites/MainIco.ico')
         self.resizable(False, False)
         self.window = tk.Canvas(self, width=self.image.width(), height=self.image.height(), bd=0, highlightthickness=0)
         self.window.pack(expand=True)
