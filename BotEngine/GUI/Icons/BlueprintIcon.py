@@ -8,11 +8,16 @@ class BlueprintItem:
         self.id = id
         self.name = name
         self.root = root
-        self.image = tk.PhotoImage(file='../Sprites/BP_Test.png')
-        self.image2 = tk.PhotoImage(file='../Sprites/BP_Test_2.png')
-        self.frame = MyButton(root.rows[root.last_row %3],image1=self.image,image2=self.image2, mytext=name, mycommand=self.load_bp, mybg='#eeeeee')
+        self.image = root.bp_image
+        x0 = 130
+        y0 = 76
+        x = self.image.width()
+        y = self.image.height()
+
+        print('x corrd' + str(x0 + x * root.last_row % 3))
+        root.canvas.create_image(x0 + (x+10) * (root.last_row % 3) ,y0 + (y+10)*int(root.last_row/3),image=self.image)
         root.last_row+=1
-        self.frame.pack(side=tk.TOP, padx=2,pady=2)
+        print('counter-' +str(root.last_row))
 
     def load_bp(self):
         self.root.cur_bp = self.id

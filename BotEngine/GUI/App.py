@@ -22,12 +22,13 @@ class Main(tk.Frame):
         self.fc_arr = []
         self.threads = []
         self.cur_bp = -1
-        self.tabs= []
+        self.tabs = []
         self.cur_bot_name = -1
-        self.rows=[]
+        self.columns = 3
         self.last_row = 0
         self.engine = engine
         self.last_bot_button = None
+        self.editor_bar = None
 
         self.init_main()
 
@@ -37,26 +38,14 @@ class Main(tk.Frame):
         self.remove_image = tk.PhotoImage(file='../Sprites/unchecked.png')
         self.play_image = tk.PhotoImage(file='../Sprites/play.png')
         self.editor_image = tk.PhotoImage(file='../Sprites/Editor_Bar.png')
+        self.bp_image = tk.PhotoImage(file='../Sprites/BP_Bar.png')
 
     def init_main(self):
 
         self.init_tab()
 
-        self.toolbar = tk.Label(bg='#eeeeee',bd=0, highlightthickness=0)
+        self.toolbar = tk.Label(bg='#eeeeee', bd=0, highlightthickness=0)
         self.toolbar.pack(side=tk.LEFT, fill=tk.Y, padx=0, pady=0)
-
-        self.editor_bar = tk.Frame(bd=0, highlightthickness=0)
-        self.editor_bar.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
-
-        self.scroll = tk.Scrollbar(self.editor_bar,bd=0, highlightthickness=0)
-        self.scroll.pack(side=tk.RIGHT, fill=tk.Y)
-
-        self.canvas = tk.Canvas(self.editor_bar, width=500, height=2000, bg='#123456',bd=0, highlightthickness=0, scrollregion = (0, 0, 2000, 2000))
-        self.canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-
-        self.canvas.config(yscrollcommand=self.scroll.set)
-        self.scroll.config(command=self.canvas.yview)
-
 
         self.init_editor_bar()
 
@@ -66,31 +55,43 @@ class Main(tk.Frame):
 
     def init_tab(self):
 
-        xc=self.toolbar_image.width()
-        yc=self.toolbar_image.height()
+        xc = self.toolbar_image.width()
+        yc = self.toolbar_image.height()
 
-        self.tab = tk.Canvas(width=xc,height=yc,bd=0, highlightthickness=0)
+        self.tab = tk.Canvas(width=xc, height=yc, bd=0, highlightthickness=0)
         self.tab.pack(side=tk.BOTTOM, fill=tk.X)
 
-        bg = self.tab.create_image(xc/2, yc/2, image=self.toolbar_image,tag='bg')
-
-
+        bg = self.tab.create_image(xc / 2, yc / 2, image=self.toolbar_image, tag='bg')
 
     def destroy_editor_bars(self):
-        #self.tab.destroy()
-        self.bot_columns.destroy()
+        # self.tab.destroy()
+        # self.bot_columns.destroy()
+        pass
 
     def init_editor_bar(self):
-        self.canvas.create_image(30,300,image=self.play_image)
-        pass
+
+        if self.editor_bar != None:
+            self.editor_bar.destroy()
+
+        self.editor_bar = tk.Frame(bd=0, highlightthickness=0)
+        self.editor_bar.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
+
+        self.scroll = tk.Scrollbar(self.editor_bar, bd=0, highlightthickness=0)
+        self.scroll.pack(side=tk.RIGHT, fill=tk.Y)
+
+        self.canvas = tk.Canvas(self.editor_bar, width=500, height=2000, bg='#dddddd', bd=0, highlightthickness=0,
+                                scrollregion=(0, 0, 2000, 2000))
+
+        self.canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+        self.canvas.config(yscrollcommand=self.scroll.set)
+        self.scroll.config(command=self.canvas.yview)
 
     def destroy_tab_icons(self):
         for tab in self.tabs:
             self.tab.delete(tab)
 
-        self.tabs=[]
-
-
+        self.tabs = []
 
     def init_bp_tab(self):
 
@@ -99,9 +100,8 @@ class Main(tk.Frame):
 
         self.destroy_tab_icons()
 
-        self.tab.create_image(984,yc/2,image=self.add_image, tag='add')
+        self.tab.create_image(984, yc / 2, image=self.add_image, tag='add')
         self.tab.tag_bind('add', '<Button-1>', self.create_bp)
-
 
         self.tab.create_image(16, yc / 2, image=self.remove_image, tag='remove')
         self.tab.tag_bind('remove', '<Button-1>', self.delete_bot)
@@ -112,7 +112,6 @@ class Main(tk.Frame):
         self.tabs.append('add')
         self.tabs.append('remove')
         self.tabs.append('run_tel')
-
 
     def init_func_tab(self):
 
@@ -127,8 +126,6 @@ class Main(tk.Frame):
         button_del_bp = ttk.Button(self.tab, text='Delete Func',
                                    command=self.del_bp)
         button_del_bp.pack(side=tk.LEFT)
-
-
 
     def init_menu(self):
         self.parent.title("Simple menu")
@@ -147,15 +144,15 @@ class Main(tk.Frame):
             fileBot.add_command(label="Settings", command=self.bot_settings)
             menubar.add_cascade(label="Bot", menu=fileBot)
 
-    def select_bot(self): ################################################################################################################################
+    def select_bot(
+            self):  ################################################################################################################################
 
         self.destroy_editor_bars()
         self.init_editor_bar()
         self.init_bp_tab()
 
-        #self.fill_blueprint()
-        #self.init_menu()
-
+        self.fill_blueprint()
+        self.init_menu()
 
     def delete_bot(self, event=''):
         self.engine.delete_cur_bot()
@@ -212,8 +209,7 @@ class Main(tk.Frame):
 
     def update_bp(self):
 
-        for bp in self.bp_arr:
-            bp.frame.destroy()
+        self.init_editor_bar()
 
         self.fill_blueprint()
 
