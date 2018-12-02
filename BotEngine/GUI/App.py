@@ -39,6 +39,7 @@ class Main(tk.Frame):
         self.play_image = tk.PhotoImage(file='../Sprites/play.png')
         self.editor_image = tk.PhotoImage(file='../Sprites/Editor_Bar.png')
         self.bp_image = tk.PhotoImage(file='../Sprites/BP_Bar.png')
+        self.back_image = tk.PhotoImage(file='../Sprites/back.png')
 
     def init_main(self):
 
@@ -115,17 +116,23 @@ class Main(tk.Frame):
 
     def init_func_tab(self):
 
-        button_back = ttk.Button(self.tab, text='Back',
-                                 command=self.select_bot)
-        button_back.pack(side=tk.LEFT)
+        xc = self.toolbar_image.width()
+        yc = self.toolbar_image.height()
 
-        button_add_func = ttk.Button(self.tab, text='Add Func',
-                                     command=self.add_func)
-        button_add_func.pack(side=tk.LEFT)
+        self.destroy_tab_icons()
 
-        button_del_bp = ttk.Button(self.tab, text='Delete Func',
-                                   command=self.del_bp)
-        button_del_bp.pack(side=tk.LEFT)
+        self.tab.create_image(984, yc / 2, image=self.add_image, tag='add')
+        self.tab.tag_bind('add', '<Button-1>', self.add_func)
+
+        self.tab.create_image(16, yc / 2, image=self.remove_image, tag='remove')
+        self.tab.tag_bind('remove', '<Button-1>', self.delete_bot)
+
+        self.tab.create_image(44, yc / 2, image=self.back_image, tag='back')
+        self.tab.tag_bind('back', '<Button-1>', self.select_bot)
+
+        self.tabs.append('add')
+        self.tabs.append('remove')
+        self.tabs.append('back')
 
     def init_menu(self):
         self.parent.title("Simple menu")
@@ -144,8 +151,7 @@ class Main(tk.Frame):
             fileBot.add_command(label="Settings", command=self.bot_settings)
             menubar.add_cascade(label="Bot", menu=fileBot)
 
-    def select_bot(
-            self):  ################################################################################################################################
+    def select_bot(self, event=''):
 
         self.destroy_editor_bars()
         self.init_editor_bar()
@@ -172,16 +178,6 @@ class Main(tk.Frame):
 
         efw.Child(self, func)
 
-    def fill_funcs(self):
-
-        self.destroy_editor_bars()
-
-        self.init_editor_bar()
-        self.init_func_tab()
-        self.update_combobox()
-
-        self.update_func()
-
     def update_func(self):
 
         for fc in self.fc_arr:
@@ -206,6 +202,14 @@ class Main(tk.Frame):
             print(bp)
 
         print(len(self.engine.CurrentBot.bot_blueprints))
+
+    def fill_funcs(self):
+
+        self.destroy_editor_bars()
+        self.init_editor_bar()
+        self.init_func_tab()
+
+        self.update_func()
 
     def update_bp(self):
 
