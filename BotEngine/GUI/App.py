@@ -29,6 +29,7 @@ class Main(tk.Frame):
         self.last_row = 0
         self.engine = engine
         self.last_bot_button = None
+        self.last_bot_name = ''
         self.editor_bar = None
         self.current_state = 0
 
@@ -170,9 +171,13 @@ class Main(tk.Frame):
         self.init_menu()
 
     def delete_bot(self, event=''):
+        self.current_state=0
+        self.last_bot_name=''
+        self.cur_bot_name=''
+        self.last_bot_button=None
         self.engine.delete_cur_bot()
         self.update_combobox()
-        self.destroy_editor_bars()
+        self.clear_canvas()
         self.destroy_tab_icons()
         self.init_menu()
 
