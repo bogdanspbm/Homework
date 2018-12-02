@@ -16,6 +16,7 @@ class Main(tk.Frame):
     def __init__(self, root, engine):
         super().__init__(root)
         self.parent = root
+        self.load_sprites()
         self.bots_arr = []
         self.bp_arr = []
         self.fc_arr = []
@@ -30,18 +31,18 @@ class Main(tk.Frame):
 
         self.init_main()
 
-
+    def load_sprites(self):
+        self.toolbar_image = tk.PhotoImage(file='../Sprites/tool_bar.png')
+        self.add_image = tk.PhotoImage(file='../Sprites/plus.png')
+        self.remove_image = tk.PhotoImage(file='../Sprites/unchecked.png')
+        self.play_image = tk.PhotoImage(file='../Sprites/play.png')
 
     def init_main(self):
 
-        self.toolbar_image = tk.PhotoImage(file='../Sprites/tool_bar.png')
-
-        self.tab = tk.Label(image=self.toolbar_image, bd=0, highlightthickness=0)
-        self.tab.pack(side=tk.BOTTOM, fill=tk.X)
+        self.init_tab()
 
         self.toolbar = tk.Label(bg='#eeeeee')
         self.toolbar.pack(side=tk.LEFT, fill=tk.Y, padx=0, pady=0)
-
 
         self.editor_bar = tk.Label(bg='#ffffff', bd=0, highlightthickness=0)
         self.editor_bar.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
@@ -52,6 +53,18 @@ class Main(tk.Frame):
         self.fill_bot_bar()
 
         self.init_menu()
+
+    def init_tab(self):
+
+        xc=self.toolbar_image.width()
+        yc=self.toolbar_image.height()
+
+        self.tab = tk.Canvas(width=xc,height=yc,bd=0, highlightthickness=0)
+        self.tab.pack(side=tk.BOTTOM, fill=tk.X)
+
+        bg = self.tab.create_image(xc/2, yc/2, image=self.toolbar_image,tag='bg')
+
+
 
     def destroy_editor_bars(self):
         #self.tab.destroy()
@@ -66,29 +79,25 @@ class Main(tk.Frame):
 
     def init_bp_tab(self):
 
+        xc = self.toolbar_image.width()
+        yc = self.toolbar_image.height()
+
 
         for tab in self.tabs:
+            self.tab.delete('add')
+            self.tab.delete('remove')
             tab.destroy()
 
 
-        button_add_bp = ttk.Button(self.tab, text='Add Blueprint',
-                                   command=self.create_bp)
-        #button_add_bp.pack(side=tk.LEFT)
-        button_add_bp.place(y=0,x=0)
+        self.tab.create_image(984,yc/2,image=self.add_image, tag='add')
+        self.tab.tag_bind('add', '<Button-1>', self.create_bp)
 
-        button_del_bot = ttk.Button(self.tab, text='Delete Bot',
-                                    command=self.delete_bot)
-        #button_del_bot.pack(side=tk.LEFT)
-        button_del_bot.place(x=100,y=0)
 
-        button_run_bot = ttk.Button(self.tab, text='Run Bot',
-                                    command=self.run_bot)
-        button_run_bot.place(x=200,y=0)
-        #button_run_bot.pack(side=tk.LEFT)
+        self.tab.create_image(16, yc / 2, image=self.remove_image, tag='remove')
+        self.tab.tag_bind('remove', '<Button-1>', self.delete_bot)
 
-        self.tabs.append(button_del_bot)
-        self.tabs.append(button_add_bp)
-        self.tabs.append(button_run_bot)
+        self.tab.create_image(44, yc / 2, image=self.play_image, tag='run_tel')
+        self.tab.tag_bind('run_tel', '<Button-1>', self.run_bot)
 
 
     def init_func_tab(self):
@@ -134,7 +143,7 @@ class Main(tk.Frame):
         #self.init_menu()
 
 
-    def delete_bot(self):
+    def delete_bot(self, event=''):
         self.engine.delete_cur_bot()
         self.update_combobox()
         self.destroy_editor_bars()
@@ -203,7 +212,7 @@ class Main(tk.Frame):
     def create_bot(self):
         cw.Child(self)  # Spawn create bot menu
 
-    def create_bp(self):
+    def create_bp(self, event=''):
         cbp.Child(self)  # Spawn create bp menu
 
     def save_bot(self):
@@ -214,7 +223,7 @@ class Main(tk.Frame):
         cbs.Child(self, self.engine.CurrentBot)
         pass
 
-    def run_bot(self):
+    def run_bot(self, event=''):
         bot = TelegramBot(self.engine.CurrentBot)
         self.threads.append(bot)
         bot.start()
