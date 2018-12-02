@@ -21,6 +21,7 @@ class Main(tk.Frame):
         self.bp_arr = []
         self.fc_arr = []
         self.threads = []
+        self.canvas_tags=[]
         self.cur_bp = -1
         self.tabs = []
         self.cur_bot_name = -1
@@ -29,8 +30,15 @@ class Main(tk.Frame):
         self.engine = engine
         self.last_bot_button = None
         self.editor_bar = None
+        self.current_state = 0
 
         self.init_main()
+
+    def clear_canvas(self):
+        for tag in self.canvas_tags:
+            self.canvas.delete(tag)
+
+        self.canvas_tags = []
 
     def load_sprites(self):
         self.toolbar_image = tk.PhotoImage(file='../Sprites/tool_bar.png')
@@ -40,6 +48,7 @@ class Main(tk.Frame):
         self.editor_image = tk.PhotoImage(file='../Sprites/Editor_Bar.png')
         self.bp_image = tk.PhotoImage(file='../Sprites/BP_Bar.png')
         self.back_image = tk.PhotoImage(file='../Sprites/back.png')
+        self.invisible_image = tk.PhotoImage(file='../Sprites/invisiblebox.png')
 
     def init_main(self):
 
@@ -64,15 +73,12 @@ class Main(tk.Frame):
 
         bg = self.tab.create_image(xc / 2, yc / 2, image=self.toolbar_image, tag='bg')
 
-    def destroy_editor_bars(self):
-        # self.tab.destroy()
-        # self.bot_columns.destroy()
-        pass
+        invisible = self.tab.create_image(0,yc/2, image=self.invisible_image)
 
     def init_editor_bar(self):
 
         if self.editor_bar != None:
-            self.editor_bar.destroy()
+            self.clear_canvas()
 
         self.editor_bar = tk.Frame(bd=0, highlightthickness=0)
         self.editor_bar.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
@@ -99,40 +105,44 @@ class Main(tk.Frame):
         xc = self.toolbar_image.width()
         yc = self.toolbar_image.height()
 
-        self.destroy_tab_icons()
+        if self.current_state != 1:
+            self.destroy_tab_icons()
+            self.current_state = 1
 
-        self.tab.create_image(984, yc / 2, image=self.add_image, tag='add')
-        self.tab.tag_bind('add', '<Button-1>', self.create_bp)
+            self.tab.create_image(984, yc / 2, image=self.add_image, tag='add')
+            self.tab.tag_bind('add', '<Button-1>', self.create_bp)
 
-        self.tab.create_image(16, yc / 2, image=self.remove_image, tag='remove')
-        self.tab.tag_bind('remove', '<Button-1>', self.delete_bot)
+            self.tab.create_image(16, yc / 2, image=self.remove_image, tag='remove')
+            self.tab.tag_bind('remove', '<Button-1>', self.delete_bot)
 
-        self.tab.create_image(44, yc / 2, image=self.play_image, tag='run_tel')
-        self.tab.tag_bind('run_tel', '<Button-1>', self.run_bot)
+            self.tab.create_image(44, yc / 2, image=self.play_image, tag='run_tel')
+            self.tab.tag_bind('run_tel', '<Button-1>', self.run_bot)
 
-        self.tabs.append('add')
-        self.tabs.append('remove')
-        self.tabs.append('run_tel')
+            self.tabs.append('add')
+            self.tabs.append('remove')
+            self.tabs.append('run_tel')
 
     def init_func_tab(self):
 
         xc = self.toolbar_image.width()
         yc = self.toolbar_image.height()
 
-        self.destroy_tab_icons()
+        if self.current_state != 2:
+            self.destroy_tab_icons()
+            self.current_state = 2
 
-        self.tab.create_image(984, yc / 2, image=self.add_image, tag='add')
-        self.tab.tag_bind('add', '<Button-1>', self.add_func)
+            self.tab.create_image(984, yc / 2, image=self.add_image, tag='add')
+            self.tab.tag_bind('add', '<Button-1>', self.add_func)
 
-        self.tab.create_image(16, yc / 2, image=self.remove_image, tag='remove')
-        self.tab.tag_bind('remove', '<Button-1>', self.delete_bot)
+            self.tab.create_image(16, yc / 2, image=self.remove_image, tag='remove')
+            self.tab.tag_bind('remove', '<Button-1>', self.delete_bot)
 
-        self.tab.create_image(44, yc / 2, image=self.back_image, tag='back')
-        self.tab.tag_bind('back', '<Button-1>', self.select_bot)
+            self.tab.create_image(44, yc / 2, image=self.back_image, tag='back')
+            self.tab.tag_bind('back', '<Button-1>', self.select_bot)
 
-        self.tabs.append('add')
-        self.tabs.append('remove')
-        self.tabs.append('back')
+            self.tabs.append('add')
+            self.tabs.append('remove')
+            self.tabs.append('back')
 
     def init_menu(self):
         self.parent.title("Simple menu")
@@ -153,8 +163,7 @@ class Main(tk.Frame):
 
     def select_bot(self, event=''):
 
-        self.destroy_editor_bars()
-        self.init_editor_bar()
+        self.clear_canvas()
         self.init_bp_tab()
 
         self.fill_blueprint()
@@ -170,7 +179,7 @@ class Main(tk.Frame):
     def del_bp(self):
         pass
 
-    def add_func(self, event='',func=-1):
+    def add_func(self, event='', func=-1):
         if func == -1:
             func = BlueprintFunctions()
             self.engine.CurrentBot.bot_blueprints[self.cur_bp].funcs.append(
@@ -180,7 +189,7 @@ class Main(tk.Frame):
 
     def update_func(self):
 
-        self.init_editor_bar()
+        self.clear_canvas()
 
         self.fc_arr = []
         id = self.cur_bp
@@ -198,23 +207,21 @@ class Main(tk.Frame):
         for bp in range(len(self.engine.CurrentBot.bot_blueprints)):
             bot = self.engine.CurrentBot.bot_blueprints[bp]
             self.bp_arr.append(blc.BlueprintItem(self, bp, bot.name))
-            print(bp)
 
-        print(len(self.engine.CurrentBot.bot_blueprints))
+
 
     def fill_funcs(self):
 
         self.last_row = 0
 
-        self.destroy_editor_bars()
-        self.init_editor_bar()
+        self.clear_canvas()
         self.init_func_tab()
 
         self.update_func()
 
     def update_bp(self):
 
-        self.init_editor_bar()
+        self.clear_canvas()
 
         self.fill_blueprint()
 
