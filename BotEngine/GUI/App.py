@@ -7,8 +7,8 @@ from BotEngine.GUI.Icons import BotIcon as boc, BlueprintIcon as blc, \
 from BotEngine.Editor.FuncLabClass import BlueprintFunctions
 import os
 from BotEngine.BotsAPI.Telegram.Bot import TelegramBot
-from BotEngine.GUI.MyWidgets.MyFrame import MyFrame
-from BotEngine.GUI.MyWidgets.MyBotButton import MyBotButton
+from BotEngine.BotsAPI.VK.Bot import VKBot
+
 
 
 class Main(tk.Frame):
@@ -32,6 +32,7 @@ class Main(tk.Frame):
         self.last_bot_name = ''
         self.editor_bar = None
         self.current_state = 0
+        self.tel_stat = 0
 
         self.init_main()
 
@@ -45,11 +46,14 @@ class Main(tk.Frame):
         self.toolbar_image = tk.PhotoImage(file='../Sprites/tool_bar.png')
         self.add_image = tk.PhotoImage(file='../Sprites/plus.png')
         self.remove_image = tk.PhotoImage(file='../Sprites/unchecked.png')
-        self.play_image = tk.PhotoImage(file='../Sprites/play.png')
+        self.play_image = tk.PhotoImage(file='../Sprites/teloff.png')
+        self.telon = tk.PhotoImage(file='../Sprites/telon.png')
         self.editor_image = tk.PhotoImage(file='../Sprites/Editor_Bar.png')
         self.bp_image = tk.PhotoImage(file='../Sprites/BP_Bar.png')
         self.back_image = tk.PhotoImage(file='../Sprites/back.png')
         self.invisible_image = tk.PhotoImage(file='../Sprites/invisiblebox.png')
+        self.cross_image = tk.PhotoImage(
+            file='../Sprites/cross.png')
 
     def init_main(self):
 
@@ -116,7 +120,7 @@ class Main(tk.Frame):
             self.tab.create_image(16, yc / 2, image=self.remove_image, tag='remove')
             self.tab.tag_bind('remove', '<Button-1>', self.delete_bot)
 
-            self.tab.create_image(44, yc / 2, image=self.play_image, tag='run_tel')
+            self.tel_img_id = self.tab.create_image(64, yc / 2, image=self.play_image, tag='run_tel')
             self.tab.tag_bind('run_tel', '<Button-1>', self.run_bot)
 
             self.tabs.append('add')
@@ -252,9 +256,15 @@ class Main(tk.Frame):
         pass
 
     def run_bot(self, event=''):
-        bot = TelegramBot(self.engine.CurrentBot)
-        self.threads.append(bot)
-        bot.start()
+        if self.tel_stat == 0:
+            self.tel_stat = 1
+            self.tab.itemconfigure(self.tel_img_id,image=self.telon)
+            bot = VKBot(self.engine.CurrentBot)
+            self.threads.append(bot)
+            bot.start()
+        else:
+            self.tel_stat = 0
+            self.tab.itemconfigure(self.tel_img_id, image=self.play_image)
 
     def fill_bot_bar(self):
 

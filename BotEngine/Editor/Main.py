@@ -23,5 +23,5 @@ if __name__ == '__main__':
     root.title('Bot Engine')
     root.iconbitmap('../Sprites/MainIco2.ico')
     root.geometry("1000x500+300+200")
-    root.resizable(False, False)
+    root.resizable(True, True)
     root.mainloop()

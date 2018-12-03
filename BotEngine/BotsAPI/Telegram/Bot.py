@@ -3,7 +3,7 @@ import datetime
 import sys
 from threading import Thread
 import threading
-from BotEngine.BotsAPI.KThread import StoppableThread
+
 
 
 class TelegramBot(Thread):
@@ -31,12 +31,14 @@ class TelegramBot(Thread):
 
             last_update = telegarm_bot.get_last_update()
 
-            last_update_id = last_update['update_id']
-            last_chat_text = last_update['message']['text']
-            last_chat_id = last_update['message']['chat']['id']
-            last_chat_name = last_update['message']['chat']['first_name']
+            if last_update != None:
 
-            telegarm_bot.send_message(last_chat_id, bot.bot_blueprints[
-                bot.CurrentBP].find_output_by_input(last_chat_text))
+                last_update_id = last_update['update_id']
+                last_chat_text = last_update['message']['text']
+                last_chat_id = last_update['message']['chat']['id']
+                last_chat_name = last_update['message']['chat']['first_name']
 
-            new_offset = last_update_id + 1
+                telegarm_bot.send_message(last_chat_id, bot.bot_blueprints[
+                    bot.CurrentBP].find_output_by_input(last_chat_text))
+
+                new_offset = last_update_id + 1
