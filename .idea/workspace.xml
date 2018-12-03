@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9057142-7147-45bd-9f0c-910f4c07b5e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/hw01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hw01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Bots/Main" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BotEngine/Bots/Second" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Bots/Second" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/BotsAPI/KThread.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/BotsAPI/Telegram/Bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/BotsAPI/Telegram/Bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/BotsAPI/Telegram/BotHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/BotsAPI/Telegram/BotHandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/BotsAPI/VKAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/BotsAPI/VK/Bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Editor/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BotEngine/GUI/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/GUI/App.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/GUI/Icons/BlueprintIcon.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/GUI/Icons/BlueprintIcon.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Sprites/plus.png" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Sprites/plus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BotEngine/Sprites/back.png" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Sprites/back.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BotEngine/Sprites/unchecked.png" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Sprites/unchecked.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,50 +62,28 @@
     <session id="-329693832">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1394" />
+          <entry key="py" value="1675" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1394" />
+          <entry key="Python" value="1675" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="7" />
+          <entry key="py" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="7" />
+          <entry key="Python" value="10" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BotEngine/Editor/EditorClass.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <marker date="1543591983059" expanded="true" signature="106:141" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BotClass.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/Editor/Main.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -138,30 +108,54 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Icons/BotIcon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="120">
+              <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Windows/CreateBotSettings.py">
+        <entry file="file://$PROJECT_DIR$/BotEngine/GUI/MyWidgets/MyButton.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="34" column="150" selection-start-line="34" selection-start-column="150" selection-end-line="34" selection-end-column="150" />
+            <state relative-caret-position="150">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1543610015152" expanded="true" signature="1750:1756" ph="..." />
+                <marker date="1543771609523" expanded="true" signature="73:74" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BotEngine/GUI/MyWidgets/MyBotButton.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="86" selection-start-line="7" selection-start-column="86" selection-end-line="7" selection-end-column="86" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Icons/FunctionIcon.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/GUI/App.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1721">
-              <caret line="261" column="23" selection-start-line="261" selection-start-column="23" selection-end-line="261" selection-end-column="23" />
+            <state relative-caret-position="246">
+              <caret line="154" column="36" selection-start-line="154" selection-start-column="36" selection-end-line="154" selection-end-column="36" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -217,7 +211,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fill_fun</find>
       <find>dump</find>
       <find>editor_bar</find>
       <find>spawn</find>
@@ -247,6 +240,7 @@
       <find>select_bot</find>
       <find>run_tel</find>
       <find>run_bot</find>
+      <find>run_vk</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -298,17 +292,17 @@
         <option value="$PROJECT_DIR$/BotEngine/GUI/Windows/CreateBotSettings.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/MyWidgets/MyFrame.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/MyWidgets/MyButton.py" />
-        <option value="$PROJECT_DIR$/BotEngine/GUI/Icons/BotIcon.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/Icons/FunctionIcon.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/Windows/EditFuncWindow.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/Windows/CreateBotWindow.py" />
-        <option value="$PROJECT_DIR$/BotEngine/GUI/MyWidgets/MyBotButton.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/Main.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/Icons/BlueprintIcon.py" />
         <option value="$PROJECT_DIR$/BotEngine/BotsAPI/Telegram/BotHandler.py" />
         <option value="$PROJECT_DIR$/BotEngine/BotsAPI/Telegram/Bot.py" />
-        <option value="$PROJECT_DIR$/BotEngine/GUI/App.py" />
         <option value="$PROJECT_DIR$/BotEngine/BotsAPI/VK/Bot.py" />
+        <option value="$PROJECT_DIR$/BotEngine/GUI/Icons/BotIcon.py" />
+        <option value="$PROJECT_DIR$/BotEngine/GUI/MyWidgets/MyBotButton.py" />
+        <option value="$PROJECT_DIR$/BotEngine/GUI/App.py" />
       </list>
     </option>
   </component>
@@ -627,12 +621,12 @@
     <frame x="0" y="48" width="1440" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.85294116" visible="true" weight="0.16913319" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.85294116" visible="true" weight="0.16913319" />
       <window_info id="Structure" order="1" sideWeight="0.14705883" side_tool="true" visible="true" weight="0.16913319" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49964765" visible="true" weight="0.27659574" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49964765" visible="true" weight="0.27659574" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" weight="0.39761648" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -889,40 +883,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/MyWidgets/MyBotButton.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Icons/FunctionIcon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
           <folding>
             <marker date="1543591983096" expanded="true" signature="900:906" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/MyWidgets/MyButton.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1543771609523" expanded="true" signature="73:74" ph="..." />
           </folding>
         </state>
       </provider>
@@ -935,13 +901,6 @@
             <element signature="e#0#20#0" expanded="true" />
             <marker date="1543610015152" expanded="true" signature="1750:1756" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Icons/BotIcon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -983,16 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Icons/BlueprintIcon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/BotsAPI/VK/Bot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1004,6 +953,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Icons/BotIcon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/MyWidgets/MyButton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <marker date="1543771609523" expanded="true" signature="73:74" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/MyWidgets/MyBotButton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="86" selection-start-line="7" selection-start-column="86" selection-end-line="7" selection-end-column="86" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/Editor/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1011,10 +988,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Icons/BlueprintIcon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/GUI/App.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1721">
-          <caret line="261" column="23" selection-start-line="261" selection-start-column="23" selection-end-line="261" selection-end-column="23" />
+        <state relative-caret-position="246">
+          <caret line="154" column="36" selection-start-line="154" selection-start-column="36" selection-end-line="154" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Icons/FunctionIcon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
