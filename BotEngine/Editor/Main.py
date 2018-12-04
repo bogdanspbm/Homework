@@ -3,11 +3,12 @@ from BotEngine.GUI import App
 
 
 def on_closing():
-    print('here')
+
+    for thread in app.threads:
+        thread.active = False
+
     root.destroy()
     exit()
-    for thread in app.threads:
-        thread.stop()
 
 
 if __name__ == '__main__':

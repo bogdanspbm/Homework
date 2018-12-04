@@ -11,23 +11,21 @@ class TelegramBot(Thread):
     def __init__(self, bot=-1):
         Thread.__init__(self)
         self.bot = bot
-        self._stop_event = threading.Event()
-
-    def stop(self):
-        self._stop_event.set()
-
-    def stopped(self):
-        return self._stop_event.is_set()
+        self.active = True
 
     def run(self):
         telegarm_bot = BotHandler(
-            '736605353:AAEufeJOHvEpwxvTCd2pKPaSEIVZFVJ_rMU')
+            self.bot.tel_token)
         new_offset = None
         bot = self.bot
 
         while True:
-            telegarm_bot.get_updates(new_offset)
             print('...')
+
+            if not self.active:
+                break
+
+            telegarm_bot.get_updates(new_offset)
 
             last_update = telegarm_bot.get_last_update()
 

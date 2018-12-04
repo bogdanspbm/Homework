@@ -15,6 +15,8 @@ class Main(tk.Frame):
     def __init__(self, root, engine):
         super().__init__(root)
         self.parent = root
+        self.tel_bots_treads = {}
+        self.vk_bots_treads = {}
         self.load_sprites()
         self.bots_arr = []
         self.bp_arr = []
@@ -292,10 +294,12 @@ class Main(tk.Frame):
             self.save_bot()
             self.tab.itemconfigure(self.tel_img_id, image=self.telon)
             bot = TelegramBot(self.engine.CurrentBot)
+            self.tel_bots_treads[self.cur_bot_name] = bot
             self.threads.append(bot)
             bot.start()
         else:
             self.tel_bots.remove(self.cur_bot_name)
+            self.tel_bots_treads[self.cur_bot_name].active=False
             self.save_bot()
             self.tab.itemconfigure(self.tel_img_id, image=self.teloff)
 
@@ -305,10 +309,12 @@ class Main(tk.Frame):
             self.save_bot()
             self.tab.itemconfigure(self.vk_img_id, image=self.vkon)
             bot = VKBot(self.engine.CurrentBot)
+            self.vk_bots_treads[self.cur_bot_name] = bot
             self.threads.append(bot)
             bot.start()
         else:
             self.vk_bots.remove(self.cur_bot_name)
+            self.vk_bots_threads[self.cur_bot_name].active=False
             self.save_bot()
             self.tab.itemconfigure(self.vk_img_id, image=self.vkoff)
 

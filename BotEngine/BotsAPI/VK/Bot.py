@@ -4,8 +4,6 @@ import time
 import threading
 import random
 
-vk = vk_api.VkApi(
-    token='119f058d4dbe935ae2a8e1e8246ea16d9aa65dc8c822b0bbc3c127d9ddada7d2bfb2bcf70c007e35547f8')
 
 
 class VKBot(Thread):
@@ -13,17 +11,18 @@ class VKBot(Thread):
     def __init__(self, bot=-1):
         Thread.__init__(self)
         self.bot = bot
-        self._stop_event = threading.Event()
+        self.vk = vk_api.VkApi(
+            token=self.bot.vk_token)
 
-    def stop(self):
-        self._stop_event.set()
-
-    def stopped(self):
-        return self._stop_event.is_set()
+        self.active = True
 
     def run(self):
+        vk = self.vk
         bot = self.bot
         while True:
+            if not self.active:
+                break
+
             message = vk.method('messages.getConversations',
                                 {'offset': 0, 'counte': 20,
                                  'filter': 'unread'})

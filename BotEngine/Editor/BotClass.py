@@ -3,9 +3,10 @@ from BotEngine.Editor.BlueprintClass import *
 
 class ChatBot:
 
-    def __init__(self, Name, Token):
+    def __init__(self, Name):
         self.Name = Name
-        self.Token = Token
+        self.vk_token = ''
+        self.tel_token = ''
         self.bot_blueprints = []
         self.CurrentBP = -1
 

@@ -8,48 +8,47 @@ class Child(tk.Toplevel):
         super().__init__(root)
         self.root = root
         self.bot = bot
-        self.button_image = tk.PhotoImage(file='../Sprites/Button_0.png')
-        self.button_image_clicked = tk.PhotoImage(file='../Sprites/Button_1.png')
+        self.tmpname = self.bot.Name
+        self.button_image = tk.PhotoImage(file='../Sprites/ButtonL_0.png')
+        self.bg = tk.PhotoImage(file='../Sprites/bot_settings.png')
         self.init_child()
 
     def init_child(self):
         self.title('Create Bot')
-        self.geometry('700x400+400+300')
+        self.geometry('400x600+700+50')
         self.resizable(False, False)
 
-        self.frame = tk.Frame(self)
+        self.canvas = tk.Canvas(self, width=400, height=600, bd=0,
+                                highlightthickness=0)
+        self.canvas.pack(fill=tk.BOTH, expand=True)
 
-        self.frame.columnconfigure(0, pad=3)
-        self.frame.columnconfigure(1, pad=3)
-        self.frame.rowconfigure(0, pad=3)
-        self.frame.rowconfigure(1, pad=3)
+        image2 = self.canvas.create_image(200, 300, image=self.bg)
+        image1 = self.canvas.create_image(367, 586, image=self.button_image,
+                                          tag='ok')
+        self.canvas.tag_bind('ok', '<Button-1>', self.update_bot)
 
-        label_desc = tk.Label(self.frame, text='Bot Name:')
-        label_desc.grid(row=0, column=0, sticky=tk.W)
+        self.bot_name = tk.Entry(self.canvas, bg='#dedede', bd=0,
+                                 highlightthickness=0, width=15)
+        self.bot_name.place(x=126, y=30)
+        self.bot_name.insert(tk.END, self.bot.Name)
 
-        self.enter_name = ttk.Entry(self.frame)
-        self.enter_name.insert(tk.END, self.bot.Name)
-        self.enter_name.grid(row=0, column=1, sticky=tk.W)
+        self.vk_token = tk.Entry(self.canvas, bg='#dedede', bd=0,
+                                 highlightthickness=0, width=25)
+        self.vk_token.place(x=57, y=65)
+        self.vk_token.insert(tk.END, self.bot.vk_token)
 
+        self.tel_token = tk.Entry(self.canvas, bg='#dedede', bd=0,
+                                  highlightthickness=0, width=25)
+        self.tel_token.place(x=57, y=99)
+        self.tel_token.insert(tk.END, self.bot.tel_token)
 
-        self.enter_button = MyButton(self.frame, image1=self.button_image, image2=self.button_image_clicked, mytext='Enter', mycommand=self.create_bot)
-        self.enter_button.grid(row=1, column=0)
-
-        #self.btn_enter = tk.Button(self.frame,borderwidth=0,
-        #                           command=self.create_bot, image = self.button_image)
-        #self.btn_enter.grid(row=1, column=0, sticky=tk.W)
-
-        self.frame.pack()
-        # self.grab_set()
-        self.focus_set()
-
-    def button_start_overlap(self, event, button):
-        button.configure(image=self.button_image_clicked)
-
-    def button_stop_overlap(self, event, button):
-        button.configure(image=self.button_image)
-
-    def create_bot(self):
-        self.root.engine.createBot(self.enter_name.get(), 'TOKEN')
+    def update_bot(self,event=''):
+        self.bot.Name = self.bot_name.get()
+        self.bot.vk_token = self.vk_token.get()
+        self.bot.tel_token = self.tel_token.get()
+        self.root.engine.del_bot(self.tmpname)
+        self.root.save_bot()
+        self.root.last_bot_name = self.bot.Name
+        self.root.cur_bot_name = self.bot.Name
         self.root.update_combobox()
         self.destroy()

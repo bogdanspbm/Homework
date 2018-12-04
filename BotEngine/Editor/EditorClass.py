@@ -8,21 +8,22 @@ class Editor():
     def __init__(self):
         self.CurrentBot = -1
 
-    def createBot(self, name='', token=''):
+    def createBot(self, name=''):
 
         if name == '':
             name = input('Enter bot name: ')
 
-        if token == '':
-            token = input('Enter bot token: ')
-
-        self.CurrentBot = ChatBot(name, token)  # Creating bot
+        self.CurrentBot = ChatBot(name)  # Creating bot
 
         self.saveBot(self.CurrentBot)  # Saving bot
 
     def delete_cur_bot(self):
         os.remove('../Bots/' + self.CurrentBot.Name)
         self.CurrentBot = -1
+        print('Removed')
+
+    def del_bot(self, name):
+        os.remove('../Bots/' + name)
         print('Removed')
 
     def loadBot(self, name=''):

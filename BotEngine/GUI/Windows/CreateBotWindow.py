@@ -21,22 +21,28 @@ class Child(tk.Toplevel):
         self.geometry('400x200+400+300')
         self.iconbitmap('../Sprites/MainIco.ico')
         self.resizable(False, False)
-        self.window = tk.Canvas(self, width=self.image.width(), height=self.image.height(), bd=0, highlightthickness=0)
+        self.window = tk.Canvas(self, width=self.image.width(),
+                                height=self.image.height(), bd=0,
+                                highlightthickness=0)
         self.window.pack(expand=True)
-        self.window.create_image(self.image.width() / 2, self.image.height() / 2, image=self.image)
-        self.img1=self.window.create_image(255, 180, image=self.image_bl, tag='accept')
-        self.img2=self.window.create_image(350, 180, image=self.image_br, tag='back')
+        self.window.create_image(self.image.width() / 2,
+                                 self.image.height() / 2, image=self.image)
+        self.img1 = self.window.create_image(303, 180, image=self.image_bl,
+                                             tag='accept')
+        self.img2 = self.window.create_image(365, 180, image=self.image_br,
+                                             tag='back')
         self.window.tag_bind('accept', '<Button-1>', self.create_bot)
         self.window.tag_bind('back', '<Button-1>', self.back)
 
-        self.enter_name = tk.Entry(self.window,bg='#e7e7e7',bd=0, highlightthickness=0)
+        self.enter_name = tk.Entry(self.window, bg='#e7e7e7', bd=0,
+                                   highlightthickness=0, width=15)
         self.enter_name.place(x=218, y=35)
 
         # self.grab_set()
         self.focus_set()
 
     def create_bot(self, event=''):
-        self.root.engine.createBot(self.enter_name.get(), 'TOKEN')
+        self.root.engine.createBot(self.enter_name.get())
         self.root.update_combobox()
         self.destroy()
 
