@@ -10,7 +10,6 @@ from BotEngine.BotsAPI.Telegram.Bot import TelegramBot
 from BotEngine.BotsAPI.VK.Bot import VKBot
 
 
-
 class Main(tk.Frame):
 
     def __init__(self, root, engine):
@@ -20,11 +19,14 @@ class Main(tk.Frame):
         self.bots_arr = []
         self.bp_arr = []
         self.fc_arr = []
+        self.tel_bots = []
+        self.vk_bots = []
         self.threads = []
-        self.canvas_tags=[]
+        self.canvas_tags = []
         self.cur_bp = -1
         self.tabs = []
         self.cur_bot_name = -1
+        self.cur_bot = None
         self.columns = 3
         self.last_row = 0
         self.engine = engine
@@ -32,8 +34,6 @@ class Main(tk.Frame):
         self.last_bot_name = ''
         self.editor_bar = None
         self.current_state = 0
-        self.tel_stat = 0
-        self.vk_stat = 0
 
         self.init_main()
 
@@ -47,14 +47,15 @@ class Main(tk.Frame):
         self.toolbar_image = tk.PhotoImage(file='../Sprites/tool_bar.png')
         self.add_image = tk.PhotoImage(file='../Sprites/plus.png')
         self.remove_image = tk.PhotoImage(file='../Sprites/unchecked.png')
-        self.play_image = tk.PhotoImage(file='../Sprites/teloff.png')
+        self.teloff = tk.PhotoImage(file='../Sprites/teloff.png')
         self.telon = tk.PhotoImage(file='../Sprites/telon.png')
         self.vkoff = tk.PhotoImage(file='../Sprites/vkoff.png')
         self.vkon = tk.PhotoImage(file='../Sprites/vkon.png')
         self.editor_image = tk.PhotoImage(file='../Sprites/Editor_Bar.png')
         self.bp_image = tk.PhotoImage(file='../Sprites/BP_Bar.png')
         self.back_image = tk.PhotoImage(file='../Sprites/back.png')
-        self.invisible_image = tk.PhotoImage(file='../Sprites/invisiblebox.png')
+        self.invisible_image = tk.PhotoImage(
+            file='../Sprites/invisiblebox.png')
         self.cross_image = tk.PhotoImage(
             file='../Sprites/cross.png')
 
@@ -79,9 +80,11 @@ class Main(tk.Frame):
         self.tab = tk.Canvas(width=xc, height=yc, bd=0, highlightthickness=0)
         self.tab.pack(side=tk.BOTTOM, fill=tk.X)
 
-        bg = self.tab.create_image(xc / 2, yc / 2, image=self.toolbar_image, tag='bg')
+        bg = self.tab.create_image(xc / 2, yc / 2, image=self.toolbar_image,
+                                   tag='bg')
 
-        invisible = self.tab.create_image(0,yc/2, image=self.invisible_image)
+        invisible = self.tab.create_image(0, yc / 2,
+                                          image=self.invisible_image)
 
     def init_editor_bar(self):
 
@@ -94,7 +97,8 @@ class Main(tk.Frame):
         self.scroll = tk.Scrollbar(self.editor_bar, bd=0, highlightthickness=0)
         self.scroll.pack(side=tk.RIGHT, fill=tk.Y)
 
-        self.canvas = tk.Canvas(self.editor_bar, width=500, height=2000, bg='#dddddd', bd=0, highlightthickness=0,
+        self.canvas = tk.Canvas(self.editor_bar, width=500, height=2000,
+                                bg='#dddddd', bd=0, highlightthickness=0,
                                 scrollregion=(0, 0, 2000, 2000))
 
         self.canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
@@ -113,24 +117,37 @@ class Main(tk.Frame):
         xc = self.toolbar_image.width()
         yc = self.toolbar_image.height()
 
-        if self.current_state != 1:
+        if self.current_state != -1:
+
+            if self.vk_bots.count(self.cur_bot_name) != 0:
+                vk_image = self.vkon
+            else:
+                vk_image = self.vkoff
+
+            if self.tel_bots.count(self.cur_bot_name) != 0:
+                tel_image = self.telon
+            else:
+                tel_image = self.teloff
+
             self.destroy_tab_icons()
             self.current_state = 1
 
             self.tab.create_image(984, yc / 2, image=self.add_image, tag='add')
             self.tab.tag_bind('add', '<Button-1>', self.create_bp)
 
-            self.tab.create_image(16, yc / 2, image=self.remove_image, tag='remove')
+            self.tab.create_image(16, yc / 2, image=self.remove_image,
+                                  tag='remove')
             self.tab.tag_bind('remove', '<Button-1>', self.delete_bot)
 
-            self.tel_img_id = self.tab.create_image(64, yc / 2, image=self.play_image, tag='run_tel')
+            self.tel_img_id = self.tab.create_image(64, yc / 2,
+                                                    image=tel_image,
+                                                    tag='run_tel')
             self.tab.tag_bind('run_tel', '<Button-1>', self.run_tel_bot)
 
             self.vk_img_id = self.tab.create_image(110, yc / 2,
-                                                    image=self.vkoff,
-                                                    tag='run_vk')
+                                                   image=vk_image,
+                                                   tag='run_vk')
             self.tab.tag_bind('run_vk', '<Button-1>', self.run_vk_bot)
-
 
             self.tabs.append('add')
             self.tabs.append('remove')
@@ -149,10 +166,12 @@ class Main(tk.Frame):
             self.tab.create_image(984, yc / 2, image=self.add_image, tag='add')
             self.tab.tag_bind('add', '<Button-1>', self.add_func)
 
-            self.tab.create_image(16, yc / 2, image=self.remove_image, tag='remove')
+            self.tab.create_image(16, yc / 2, image=self.remove_image,
+                                  tag='remove')
             self.tab.tag_bind('remove', '<Button-1>', self.delete_bot)
 
-            self.tab.create_image(40, yc / 2, image=self.back_image, tag='back')
+            self.tab.create_image(40, yc / 2, image=self.back_image,
+                                  tag='back')
             self.tab.tag_bind('back', '<Button-1>', self.select_bot)
 
             self.tabs.append('add')
@@ -178,6 +197,8 @@ class Main(tk.Frame):
 
     def select_bot(self, event=''):
 
+        self.cur_bot = self.engine.CurrentBot
+
         self.clear_canvas()
         self.init_bp_tab()
 
@@ -185,10 +206,10 @@ class Main(tk.Frame):
         self.init_menu()
 
     def delete_bot(self, event=''):
-        self.current_state=0
-        self.last_bot_name=''
-        self.cur_bot_name=''
-        self.last_bot_button=None
+        self.current_state = 0
+        self.last_bot_name = ''
+        self.cur_bot_name = ''
+        self.last_bot_button = None
         self.engine.delete_cur_bot()
         self.update_combobox()
         self.clear_canvas()
@@ -210,6 +231,8 @@ class Main(tk.Frame):
 
         self.clear_canvas()
 
+        self.last_row = 0
+
         self.fc_arr = []
         id = self.cur_bp
 
@@ -226,8 +249,6 @@ class Main(tk.Frame):
         for bp in range(len(self.engine.CurrentBot.bot_blueprints)):
             bot = self.engine.CurrentBot.bot_blueprints[bp]
             self.bp_arr.append(blc.BlueprintItem(self, bp, bot.name))
-
-
 
     def fill_funcs(self):
 
@@ -266,25 +287,29 @@ class Main(tk.Frame):
         pass
 
     def run_tel_bot(self, event=''):
-        if self.tel_stat == 0:
-            self.tel_stat = 1
-            self.tab.itemconfigure(self.tel_img_id,image=self.telon)
+        if self.tel_bots.count(self.cur_bot_name) == 0:
+            self.tel_bots.append(self.cur_bot_name)
+            self.save_bot()
+            self.tab.itemconfigure(self.tel_img_id, image=self.telon)
             bot = TelegramBot(self.engine.CurrentBot)
             self.threads.append(bot)
             bot.start()
         else:
-            self.tel_stat = 0
-            self.tab.itemconfigure(self.tel_img_id, image=self.play_image)
+            self.tel_bots.remove(self.cur_bot_name)
+            self.save_bot()
+            self.tab.itemconfigure(self.tel_img_id, image=self.teloff)
 
     def run_vk_bot(self, event=''):
-        if self.vk_stat == 0:
-            self.vk_stat = 1
-            self.tab.itemconfigure(self.vk_img_id,image=self.vkon)
+        if self.vk_bots.count(self.cur_bot_name) == 0:
+            self.vk_bots.append(self.cur_bot_name)
+            self.save_bot()
+            self.tab.itemconfigure(self.vk_img_id, image=self.vkon)
             bot = VKBot(self.engine.CurrentBot)
             self.threads.append(bot)
             bot.start()
         else:
-            self.tel_stat = 0
+            self.vk_bots.remove(self.cur_bot_name)
+            self.save_bot()
             self.tab.itemconfigure(self.vk_img_id, image=self.vkoff)
 
     def fill_bot_bar(self):
