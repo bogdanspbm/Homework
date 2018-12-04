@@ -223,7 +223,7 @@ class Main(tk.Frame):
 
     def add_func(self, event='', func=-1):
         if func == -1:
-            func = BlueprintFunctions()
+            func = BlueprintFunctions(parentbp=self.cur_bot.bot_blueprints[self.cur_bp])
             self.engine.CurrentBot.bot_blueprints[self.cur_bp].funcs.append(
                 func)
 

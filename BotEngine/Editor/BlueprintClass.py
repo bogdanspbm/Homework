@@ -3,12 +3,13 @@ from BotEngine.Editor.FuncLabClass import *
 
 class Blueprint():
 
-    def __init__(self, id, name, parent):
+    def __init__(self, id, name, parent, bot):
 
         self.ID = id
         self.name = name
         self.blueprint_lib = {
         }
+        self.global_vars = bot.global_vars
         self.funcs = []
         self.ParentBot = parent
 
@@ -30,7 +31,7 @@ class Blueprint():
         if goto == -1 and type != 'print':
             goto = int(input('Enter goto: '))
 
-        fc = BlueprintFunctions(type, inputv, output, goto)
+        fc = BlueprintFunctions(type, inputv, output, goto, self)
         self.funcs.append(fc)
 
         return fc

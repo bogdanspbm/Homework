@@ -6,6 +6,8 @@ class BlueprintFunctions():
     def __init__(self, type='print', input='', output='', goto=-1,
                  parentbp='add bot link'):
 
+        self.global_vars = parentbp.global_vars
+
         # self.funclink
         if input != '':
             self.input = input.translate()
@@ -28,6 +30,13 @@ class BlueprintFunctions():
 
         print(self.output)
 
+
+    def upgrade_output(self):
+        for key in self.global_vars.keys():
+            self.output = self.output.replace('%' + str(key) + '%',
+                                              str(self.global_vars[key]))
+            return self.output
+
     def printMessageAndGoTo(self):
 
         print(self.ouptut)
@@ -38,7 +47,7 @@ class BlueprintFunctions():
         for i in self.input.split(';'):
             if i == input:
                 self.result(self)
-                return self.output
+                return self.upgrade_output()
         return 0
 
     funcs = {

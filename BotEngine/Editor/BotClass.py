@@ -1,4 +1,5 @@
 from BotEngine.Editor.BlueprintClass import *
+import datetime as time
 
 
 class ChatBot:
@@ -9,6 +10,10 @@ class ChatBot:
         self.tel_token = ''
         self.bot_blueprints = []
         self.CurrentBP = -1
+        self.global_vars = {
+            'H': time.time().hour,
+            'M': time.time().minute
+        }
 
     def selectCurrentBP(self, bp=-1):
 
@@ -19,7 +24,7 @@ class ChatBot:
 
     def addBlueprint(self, name='', root=-1):
         self.bot_blueprints.append(Blueprint(len(self.bot_blueprints), name,
-                                             self.Parent))  # Add clear blueprint to list
+                                             self.Parent,self))  # Add clear blueprint to list
         print(len(self.bot_blueprints))
 
         if root != -1:
