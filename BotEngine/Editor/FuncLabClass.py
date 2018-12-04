@@ -1,5 +1,5 @@
 from BotEngine.Editor.BlueprintClass import *
-
+import datetime as time
 
 class BlueprintFunctions():
 
@@ -18,6 +18,8 @@ class BlueprintFunctions():
         else:
             self.output = output
 
+        self.secoutput = self.output
+
         self.type = type
 
         if type == 'printgoto':
@@ -32,10 +34,11 @@ class BlueprintFunctions():
 
 
     def upgrade_output(self):
+        self.secoutput = self.output
         for key in self.global_vars.keys():
-            self.output = self.output.replace('%' + str(key) + '%',
+            self.secoutput = self.secoutput.replace('%' + str(key) + '%',
                                               str(self.global_vars[key]))
-            return self.output
+        return self.secoutput
 
     def printMessageAndGoTo(self):
 
@@ -43,6 +46,8 @@ class BlueprintFunctions():
         self.parent.ParentBot.selectCurrentBP(self.goto)
 
     def try_to_input(self, input):
+
+        print(time.time().hour)
 
         for i in self.input.split(';'):
             if i == input:

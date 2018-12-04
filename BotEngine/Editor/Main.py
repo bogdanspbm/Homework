@@ -1,5 +1,7 @@
 from BotEngine.Editor import EditorClass
 from BotEngine.GUI import App
+import datetime as time
+
 
 
 def on_closing():
@@ -12,6 +14,7 @@ def on_closing():
 
 
 if __name__ == '__main__':
+    print(time.datetime.now().minute)
     bot_editor = EditorClass.Editor()
 
     root = App.tk.Tk()
