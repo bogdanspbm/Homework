@@ -35,6 +35,7 @@ class BlueprintFunctions():
 
     def add_global_var(self, var, value):
         self.parent.ParentBot.global_vars[var] = value
+        self.parent.ParentBot.save_local_bot()
 
     def get_all_splits(self, input):
 
@@ -76,7 +77,7 @@ class BlueprintFunctions():
                 b = myinp.split(splits[i])
                 if b[0] == '':
                     b.remove('')
-                val = self.find_overlap(a[0],b[0]) # NADO FIXIT'
+                val = self.find_overlap(a[0],b[len(b)-1]) # NADO FIXIT'
                 if val != '':
                     new_keys.append(splits[i+1])
                     new_vals.append(val)

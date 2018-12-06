@@ -1,6 +1,6 @@
 from BotEngine.Editor.BlueprintClass import *
 import datetime as time
-
+import pickle
 
 class ChatBot:
 
@@ -47,6 +47,16 @@ class ChatBot:
     def saveBot(root):
 
         root.saveBot()
+
+    def save_local_bot(self):
+        BotFile = open('../Bots/' + self.Name + '.bot', 'wb+')  # Create or Open File
+
+        BotFile.truncate()  # Clear File
+        pickle.dump(self, BotFile,
+                    protocol=pickle.HIGHEST_PROTOCOL)  # Write Bot Class
+        # Write Bot Class
+
+        BotFile.close()  # Close file
 
     def editBlueprint(self, id=0):
 

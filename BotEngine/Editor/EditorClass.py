@@ -18,12 +18,12 @@ class Editor():
         self.saveBot(self.CurrentBot)  # Saving bot
 
     def delete_cur_bot(self):
-        os.remove('../Bots/' + self.CurrentBot.Name)
+        os.remove('../Bots/' + self.CurrentBot.Name + '.bot')
         self.CurrentBot = -1
         print('Removed')
 
     def del_bot(self, name):
-        os.remove('../Bots/' + name)
+        os.remove('../Bots/' + name+ '.bot')
         print('Removed')
 
     def loadBot(self, name=''):
@@ -33,7 +33,7 @@ class Editor():
         if name == '':
             name = input('Enter bot name: ')
 
-        BotFile = open('../Bots/' + name, 'rb+')
+        BotFile = open('../Bots/' + name+ '.bot', 'rb+')
 
         bot = pickle.load(BotFile)
 
@@ -53,7 +53,7 @@ class Editor():
         if bot == 0:
             bot = self.CurrentBot
 
-        BotFile = open('../Bots/' + bot.Name, 'wb+')  # Create or Open File
+        BotFile = open('../Bots/' + bot.Name + '.bot', 'wb+')  # Create or Open File
 
         BotFile.truncate()  # Clear File
         pickle.dump(bot, BotFile,

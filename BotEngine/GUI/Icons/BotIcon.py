@@ -13,5 +13,5 @@ class BotItem:
         self.frame.pack(side=tk.TOP, fill=tk.X,padx=0,pady=0)
 
     def load_bot(self):
-        self.root.engine.loadBot(self.name)
+        self.root.engine.loadBot(self.name[4:])
         self.root.select_bot()

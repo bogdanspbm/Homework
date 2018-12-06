@@ -16,7 +16,7 @@ class MyBotButton(tk.Canvas):
 
         self.image1 = image1
         self.image2 = image2
-        self.text = mytext
+        self.text = mytext[4:]
         self.mycommand = mycommand
         self.button = None
         self.main_window = main_window
