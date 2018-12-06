@@ -11,7 +11,7 @@ class Blueprint():
         }
         self.global_vars = bot.global_vars
         self.funcs = []
-        self.ParentBot = parent
+        self.ParentBot = bot
 
     def closeBlueprint(self):
 

@@ -314,7 +314,7 @@ class Main(tk.Frame):
             bot.start()
         else:
             self.vk_bots.remove(self.cur_bot_name)
-            self.vk_bots_threads[self.cur_bot_name].active=False
+            self.vk_bots_treads[self.cur_bot_name].active=False
             self.save_bot()
             self.tab.itemconfigure(self.vk_img_id, image=self.vkoff)
 

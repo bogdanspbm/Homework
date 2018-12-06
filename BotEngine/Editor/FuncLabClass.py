@@ -41,11 +41,11 @@ class BlueprintFunctions():
         arr = input.split('%')
         return arr
 
-    def find_overlap(self,second, first):
+    def find_overlap(self,first, second):
         last_right = ''
         try:
             for i in range(len(first)):
-                test1, test2 = first[i:], second[:len(s1) - i]
+                test1, test2 = first[i:], second[:len(first) - i]
                 if test1 == test2:
                     last_right = test1
             return last_right
@@ -54,9 +54,11 @@ class BlueprintFunctions():
 
     def try_to_write_var(self, myinput, funcinput):
 
-        splits = funcinput + '.'.split('%')
+        splits = (funcinput + '.').split('%')
 
-        myinp = myinput + '.'
+        myinp = myinput
+
+        my_dic = {}
 
         first_eq = []
         sec_eq = []
@@ -69,31 +71,25 @@ class BlueprintFunctions():
         for i in range(len(splits) - 2):
             if i%2 ==0:
                 a = myinp.split(splits[i+2])
+                if a[0] == '':
+                    a.remove('')
                 b = myinp.split(splits[i])
-                val = self.find_overlap(a,b)
+                if b[0] == '':
+                    b.remove('')
+                val = self.find_overlap(a[0],b[0]) # NADO FIXIT'
                 if val != '':
-                    new_keys.append(split[i+1])
+                    new_keys.append(splits[i+1])
                     new_vals.append(val)
+                    my_dic[splits[i+1]] = val
 
-        for i in range(len(splits)):
-            if i % 2 == 1:
-                splits.remove(splits[i])
+        tmp_out = funcinput
 
-        for val in new_vals:
-            myinp.replace(val, '%')
+        for key in my_dic:
+            tmp_out = tmp_out.replace('%' + str(key) + '%', str(my_dic[key]))
 
-        myinp = myinp.split('%')
-
-        if len(myinp) == len(splits):
-            for i in range(len(myinp)):
-                if myinp[i] != splits[i]:
-                    flag = 1
-        else:
-            flag = 1
-
-        if flag == 0:
+        if tmp_out == myinput:
             for i in range(len(new_keys)):
-                self.add_global_var(new_keys[i],new_vals[i])
+                self.add_global_var(new_keys[i], new_vals[i])
             return 1
         return 0
 
@@ -117,8 +113,12 @@ class BlueprintFunctions():
     def upgrade_output(self):
         self.secoutput = self.output
         for key in self.global_vars.keys():
-            self.secoutput = self.secoutput.replace('%' + str(key) + '%',
-                                                    str(self.global_vars[key]()))
+            try:
+                self.secoutput = self.secoutput.replace('%' + str(key) + '%',
+                                                        str(self.global_vars[key]()))
+            except:
+                self.secoutput = self.secoutput.replace('%' + str(key) + '%',
+                                                        str(self.global_vars[key]))
         return self.secoutput
 
     def printMessageAndGoTo(self):
@@ -134,7 +134,7 @@ class BlueprintFunctions():
             if i == input:
                 self.result(self)
                 return self.upgrade_output()
-            elif self.try_to_write_var(input, i) == 1:
+            elif i.count('%') > 1 and self.try_to_write_var(input, i) == 1:
                 return self.upgrade_output()
         return 0
 

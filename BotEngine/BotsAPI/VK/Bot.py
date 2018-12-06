@@ -30,7 +30,9 @@ class VKBot(Thread):
                 id = message['items'][0]['last_message']['from_id']
                 body = message['items'][0]['last_message']['text']
                 if body != '':
-                    vk.method('messages.send',
+                    if bot.bot_blueprints[
+                                  bot.CurrentBP].find_output_by_input(body) != None:
+                        vk.method('messages.send',
                               {'peer_id': id,'random_id':random.randrange(0,1000000), 'message': bot.bot_blueprints[
                                   bot.CurrentBP].find_output_by_input(body)})
         time.sleep(1)

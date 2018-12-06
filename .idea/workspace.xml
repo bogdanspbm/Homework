@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/BotEngine/Tests/Split.py" line="16" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e9057142-7147-45bd-9f0c-910f4c07b5e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -30,7 +33,7 @@
     <SUITE FILE_PATH="coverage/Homework$Unittests_in_smile_test_py.coverage" NAME="Unittests in smile_test.py Coverage Results" MODIFIED="1541922621644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task1" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_in_trades_test_py.coverage" NAME="Unittests in trades_test.py Coverage Results" MODIFIED="1541922626734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task3" />
     <SUITE FILE_PATH="coverage/Homework$trades_logic.coverage" NAME="trades_logic Coverage Results" MODIFIED="1541874471451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task3" />
-    <SUITE FILE_PATH="coverage/Homework$Main.coverage" NAME="Main Coverage Results" MODIFIED="1544116834665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BotEngine/Editor" />
+    <SUITE FILE_PATH="coverage/Homework$Main.coverage" NAME="Main Coverage Results" MODIFIED="1544119283124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BotEngine/Editor" />
     <SUITE FILE_PATH="coverage/Homework$game_class.coverage" NAME="game_class Coverage Results" MODIFIED="1541363816168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task4" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_for_poly_test_Validator_test_4.coverage" NAME="Unittests for poly_test.Validator.test_4 Coverage Results" MODIFIED="1541868752048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task2" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_for_smile_test_Validator_test_4.coverage" NAME="Unittests for smile_test.Validator.test_4 Coverage Results" MODIFIED="1541341286188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task1" />
@@ -53,7 +56,7 @@
     <SUITE FILE_PATH="coverage/hw01$PerfectNum.coverage" NAME="PerfectNum Coverage Results" MODIFIED="1539365516612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW2" />
     <SUITE FILE_PATH="coverage/hw01$Factorial.coverage" NAME="Factorial Coverage Results" MODIFIED="1539409358899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW2" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_for_poly_test_Validator_test_3.coverage" NAME="Unittests for poly_test.Validator.test_3 Coverage Results" MODIFIED="1541868119200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task2" />
-    <SUITE FILE_PATH="coverage/Homework$Split.coverage" NAME="Split Coverage Results" MODIFIED="1544116830583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BotEngine/Tests" />
+    <SUITE FILE_PATH="coverage/Homework$Split.coverage" NAME="Split Coverage Results" MODIFIED="1544117752183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BotEngine/Tests" />
     <SUITE FILE_PATH="coverage/Homework$game_logic.coverage" NAME="game_logic Coverage Results" MODIFIED="1541861768560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw4/task4" />
     <SUITE FILE_PATH="coverage/Homework$caesar.coverage" NAME="caesar Coverage Results" MODIFIED="1540060256628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
     <SUITE FILE_PATH="coverage/Homework$Unittests_in_balls_collide_test_py.coverage" NAME="Unittests in balls_collide_test.py Coverage Results" MODIFIED="1540058127756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW3" />
@@ -62,27 +65,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BotClass.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Icons/FunctionIcon.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,25 +78,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Windows/CreateBlueprintWindow.py">
+        <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Windows/EditFuncWindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -143,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/GUI/App.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="2634">
+              <caret line="316" column="26" lean-forward="true" selection-start-line="316" selection-start-column="26" selection-end-line="316" selection-end-column="26" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -155,8 +122,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BotEngine/Editor/FuncLabClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+            <state relative-caret-position="355">
+              <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -165,13 +132,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BotEngine/BotsAPI/VK/Bot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/threading.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="916" selection-start-line="916" selection-end-line="916" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BotEngine/keys">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="91" selection-start-column="6" selection-end-column="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/Tests/Split.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="32" selection-start-line="32" selection-end-line="36" selection-end-column="24" />
-              <folding>
-                <element signature="e#1#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="687">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
@@ -269,15 +263,15 @@
         <option value="$PROJECT_DIR$/BotEngine/Editor/EditorClass.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/Windows/CreateBotSettings.py" />
         <option value="$PROJECT_DIR$/BotEngine/keys" />
-        <option value="$PROJECT_DIR$/BotEngine/BotsAPI/VK/Bot.py" />
         <option value="$PROJECT_DIR$/BotEngine/BotsAPI/Telegram/Bot.py" />
-        <option value="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/Main.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/Icons/FunctionIcon.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/Icons/BlueprintIcon.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" />
-        <option value="$PROJECT_DIR$/BotEngine/GUI/App.py" />
         <option value="$PROJECT_DIR$/BotEngine/Tests/Split.py" />
+        <option value="$PROJECT_DIR$/BotEngine/GUI/App.py" />
+        <option value="$PROJECT_DIR$/BotEngine/BotsAPI/VK/Bot.py" />
+        <option value="$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/FuncLabClass.py" />
       </list>
     </option>
@@ -364,6 +358,12 @@
               <item name="BotEngine" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
               <item name="Windows" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homework" type="462c0819:PsiDirectoryNode" />
+              <item name="BotEngine" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -546,7 +546,7 @@
       <workItem from="1543135651034" duration="2380000" />
       <workItem from="1543680499110" duration="17011000" />
       <workItem from="1543738056762" duration="17692000" />
-      <workItem from="1544112297163" duration="4767000" />
+      <workItem from="1544112297163" duration="6882000" />
     </task>
     <servers />
   </component>
@@ -583,7 +583,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49954000" />
+    <option name="totallyTimeSpent" value="52069000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -598,13 +598,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.85294116" visible="true" weight="0.12579957" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.85294116" visible="true" weight="0.123667374" />
       <window_info id="Structure" order="1" sideWeight="0.14705883" side_tool="true" weight="0.16913319" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49626866" visible="true" weight="0.2751896" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49612403" weight="0.39716312" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49626866" weight="0.2751896" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49612403" visible="true" weight="0.39653304" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32827735" />
@@ -628,15 +628,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BotEngine/Tests/Split.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BotEngine/Tests/Split.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/BotEngine/Editor/FuncLabClass.py</url>
-          <line>116</line>
-          <option name="timeStamp" value="8" />
+          <line>78</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/smile/poly_logik.py" />
     <entry file="file://$USER_HOME$/smile/poly_test.py" />
     <entry file="file://$PROJECT_DIR$/Lesson_20_10_18/GameFuncs.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -828,16 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/BotsAPI/VK/Bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/BotsAPI/Telegram/BotHandler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -878,13 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/keys">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="53" lean-forward="true" selection-start-column="6" selection-end-line="1" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/BotsAPI/Telegram/Bot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-53">
@@ -905,27 +897,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/GUI/Windows/CreateBlueprintWindow.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="508">
           <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/App.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
@@ -969,20 +944,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/GUI/App.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2634">
+          <caret line="316" column="26" lean-forward="true" selection-start-line="316" selection-start-column="26" selection-end-line="316" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/Tests/Split.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="32" selection-start-line="32" selection-end-line="36" selection-end-column="24" />
+        <state relative-caret-position="687">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/BotsAPI/VK/Bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
-            <element signature="e#1#10#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="916" selection-start-line="916" selection-end-line="916" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BlueprintClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/keys">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="91" selection-start-column="6" selection-end-column="91" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/Editor/FuncLabClass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+        <state relative-caret-position="355">
+          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
