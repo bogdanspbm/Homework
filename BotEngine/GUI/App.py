@@ -137,16 +137,12 @@ class Main(tk.Frame):
             self.tab.create_image(984, yc / 2, image=self.add_image, tag='add')
             self.tab.tag_bind('add', '<Button-1>', self.create_bp)
 
-            self.tab.create_image(16, yc / 2, image=self.remove_image,
-                                  tag='remove')
-            self.tab.tag_bind('remove', '<Button-1>', self.delete_bot)
-
-            self.tel_img_id = self.tab.create_image(64, yc / 2,
+            self.tel_img_id = self.tab.create_image(26, yc / 2,
                                                     image=tel_image,
                                                     tag='run_tel')
             self.tab.tag_bind('run_tel', '<Button-1>', self.run_tel_bot)
 
-            self.vk_img_id = self.tab.create_image(110, yc / 2,
+            self.vk_img_id = self.tab.create_image(70, yc / 2,
                                                    image=vk_image,
                                                    tag='run_vk')
             self.tab.tag_bind('run_vk', '<Button-1>', self.run_vk_bot)
@@ -195,6 +191,7 @@ class Main(tk.Frame):
         if self.engine.CurrentBot != -1:
             fileBot = tk.Menu(menubar)
             fileBot.add_command(label="Settings", command=self.bot_settings)
+            fileBot.add_command(label="Delete Bot", command=self.delete_bot)
             menubar.add_cascade(label="Bot", menu=fileBot)
 
     def select_bot(self, event=''):
