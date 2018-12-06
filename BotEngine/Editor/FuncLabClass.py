@@ -37,7 +37,7 @@ class BlueprintFunctions():
         self.secoutput = self.output
         for key in self.global_vars.keys():
             self.secoutput = self.secoutput.replace('%' + str(key) + '%',
-                                              str(self.global_vars[key]))
+                                              str(self.global_vars[key]()))
         return self.secoutput
 
     def printMessageAndGoTo(self):

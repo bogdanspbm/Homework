@@ -27,7 +27,7 @@ class BlueprintItem:
 
         root.canvas.create_text(x0 + (x + 10) * (root.last_row % 3) - 78,
                                 y0 + (y + 10) * int(root.last_row / 3) - 48,
-                                font=("Bebas Bold", 20), text=self.name,
+                                font=("Bebas Bold", 20), text=self.name[:20],
                                 tag=('txt' + str(root.last_row)))
 
         root.canvas_tags.append(('txt' + str(root.last_row)))

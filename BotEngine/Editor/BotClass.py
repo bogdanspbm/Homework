@@ -6,15 +6,20 @@ class ChatBot:
 
     def __init__(self, Name):
         self.Name = Name
-        d = time.datetime.now()
         self.vk_token = ''
         self.tel_token = ''
         self.bot_blueprints = []
         self.CurrentBP = -1
         self.global_vars = {
-            'H': d.hour ,
-            'M': d.minute
+            'H': self.get_hour ,
+            'M': self.get_minute
         }
+
+    def get_hour(self):
+        return time.datetime.now().hour
+
+    def get_minute(self):
+        return time.datetime.now().minute
 
     def selectCurrentBP(self, bp=-1):
 
