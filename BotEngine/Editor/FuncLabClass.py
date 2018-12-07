@@ -1,5 +1,6 @@
 from BotEngine.Editor.BlueprintClass import *
 import time
+import random
 
 
 class BlueprintFunctions():
@@ -95,6 +96,7 @@ class BlueprintFunctions():
             for i in range(len(new_keys)):
                 if new_keys[i].count('_id') > 0:
                     self.add_global_var(new_keys[i], new_keys[i])
+                    self.add_global_var(new_keys[i].replace('_id','_randid'), new_keys[i])
                     new_keys[i] = new_keys[i].replace('id', str(id))
                 self.add_global_var(new_keys[i], new_vals[i])
             return 1
@@ -112,18 +114,31 @@ class BlueprintFunctions():
             if status == 1 and char != '$':
                 var.app
 
-    def upgrade_output(self,id=-1):
+    def upgrade_output(self, id=-1):
         self.secoutput = self.output
         for key in self.global_vars.keys():
             try:
                 if key.count('_id') > 0:
-                    val = str(self.global_vars[key.replace('id',str(id))]())
+                    val = str(self.global_vars[key.replace('id', str(id))]())
+                if key.count('_randid') > 0:
+                    val = str(self.global_vars[key.replace('randid',
+                                                           self.parent.ParentBot.users_id[
+                                                               random.randrange(
+                                                                   0, len(
+                                                                       self.parent.ParentBot.users_id) - 1)])]())
                 self.secoutput = self.secoutput.replace('%' + str(key) + '%',
                                                         val)
             except:
                 val = str(self.global_vars[key])
                 if key.count('_id') > 0:
                     val = str(self.global_vars[key.replace('id', str(id))])
+                if key.count('_randid') > 0:
+                    val = str(self.global_vars[key.replace('randid',
+                                                               str(self.parent.ParentBot.users_id[
+                                                                   random.randrange(
+                                                                       0, len(
+                                                                           self.parent.ParentBot.users_id) - 1)]))])
+                print('val')
                 self.secoutput = self.secoutput.replace('%' + str(key) + '%',
                                                         val)
         return self.secoutput
@@ -139,7 +154,8 @@ class BlueprintFunctions():
                 if i == input:
                     self.result(self)
                     return self.upgrade_output(id)
-                elif i.count('%') > 1 and self.try_to_write_var(input, i, id) == 1:
+                elif i.count('%') > 1 and self.try_to_write_var(input, i,
+                                                                id) == 1:
                     return self.upgrade_output(id)
             return None
 
@@ -149,7 +165,8 @@ class BlueprintFunctions():
                 if i == input:
                     self.result(self)
                     return self.upgrade_output(id)
-                elif i.count('%') > 1 and self.try_to_write_var(input, i,id) == 1:
+                elif i.count('%') > 1 and self.try_to_write_var(input, i,
+                                                                id) == 1:
                     return self.upgrade_output(id)
             return None
 

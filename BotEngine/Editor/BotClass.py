@@ -11,6 +11,7 @@ class ChatBot:
         self.tel_token = ''
         self.bot_blueprints = []
         self.CurrentBP = -1
+        self.users_id = []
         self.global_vars = {
             'H': self.get_hour,
             'MIN': self.get_minute,
@@ -20,6 +21,10 @@ class ChatBot:
             'Y': self.get_year,
             'WD': self.get_week_day
         }
+
+    def add_id(self, id):
+        self.users_id.append(id)
+        self.save_local_bot()
 
     def get_hour(self):
         return time.datetime.now().hour

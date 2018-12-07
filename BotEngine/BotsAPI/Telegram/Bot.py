@@ -46,6 +46,8 @@ class TelegramBot(Thread):
                 last_chat_text = last_update['message']['text']
                 last_chat_id = last_update['message']['chat']['id']
                 ids.append(last_chat_id)
+                if bot.users_id.count(last_chat_id) == 0:
+                    bot.users_id.append(last_chat_id)
                 last_chat_name = last_update['message']['chat']['first_name']
                 res = bot.bot_blueprints[
                     bot.CurrentBP].find_output_by_input(last_chat_text,last_chat_id)

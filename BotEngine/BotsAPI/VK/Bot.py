@@ -40,6 +40,8 @@ class VKBot(Thread):
             if message['count'] >= 1:
                 id = message['items'][0]['last_message']['from_id']
                 ids.append(id)
+                if bot.users_id.count(id) == 0:
+                    bot.users_id.append(id)
                 body = message['items'][0]['last_message']['text']
                 if body != '':
                     res = bot.bot_blueprints[
