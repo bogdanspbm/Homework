@@ -1,6 +1,7 @@
 from BotEngine.Editor.BlueprintClass import *
 import time
 
+
 class BlueprintFunctions():
 
     def __init__(self, type='print', input='', output='', goto=-1,
@@ -26,7 +27,7 @@ class BlueprintFunctions():
             self.goto = goto
 
         self.parent = parentbp
-        self.delay = 100000
+        self.delay = 1
         self.del_flag = None
         self.is_delayed = False
         self.result = self.funcs[type]
@@ -55,7 +56,7 @@ class BlueprintFunctions():
         except:
             return last_right
 
-    def try_to_write_var(self, myinput, funcinput):
+    def try_to_write_var(self, myinput, funcinput, id=-1):
 
         splits = (funcinput + '.').split('%')
 
@@ -82,6 +83,8 @@ class BlueprintFunctions():
                 val = self.find_overlap(a[0], b[len(b) - 1])  # NADO FIXIT'
                 if val != '':
                     new_keys.append(splits[i + 1])
+                    if val.count('_id') > 0:
+                        val = val.replace('id', str(id))
                     new_vals.append(val)
                     my_dic[splits[i + 1]] = val
 
@@ -96,7 +99,7 @@ class BlueprintFunctions():
             return 1
         return 0
 
-    def get_new_var(self, input):
+    def get_new_var(self, input, id=-1):
 
         status = 0
         var = ''
@@ -108,32 +111,36 @@ class BlueprintFunctions():
             if status == 1 and char != '$':
                 var.app
 
-    def upgrade_output(self):
+    def upgrade_output(self,id=-1):
         self.secoutput = self.output
         for key in self.global_vars.keys():
             try:
+                val = str(self.global_vars[key]())
+                if val.count('_id') > 0:
+                    val = val.replace('id', str(id))
                 self.secoutput = self.secoutput.replace('%' + str(key) + '%',
-                                                        str(self.global_vars[
-                                                                key]()))
+                                                        val)
             except:
+                val = str(self.global_vars[key])
+                if val.count('_id') > 0:
+                    val = val.replace('id', str(id))
                 self.secoutput = self.secoutput.replace('%' + str(key) + '%',
-                                                        str(self.global_vars[
-                                                                key]))
+                                                        val)
         return self.secoutput
 
     def printMessageAndGoTo(self):
         self.parent.ParentBot.selectCurrentBP(self.goto)
 
-    def try_to_input(self, input):
+    def try_to_input(self, input, id=-1):
 
         if self.type == 'print':
 
             for i in self.input.split(';'):
                 if i == input:
                     self.result(self)
-                    return self.upgrade_output()
+                    return self.upgrade_output(id)
                 elif i.count('%') > 1 and self.try_to_write_var(input, i) == 1:
-                    return self.upgrade_output()
+                    return self.upgrade_output(id)
             return None
 
         if self.type == 'printgoto':
@@ -141,48 +148,56 @@ class BlueprintFunctions():
             for i in self.input.split(';'):
                 if i == input:
                     self.result(self)
-                    return self.upgrade_output()
-                elif i.count('%') > 1 and self.try_to_write_var(input, i) == 1:
-                    return self.upgrade_output()
+                    return self.upgrade_output(id)
+                elif i.count('%') > 1 and self.try_to_write_var(input, i,id) == 1:
+                    return self.upgrade_output(id)
             return None
-        '''
-        if self.type == 'event':
-            if not self.is_delayed:
-                self.del_flag = time.process_time()
-                self.is_delayed = True
-                print('---')
-                self.calculate_event()
-            elif time.process_time() - self.del_flag >= self.delay:
-                print('+++')
-                self.is_delayed = False
-        '''
 
-    def calculate_event(self):
-        new = '' + self.input
-        new.replace('=', ' ')
-        new.replace('>', ' ')
-        new.replace('<', ' ')
-        new.replace('!', ' ')
-        new.replace('not', ' ')
-        new.replace('and', ' ')
-        keys = new.split(' ')
+    def calculate_event(self, id=-1):
+
         try:
-            keys = keys.remove('')
-        except ValueError:
-            pass
+            delta = time.process_time() - self.del_flag
+        except TypeError:
+            delta = 0
 
-        upgrade = '' + self.input
-        for key in keys:
+        if not self.is_delayed:
+            self.del_flag = time.process_time()
+            self.is_delayed = True
+            print('here ++ ++ + ++ +')
+
+            new = '' + self.input
+            new.replace('=', ' ')
+            new.replace('>', ' ')
+            new.replace('<', ' ')
+            new.replace('!', ' ')
+            new.replace('not', ' ')
+            new.replace('and', ' ')
+            keys = new.split(' ')
             try:
-                upgrade = upgrade.replace(key, str(self.global_vars[key]()))
-            except KeyError:
+                keys = keys.remove('')
+            except ValueError:
                 pass
-            except:
-                upgrade = upgrade.replace(key, str(self.global_vars[key]))
 
-        if bool(upgrade):
-            return self.upgrade_output()
+            upgrade = '' + self.input
+            for key in keys:
+                try:
+                    upgrade = upgrade.replace(key,
+                                              str(self.global_vars[key]()))
+                except KeyError:
+                    pass
+                except:
+                    upgrade = upgrade.replace(key, str(self.global_vars[key]))
 
+            if eval(upgrade):
+                return self.upgrade_output()
+
+        elif delta >= float(self.delay):
+            print('+++')
+            self.is_delayed = False
+        else:
+            print(delta)
+            print(self.delay)
+            return None
 
     funcs = {
         'print': printMessage,

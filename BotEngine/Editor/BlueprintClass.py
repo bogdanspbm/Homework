@@ -49,9 +49,9 @@ class Blueprint():
 
         return -1
 
-    def find_output_by_input(self, input):
+    def find_output_by_input(self, input,id=-1):
         for func in self.funcs:
-            res = func.try_to_input(input)
+            res = func.try_to_input(input,id)
             if res != None:
                 return res
         return None

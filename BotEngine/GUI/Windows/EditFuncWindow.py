@@ -46,6 +46,11 @@ class Child(tk.Toplevel):
             print(self.func.goto)
             self.gotobox.place(x=30, y=110)
 
+        if self.type == 'event':
+            self.delay_text = tk.Entry(self)
+            self.delay_text.insert(tk.END, self.func.delay)
+            self.delay_text.place(x=30, y=110)
+
         print(self.type)
 
         # self.grab_set()
@@ -57,9 +62,14 @@ class Child(tk.Toplevel):
         if l_type == 'print':
             try:
                 self.gotobox.destroy()
+                self.delay_text.destroy()
             except AttributeError:
                 pass
         if l_type == 'printgoto':
+            try:
+                self.delay_text.destroy()
+            except AttributeError:
+                pass
             goto_list = []
             for bot in self.func.parent.ParentBot.bot_blueprints:
                 goto_list.append(bot.name)
@@ -68,6 +78,9 @@ class Child(tk.Toplevel):
             self.gotobox.place(x=30, y=110)
             pass
         if l_type == 'event':
+            self.delay_text = tk.Entry(self)
+            self.delay_text.insert(tk.END,self.func.delay)
+            self.delay_text.place(x=30, y=110)
             try:
                 self.gotobox.destroy()
             except AttributeError:
@@ -86,6 +99,9 @@ class Child(tk.Toplevel):
                 self.gotobox.get())
             print(self.func.parent.ParentBot.get_bp_index_by_name(
                 self.gotobox.get()))
+
+        if self.type_box.get() == 'event':
+            self.func.delay = self.delay_text.get()
         self.root.update_func()
         self.root.save_bot()
         self.destroy()

@@ -32,9 +32,9 @@ class TelegramBot(Thread):
 
             for event in bot.bot_blueprints[bot.CurrentBP].funcs:
                 if event.type == 'event':
-                    res = event.calculate_event()
-                    if res != None and res != '':
-                        for id in ids:
+                    for id in ids:
+                        res = event.calculate_event(id)
+                        if res != None and res != '':
                             print(str(id) + ' ' + res)
                             telegarm_bot.send_message(id,
                                                       res)
@@ -48,7 +48,7 @@ class TelegramBot(Thread):
                 ids.append(last_chat_id)
                 last_chat_name = last_update['message']['chat']['first_name']
                 res = bot.bot_blueprints[
-                    bot.CurrentBP].find_output_by_input(last_chat_text)
+                    bot.CurrentBP].find_output_by_input(last_chat_text,last_chat_id)
                 telegarm_bot.send_message(last_chat_id, res)
                 print(res)
 
