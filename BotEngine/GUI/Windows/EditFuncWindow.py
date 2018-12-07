@@ -8,7 +8,7 @@ class Child(tk.Toplevel):
         super().__init__(root)
         self.root = root
         self.enter_name = -1
-        self.type = -1
+        self.type = func.type
         self.btn_enter = -1
         self.func = func
         self.init_child()
@@ -30,15 +30,42 @@ class Child(tk.Toplevel):
 
         self.type_box = ttk.Combobox(self, values=type_list)
         self.type_box.current(type_list.index(self.func.type))
+        self.type_box.bind("<<ComboboxSelected>>", self.switch_window)
         self.type_box.place(x=30, y=80)
-        self.type_box.current(0)
 
         self.btn_enter = ttk.Button(self, text='Accept',
                                     command=self.save_change)
-        self.btn_enter.place(x=30, y=130)
+        self.btn_enter.place(x=30, y=140)
+
+        if self.type == 'printgoto':
+            goto_list = []
+            for bot in self.func.parent.ParentBot.bot_blueprints:
+                goto_list.append(bot.name)
+            self.gotobox = ttk.Combobox(self, values=goto_list)
+            self.gotobox.current(self.func.goto)
+            print(self.func.goto)
+            self.gotobox.place(x=30, y=110)
+
+        print(self.type)
 
         # self.grab_set()
         self.focus_set()
+
+    def switch_window(self, event=''):
+        l_type = self.type_box.get()
+
+        if l_type == 'print':
+            self.gotobox.destroy()
+            pass
+        if l_type == 'printgoto':
+            goto_list = []
+            for bot in self.func.parent.ParentBot.bot_blueprints:
+                goto_list.append(bot.name)
+            self.gotobox = ttk.Combobox(self, values=goto_list)
+            self.gotobox.current(self.func.goto)
+            self.gotobox.place(x=30,y=110)
+            pass
+
 
     def save_change(self):
         # self.root.engine.CurrentBot.addBlueprint(self.enter_name.get())
@@ -47,6 +74,11 @@ class Child(tk.Toplevel):
         self.func.output = self.enter_output.get()
         self.func.type = self.type_box.get()
         self.func.result = self.func.funcs[self.type_box.get()]
+        if self.type_box.get() != 'printgoto':
+            self.func.goto = -1
+        else:
+            self.func.goto = self.func.parent.ParentBot.get_bp_index_by_name(self.gotobox.get())
+            print(self.func.parent.ParentBot.get_bp_index_by_name(self.gotobox.get()))
         self.root.update_func()
         self.root.save_bot()
         self.destroy()

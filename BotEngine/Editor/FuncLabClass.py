@@ -42,7 +42,7 @@ class BlueprintFunctions():
         arr = input.split('%')
         return arr
 
-    def find_overlap(self,first, second):
+    def find_overlap(self, first, second):
         last_right = ''
         try:
             for i in range(len(first)):
@@ -70,18 +70,18 @@ class BlueprintFunctions():
         flag = 0
 
         for i in range(len(splits) - 2):
-            if i%2 ==0:
-                a = myinp.split(splits[i+2])
+            if i % 2 == 0:
+                a = myinp.split(splits[i + 2])
                 if a[0] == '':
                     a.remove('')
                 b = myinp.split(splits[i])
                 if b[0] == '':
                     b.remove('')
-                val = self.find_overlap(a[0],b[len(b)-1]) # NADO FIXIT'
+                val = self.find_overlap(a[0], b[len(b) - 1])  # NADO FIXIT'
                 if val != '':
-                    new_keys.append(splits[i+1])
+                    new_keys.append(splits[i + 1])
                     new_vals.append(val)
-                    my_dic[splits[i+1]] = val
+                    my_dic[splits[i + 1]] = val
 
         tmp_out = funcinput
 
@@ -94,32 +94,29 @@ class BlueprintFunctions():
             return 1
         return 0
 
-
-
-
-
-
     def get_new_var(self, input):
 
         status = 0
         var = ''
 
         for char in input:
-           if char == '$' and status == 0:
-               status = 1
-               var = ''
-           if status == 1 and char != '$':
-               var.app
+            if char == '$' and status == 0:
+                status = 1
+                var = ''
+            if status == 1 and char != '$':
+                var.app
 
     def upgrade_output(self):
         self.secoutput = self.output
         for key in self.global_vars.keys():
             try:
                 self.secoutput = self.secoutput.replace('%' + str(key) + '%',
-                                                        str(self.global_vars[key]()))
+                                                        str(self.global_vars[
+                                                                key]()))
             except:
                 self.secoutput = self.secoutput.replace('%' + str(key) + '%',
-                                                        str(self.global_vars[key]))
+                                                        str(self.global_vars[
+                                                                key]))
         return self.secoutput
 
     def printMessageAndGoTo(self):
@@ -129,15 +126,25 @@ class BlueprintFunctions():
 
     def try_to_input(self, input):
 
-        print(time.time().hour)
+        if self.type == 'print':
 
-        for i in self.input.split(';'):
-            if i == input:
-                self.result(self)
-                return self.upgrade_output()
-            elif i.count('%') > 1 and self.try_to_write_var(input, i) == 1:
-                return self.upgrade_output()
-        return 0
+            for i in self.input.split(';'):
+                if i == input:
+                    self.result(self)
+                    return self.upgrade_output()
+                elif i.count('%') > 1 and self.try_to_write_var(input, i) == 1:
+                    return self.upgrade_output()
+            return 0
+
+        if self.type == 'printgoto':
+            for i in self.input.split(';'):
+                if i == input:
+                    self.result(self)
+                    return self.upgrade_output()
+                elif i.count('%') > 1 and self.try_to_write_var(input, i) == 1:
+                    self.parent.ParentBot.CurrentBP = self.goto
+                    return self.upgrade_output()
+            return 0
 
     funcs = {
         'print': printMessage,

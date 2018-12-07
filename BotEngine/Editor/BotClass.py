@@ -2,6 +2,7 @@ from BotEngine.Editor.BlueprintClass import *
 import datetime as time
 import pickle
 
+
 class ChatBot:
 
     def __init__(self, Name):
@@ -11,7 +12,7 @@ class ChatBot:
         self.bot_blueprints = []
         self.CurrentBP = -1
         self.global_vars = {
-            'H': self.get_hour ,
+            'H': self.get_hour,
             'M': self.get_minute
         }
 
@@ -28,9 +29,21 @@ class ChatBot:
 
         self.CurrentBP = bp
 
+    def select_bp_with_name(self, name):
+        for i in range(len(self.bot_blueprints)):
+            if self.bot_blueprints[i].name == name:
+                print(name + ' ' + self.bot_blueprints[i].name)
+
+
+    def get_bp_index_by_name(self, name):
+        for i in range(len(self.bot_blueprints)):
+            if self.bot_blueprints[i].name == name:
+                return i
+
     def addBlueprint(self, name='', root=-1):
         self.bot_blueprints.append(Blueprint(len(self.bot_blueprints), name,
-                                             self.Parent,self))  # Add clear blueprint to list
+                                             self.Parent,
+                                             self))  # Add clear blueprint to list
         print(len(self.bot_blueprints))
 
         if root != -1:
@@ -49,7 +62,8 @@ class ChatBot:
         root.saveBot()
 
     def save_local_bot(self):
-        BotFile = open('../Bots/' + self.Name + '.bot', 'wb+')  # Create or Open File
+        BotFile = open('../Bots/' + self.Name + '.bot',
+                       'wb+')  # Create or Open File
 
         BotFile.truncate()  # Clear File
         pickle.dump(self, BotFile,
