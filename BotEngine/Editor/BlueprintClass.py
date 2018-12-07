@@ -51,10 +51,10 @@ class Blueprint():
 
     def find_output_by_input(self, input):
         for func in self.funcs:
-            if func.try_to_input(input) != None:
-                return func.try_to_input(input)
-            else:
-                return None
+            res = func.try_to_input(input)
+            if res != None:
+                return res
+        return None
 
     def testBluerpint(self):
         while True:

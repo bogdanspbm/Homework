@@ -18,6 +18,7 @@ class TelegramBot(Thread):
             self.bot.tel_token)
         new_offset = None
         bot = self.bot
+        ids = []
 
         while True:
             print('...')
@@ -29,14 +30,26 @@ class TelegramBot(Thread):
 
             last_update = telegarm_bot.get_last_update()
 
+            for event in bot.bot_blueprints[bot.CurrentBP].funcs:
+                if event.type == 'event':
+                    res = event.calculate_event()
+                    if res != None and res != '':
+                        for id in ids:
+                            print(str(id) + ' ' + res)
+                            telegarm_bot.send_message(id,
+                                                      res)
+
+
             if last_update != None:
 
                 last_update_id = last_update['update_id']
                 last_chat_text = last_update['message']['text']
                 last_chat_id = last_update['message']['chat']['id']
+                ids.append(last_chat_id)
                 last_chat_name = last_update['message']['chat']['first_name']
-
-                telegarm_bot.send_message(last_chat_id, bot.bot_blueprints[
-                    bot.CurrentBP].find_output_by_input(last_chat_text))
+                res = bot.bot_blueprints[
+                    bot.CurrentBP].find_output_by_input(last_chat_text)
+                telegarm_bot.send_message(last_chat_id, res)
+                print(res)
 
                 new_offset = last_update_id + 1

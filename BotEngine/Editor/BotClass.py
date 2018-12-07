@@ -13,7 +13,12 @@ class ChatBot:
         self.CurrentBP = -1
         self.global_vars = {
             'H': self.get_hour,
-            'M': self.get_minute
+            'MIN': self.get_minute,
+            'S': self.get_sec,
+            'D': self.get_day,
+            'MONTH': self.get_month,
+            'Y': self.get_year,
+            'WD': self.get_week_day
         }
 
     def get_hour(self):
@@ -21,6 +26,22 @@ class ChatBot:
 
     def get_minute(self):
         return time.datetime.now().minute
+
+    def get_sec(self):
+        return time.datetime.now().second
+
+    def get_day(self):
+        return time.datetime.now().day
+
+    def get_month(self):
+        return time.datetime.now().month
+
+    def get_year(self):
+        return time.datetime.now().year
+
+    def get_week_day(self):
+        return time.datetime.weekday()
+
 
     def selectCurrentBP(self, bp=-1):
 

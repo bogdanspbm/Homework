@@ -1,6 +1,5 @@
 from BotEngine.Editor.BlueprintClass import *
-import datetime as time
-
+import time
 
 class BlueprintFunctions():
 
@@ -27,6 +26,9 @@ class BlueprintFunctions():
             self.goto = goto
 
         self.parent = parentbp
+        self.delay = 100000
+        self.del_flag = None
+        self.is_delayed = False
         self.result = self.funcs[type]
 
     def printMessage(self):
@@ -132,7 +134,7 @@ class BlueprintFunctions():
                     return self.upgrade_output()
                 elif i.count('%') > 1 and self.try_to_write_var(input, i) == 1:
                     return self.upgrade_output()
-            return 0
+            return None
 
         if self.type == 'printgoto':
             self.parent.ParentBot.CurrentBP = self.goto
@@ -143,9 +145,17 @@ class BlueprintFunctions():
                 elif i.count('%') > 1 and self.try_to_write_var(input, i) == 1:
                     return self.upgrade_output()
             return None
-
+        '''
         if self.type == 'event':
-            self.calculate_event(input)
+            if not self.is_delayed:
+                self.del_flag = time.process_time()
+                self.is_delayed = True
+                print('---')
+                self.calculate_event()
+            elif time.process_time() - self.del_flag >= self.delay:
+                print('+++')
+                self.is_delayed = False
+        '''
 
     def calculate_event(self):
         new = '' + self.input
