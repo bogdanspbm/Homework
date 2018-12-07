@@ -58,6 +58,7 @@ class ChatBot:
         self.CurrentBP = bp
         self.cur_bp[id] = bp
         self.bot_blueprints[bp].enter_event(id)
+        self.save_local_bot()
 
     def select_bp_with_name(self, name):
         for i in range(len(self.bot_blueprints)):

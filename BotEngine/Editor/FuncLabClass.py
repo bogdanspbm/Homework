@@ -78,7 +78,12 @@ class BlueprintFunctions():
                 a = myinp.split(splits[i + 2])
                 if a[0] == '':
                     a.remove('')
-                b = myinp.split(splits[i])
+                try:
+                    b = myinp.split(splits[i])
+                except:
+                    b = []
+                    b.append(myinp)
+                    pass
                 if b[0] == '':
                     b.remove('')
                 val = self.find_overlap(a[0], b[len(b) - 1])  # NADO FIXIT'
@@ -96,7 +101,8 @@ class BlueprintFunctions():
             for i in range(len(new_keys)):
                 if new_keys[i].count('_id') > 0:
                     self.add_global_var(new_keys[i], new_keys[i])
-                    self.add_global_var(new_keys[i].replace('_id','_randid'), new_keys[i])
+                    self.add_global_var(new_keys[i].replace('_id', '_randid'),
+                                        new_keys[i])
                     new_keys[i] = new_keys[i].replace('id', str(id))
                 self.add_global_var(new_keys[i], new_vals[i])
             return 1
@@ -115,6 +121,7 @@ class BlueprintFunctions():
                 var.app
 
     def upgrade_output(self, id=-1):
+        random_id = random.randrange(0,len(self.parent.ParentBot.users_id))
         self.secoutput = self.output
         for key in self.global_vars.keys():
             try:
@@ -122,29 +129,34 @@ class BlueprintFunctions():
                     val = str(self.global_vars[key.replace('id', str(id))]())
                 if key.count('_randid') > 0:
                     val = str(self.global_vars[key.replace('randid',
-                                                           self.parent.ParentBot.users_id[
-                                                               random.randrange(
-                                                                   0, len(
-                                                                       self.parent.ParentBot.users_id) - 1)])]())
+                                                           self.parent.ParentBot.users_id[random_id])]())
                 self.secoutput = self.secoutput.replace('%' + str(key) + '%',
                                                         val)
             except:
                 val = str(self.global_vars[key])
-                if key.count('_id') > 0:
+            if key.count('_id') > 0:
+                try:
                     val = str(self.global_vars[key.replace('id', str(id))])
-                if key.count('_randid') > 0:
+                except KeyError:
+                    val = str(self.global_vars[key])
+            if key.count('_randid') > 0:
+                try:
                     val = str(self.global_vars[key.replace('randid',
-                                                               str(self.parent.ParentBot.users_id[
-                                                                   random.randrange(
-                                                                       0, len(
-                                                                           self.parent.ParentBot.users_id) - 1)]))])
-                print('val')
-                self.secoutput = self.secoutput.replace('%' + str(key) + '%',
-                                                        val)
+                                                           str(
+                                                               self.parent.ParentBot.users_id[random_id
+                                                               ]))])
+                except KeyError:
+                    print('bad rand')
+                    val = str(self.global_vars[key.replace('randid',
+                                                           str(
+                                                               self.parent.ParentBot.users_id[
+                                                                   0]))])
+            self.secoutput = self.secoutput.replace('%' + str(key) + '%',
+                                                    val)
         return self.secoutput
 
-    def printMessageAndGoTo(self, id = 0):
-        #self.parent.ParentBot.selectCurrentBP(self.goto, id)
+    def printMessageAndGoTo(self, id=0):
+        # self.parent.ParentBot.selectCurrentBP(self.goto, id)
         pass
 
     def try_to_input(self, input, id=0):
