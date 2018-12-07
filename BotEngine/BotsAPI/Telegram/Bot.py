@@ -30,13 +30,14 @@ class TelegramBot(Thread):
 
             last_update = telegarm_bot.get_last_update()
 
-            for event in bot.bot_blueprints[bot.CurrentBP].funcs:
-                if event.type == 'event':
-                    for id in ids:
-                        res = event.calculate_event(id)
-                        if res != None and res != '':
-                            print(str(id) + ' ' + res)
-                            telegarm_bot.send_message(id,
+            for unid in bot.users_id:
+                for event in bot.bot_blueprints[bot.cur_bp[unid]].funcs:
+                    if event.type == 'event':
+                        for id in ids:
+                            res = event.calculate_event(id)
+                            if res != None and res != '':
+                                print(str(id) + ' ' + res)
+                                telegarm_bot.send_message(id,
                                                       res)
 
 
@@ -47,10 +48,10 @@ class TelegramBot(Thread):
                 last_chat_id = last_update['message']['chat']['id']
                 ids.append(last_chat_id)
                 if bot.users_id.count(last_chat_id) == 0:
-                    bot.users_id.append(last_chat_id)
+                    bot.add_id(last_chat_id)
                 last_chat_name = last_update['message']['chat']['first_name']
                 res = bot.bot_blueprints[
-                    bot.CurrentBP].find_output_by_input(last_chat_text,last_chat_id)
+                    bot.cur_bp[last_chat_id]].find_output_by_input(last_chat_text,last_chat_id)
                 telegarm_bot.send_message(last_chat_id, res)
                 print(res)
 

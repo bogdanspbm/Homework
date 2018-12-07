@@ -23,12 +23,13 @@ class VKBot(Thread):
             if not self.active:
                 break
 
-            for event in bot.bot_blueprints[bot.CurrentBP].funcs:
-                if event.type == 'event':
-                    for id in ids:
-                        res = event.calculate_event(id)
-                        if res != None and res != '':
-                            vk.method('messages.send',
+            for unid in bot.users_id:
+                for event in bot.bot_blueprints[bot.cur_bp[unid]].funcs:
+                    if event.type == 'event':
+                        for id in ids:
+                            res = event.calculate_event(id)
+                            if res != None and res != '':
+                                vk.method('messages.send',
                                       {'peer_id': id,
                                        'random_id': random.randrange(0,
                                                                      1000000),
@@ -41,11 +42,11 @@ class VKBot(Thread):
                 id = message['items'][0]['last_message']['from_id']
                 ids.append(id)
                 if bot.users_id.count(id) == 0:
-                    bot.users_id.append(id)
+                    bot.add_id(id)
                 body = message['items'][0]['last_message']['text']
                 if body != '':
                     res = bot.bot_blueprints[
-                        bot.CurrentBP].find_output_by_input(body, id)
+                        bot.cur_bp[id]].find_output_by_input(body, id)
                     if res != None:
                         vk.method('messages.send',
                                   {'peer_id': id,

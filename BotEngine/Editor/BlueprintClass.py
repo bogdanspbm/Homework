@@ -22,7 +22,7 @@ class Blueprint():
             if func.type == 'event' and func.input == 'enter':
                 return func.upgrade_output(id)
             elif func.type == 'event' and func.input == 'entergo':
-                self.ParentBot.selectCurrentBP(func.goto)
+                self.ParentBot.selectCurrentBP(func.goto, id)
                 return func.upgrade_output
         return None
 
@@ -50,7 +50,7 @@ class Blueprint():
         for func in self.funcs:
             print(func.input)
 
-    def find_func_by_output(self, output):
+    def find_func_by_output(self, output, id=-1):
 
         for func in self.funcs:
             if func.output == output:

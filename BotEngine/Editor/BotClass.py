@@ -11,6 +11,7 @@ class ChatBot:
         self.tel_token = ''
         self.bot_blueprints = []
         self.CurrentBP = -1
+        self.cur_bp = {}
         self.users_id = []
         self.global_vars = {
             'H': self.get_hour,
@@ -24,6 +25,7 @@ class ChatBot:
 
     def add_id(self, id):
         self.users_id.append(id)
+        self.cur_bp[id] = 0
         self.save_local_bot()
 
     def get_hour(self):
@@ -48,12 +50,14 @@ class ChatBot:
         return time.datetime.weekday()
 
 
-    def selectCurrentBP(self, bp=-1):
+    def selectCurrentBP(self, bp=-1, id = -1):
 
         if bp == -1:
             bp = int(input('Enter BP id: '))
 
         self.CurrentBP = bp
+        self.cur_bp[id] = bp
+        self.bot_blueprints[bp].enter_event(id)
 
     def select_bp_with_name(self, name):
         for i in range(len(self.bot_blueprints)):
@@ -75,8 +79,6 @@ class ChatBot:
         if root != -1:
             self.saveBot(root)
 
-    def runBot(self):
-        pass
 
     @staticmethod
     def closeBot(root):

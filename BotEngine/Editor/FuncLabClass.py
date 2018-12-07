@@ -143,10 +143,11 @@ class BlueprintFunctions():
                                                         val)
         return self.secoutput
 
-    def printMessageAndGoTo(self):
-        self.parent.ParentBot.selectCurrentBP(self.goto)
+    def printMessageAndGoTo(self, id = 0):
+        #self.parent.ParentBot.selectCurrentBP(self.goto, id)
+        pass
 
-    def try_to_input(self, input, id=-1):
+    def try_to_input(self, input, id=0):
 
         if self.type == 'print':
 
@@ -160,13 +161,14 @@ class BlueprintFunctions():
             return None
 
         if self.type == 'printgoto':
-            self.parent.ParentBot.CurrentBP = self.goto
             for i in self.input.split(';'):
                 if i == input:
                     self.result(self)
+                    self.parent.ParentBot.selectCurrentBP(self.goto, id)
                     return self.upgrade_output(id)
                 elif i.count('%') > 1 and self.try_to_write_var(input, i,
                                                                 id) == 1:
+                    self.parent.ParentBot.selectCurrentBP(self.goto, id)
                     return self.upgrade_output(id)
             return None
 
