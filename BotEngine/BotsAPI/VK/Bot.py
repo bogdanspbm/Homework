@@ -19,20 +19,34 @@ class VKBot(Thread):
     def run(self):
         vk = self.vk
         bot = self.bot
+        ids = []
         while True:
             if not self.active:
                 break
+
+            for event in bot.bot_blueprints[bot.CurrentBP].funcs:
+                if event.type == 'event':
+                    res = event.calculate_event()
+                    if res != None and res != '':
+                        for id in ids:
+                            vk.method('messages.send',
+                                  {'peer_id': id,
+                                   'random_id': random.randrange(0, 1000000),
+                                   'message': res})
+
 
             message = vk.method('messages.getConversations',
                                 {'offset': 0, 'counte': 20,
                                  'filter': 'unread'})
             if message['count'] >= 1:
                 id = message['items'][0]['last_message']['from_id']
+                ids.append(id)
                 body = message['items'][0]['last_message']['text']
                 if body != '':
-                    if bot.bot_blueprints[
-                                  bot.CurrentBP].find_output_by_input(body) != None:
+                    res = bot.bot_blueprints[
+                                  bot.CurrentBP].find_output_by_input(body)
+                    if res != None:
                         vk.method('messages.send',
-                              {'peer_id': id,'random_id':random.randrange(0,1000000), 'message': bot.bot_blueprints[
-                                  bot.CurrentBP].find_output_by_input(body)})
+                              {'peer_id': id,'random_id':random.randrange(0,1000000), 'message': res})
+
         time.sleep(1)

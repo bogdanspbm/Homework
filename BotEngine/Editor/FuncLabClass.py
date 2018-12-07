@@ -120,8 +120,6 @@ class BlueprintFunctions():
         return self.secoutput
 
     def printMessageAndGoTo(self):
-
-        print(self.ouptut)
         self.parent.ParentBot.selectCurrentBP(self.goto)
 
     def try_to_input(self, input):
@@ -137,16 +135,47 @@ class BlueprintFunctions():
             return 0
 
         if self.type == 'printgoto':
+            self.parent.ParentBot.CurrentBP = self.goto
             for i in self.input.split(';'):
                 if i == input:
                     self.result(self)
                     return self.upgrade_output()
                 elif i.count('%') > 1 and self.try_to_write_var(input, i) == 1:
-                    self.parent.ParentBot.CurrentBP = self.goto
                     return self.upgrade_output()
-            return 0
+            return None
+
+        if self.type == 'event':
+            self.calculate_event(input)
+
+    def calculate_event(self):
+        new = '' + self.input
+        new.replace('=', ' ')
+        new.replace('>', ' ')
+        new.replace('<', ' ')
+        new.replace('!', ' ')
+        new.replace('not', ' ')
+        new.replace('and', ' ')
+        keys = new.split(' ')
+        try:
+            keys = keys.remove('')
+        except ValueError:
+            pass
+
+        upgrade = '' + self.input
+        for key in keys:
+            try:
+                upgrade = upgrade.replace(key, str(self.global_vars[key]()))
+            except KeyError:
+                pass
+            except:
+                upgrade = upgrade.replace(key, str(self.global_vars[key]))
+
+        if bool(upgrade):
+            return self.upgrade_output()
+
 
     funcs = {
         'print': printMessage,
-        'printgoto': printMessageAndGoTo
+        'printgoto': printMessageAndGoTo,
+        'event': calculate_event
     }
