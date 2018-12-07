@@ -83,8 +83,6 @@ class BlueprintFunctions():
                 val = self.find_overlap(a[0], b[len(b) - 1])  # NADO FIXIT'
                 if val != '':
                     new_keys.append(splits[i + 1])
-                    if val.count('_id') > 0:
-                        val = val.replace('id', str(id))
                     new_vals.append(val)
                     my_dic[splits[i + 1]] = val
 
@@ -95,6 +93,9 @@ class BlueprintFunctions():
 
         if tmp_out == myinput:
             for i in range(len(new_keys)):
+                if new_keys[i].count('_id') > 0:
+                    self.add_global_var(new_keys[i], new_keys[i])
+                    new_keys[i] = new_keys[i].replace('id', str(id))
                 self.add_global_var(new_keys[i], new_vals[i])
             return 1
         return 0
@@ -115,15 +116,14 @@ class BlueprintFunctions():
         self.secoutput = self.output
         for key in self.global_vars.keys():
             try:
-                val = str(self.global_vars[key]())
-                if val.count('_id') > 0:
-                    val = val.replace('id', str(id))
+                if key.count('_id') > 0:
+                    val = str(self.global_vars[key.replace('id',str(id))]())
                 self.secoutput = self.secoutput.replace('%' + str(key) + '%',
                                                         val)
             except:
                 val = str(self.global_vars[key])
-                if val.count('_id') > 0:
-                    val = val.replace('id', str(id))
+                if key.count('_id') > 0:
+                    val = str(self.global_vars[key.replace('id', str(id))])
                 self.secoutput = self.secoutput.replace('%' + str(key) + '%',
                                                         val)
         return self.secoutput
@@ -139,7 +139,7 @@ class BlueprintFunctions():
                 if i == input:
                     self.result(self)
                     return self.upgrade_output(id)
-                elif i.count('%') > 1 and self.try_to_write_var(input, i) == 1:
+                elif i.count('%') > 1 and self.try_to_write_var(input, i, id) == 1:
                     return self.upgrade_output(id)
             return None
 
@@ -189,7 +189,7 @@ class BlueprintFunctions():
                     upgrade = upgrade.replace(key, str(self.global_vars[key]))
 
             if eval(upgrade):
-                return self.upgrade_output()
+                return self.upgrade_output(id)
 
         elif delta >= float(self.delay):
             print('+++')
