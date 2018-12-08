@@ -47,7 +47,7 @@ class ChatBot:
         return time.datetime.now().year
 
     def get_week_day(self):
-        return time.datetime.weekday()
+        return time.datetime.weekday(time.datetime.now())
 
     def selectCurrentBP(self, bp=-1, id=-1):
 

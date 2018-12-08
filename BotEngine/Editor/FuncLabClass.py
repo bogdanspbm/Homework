@@ -29,8 +29,8 @@ class BlueprintFunctions():
 
         self.parent = parentbp
         self.delay = 1
-        self.del_flag = None
-        self.is_delayed = False
+        self.del_flag = {}
+        self.is_delayed = {}
         self.result = self.funcs[type]
 
     def printMessage(self):
@@ -148,14 +148,14 @@ class BlueprintFunctions():
                     try:
                         val = str(self.global_vars[key.replace('id', str(id))]())
                     except KeyError:
-                        val = str(self.global_vars[key])()
+                        val = str(self.global_vars[key]())()
                 elif key.count('_randid') > 0:
                     try:
                         val = str(self.global_vars[key.replace('randid',
                                                            self.parent.ParentBot.users_id[
                                                                random_id])]())
                     except KeyError:
-                        val = str(self.global_vars[key()])
+                        val = str(self.global_vars[key]())
                 else:
                     val = self.global_vars[key]()
             except TypeError:
@@ -177,6 +177,10 @@ class BlueprintFunctions():
                 else:
                     val = self.global_vars[key]
 
+            try:
+                val = val()
+            except:
+                pass
             self.secoutput = self.secoutput.replace('%' + str(key) + '%',
                                                     str(val))
         return self.secoutput
@@ -213,13 +217,24 @@ class BlueprintFunctions():
     def calculate_event(self, id=-1):
 
         try:
-            delta = time.process_time() - self.del_flag
+            delta = time.process_time() - self.del_flag[id]
         except TypeError:
             delta = 0
+        except KeyError:
+            delta = 0
 
-        if not self.is_delayed:
-            self.del_flag = time.process_time()
-            self.is_delayed = True
+        if delta < -0.1:
+            self.del_flag[id] = time.process_time()
+            print('null delta')
+
+        try:
+            flag = self.is_delayed[id]
+        except KeyError:
+            self.is_delayed[id] = False
+
+        if not self.is_delayed[id]:
+            self.del_flag[id] = time.process_time()
+            self.is_delayed[id] = True
             print('here ++ ++ + ++ +')
 
             new = '' + self.input
@@ -250,10 +265,8 @@ class BlueprintFunctions():
 
         elif delta >= float(self.delay):
             print('+++')
-            self.is_delayed = False
+            self.is_delayed[id] = False
         else:
-            print(delta)
-            print(self.delay)
             return None
 
     funcs = {
