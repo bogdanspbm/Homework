@@ -48,7 +48,7 @@ class Child(tk.Toplevel):
     def back(self, event=''):
         self.destroy()
 
-    def create_bp(self):
+    def create_bp(self, event=''):
         self.root.engine.CurrentBot.addBlueprint(self.enter_name.get(),
                                                  self.root.engine)
         self.root.update_bp()

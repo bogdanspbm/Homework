@@ -120,6 +120,25 @@ class BlueprintFunctions():
             if status == 1 and char != '$':
                 var.app
 
+    def rerand_key(self, key, depth=0):
+        if depth >= 30:
+            val = str(self.global_vars[key.replace('randid',
+                                                   str(
+                                                       self.parent.ParentBot.users_id[
+                                                           0]))])
+        else:
+            try:
+                random_id = random.randrange(0, len(
+                    self.parent.ParentBot.users_id))
+                val = str(self.global_vars[key.replace('randid',
+                                                       str(
+                                                           self.parent.ParentBot.users_id[
+                                                               random_id
+                                                           ]))])
+            except KeyError:
+                val = self.rerand_key(key, depth=depth + 1)
+        return val
+
     def upgrade_output(self, id=-1):
         random_id = random.randrange(0, len(self.parent.ParentBot.users_id))
         self.secoutput = self.output
@@ -127,20 +146,20 @@ class BlueprintFunctions():
             try:
                 if key.count('_id') > 0:
                     val = str(self.global_vars[key.replace('id', str(id))]())
-                if key.count('_randid') > 0:
+                elif key.count('_randid') > 0:
                     val = str(self.global_vars[key.replace('randid',
                                                            self.parent.ParentBot.users_id[
                                                                random_id])]())
-                self.secoutput = self.secoutput.replace('%' + str(key) + '%',
-                                                        val)
-            except:
+                else:
+                    val = self.global_vars[key]
+            except TypeError:
                 val = str(self.global_vars[key])
             if key.count('_id') > 0:
                 try:
                     val = str(self.global_vars[key.replace('id', str(id))])
                 except KeyError:
                     val = str(self.global_vars[key])
-            if key.count('_randid') > 0:
+            elif key.count('_randid') > 0:
                 try:
                     val = str(self.global_vars[key.replace('randid',
                                                            str(
@@ -148,13 +167,11 @@ class BlueprintFunctions():
                                                                    random_id
                                                                ]))])
                 except KeyError:
-                    print('bad rand')
-                    val = str(self.global_vars[key.replace('randid',
-                                                           str(
-                                                               self.parent.ParentBot.users_id[
-                                                                   0]))])
+                    self.rerand_key(key, 0)
+            else:
+                val = self.global_vars[key]
             self.secoutput = self.secoutput.replace('%' + str(key) + '%',
-                                                    val)
+                                                    str(val))
         return self.secoutput
 
     def printMessageAndGoTo(self, id=0):
