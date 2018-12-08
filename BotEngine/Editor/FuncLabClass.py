@@ -52,7 +52,7 @@ class BlueprintFunctions():
             for i in range(len(first)):
                 test1, test2 = first[i:], second[:len(first) - i]
                 if test1 == test2:
-                    last_right = test1
+                    return test1
             return last_right
         except:
             return last_right
@@ -145,31 +145,38 @@ class BlueprintFunctions():
         for key in self.global_vars.keys():
             try:
                 if key.count('_id') > 0:
-                    val = str(self.global_vars[key.replace('id', str(id))]())
+                    try:
+                        val = str(self.global_vars[key.replace('id', str(id))]())
+                    except KeyError:
+                        val = str(self.global_vars[key])()
                 elif key.count('_randid') > 0:
-                    val = str(self.global_vars[key.replace('randid',
+                    try:
+                        val = str(self.global_vars[key.replace('randid',
                                                            self.parent.ParentBot.users_id[
                                                                random_id])]())
+                    except KeyError:
+                        val = str(self.global_vars[key()])
                 else:
                     val = self.global_vars[key]
             except TypeError:
                 val = str(self.global_vars[key])
-            if key.count('_id') > 0:
-                try:
-                    val = str(self.global_vars[key.replace('id', str(id))])
-                except KeyError:
-                    val = str(self.global_vars[key])
-            elif key.count('_randid') > 0:
-                try:
-                    val = str(self.global_vars[key.replace('randid',
+                if key.count('_id') > 0:
+                    try:
+                        val = str(self.global_vars[key.replace('id', str(id))])
+                    except KeyError:
+                        val = str(self.global_vars[key])
+                elif key.count('_randid') > 0:
+                    try:
+                        val = str(self.global_vars[key.replace('randid',
                                                            str(
                                                                self.parent.ParentBot.users_id[
                                                                    random_id
                                                                ]))])
-                except KeyError:
-                    self.rerand_key(key, 0)
-            else:
-                val = self.global_vars[key]
+                    except KeyError:
+                        self.rerand_key(key, 0)
+                else:
+                    val = self.global_vars[key]
+
             self.secoutput = self.secoutput.replace('%' + str(key) + '%',
                                                     str(val))
         return self.secoutput

@@ -45,6 +45,11 @@ class Main(tk.Frame):
 
         self.canvas_tags = []
 
+        try:
+            self.canvas.yview_moveto(0)
+        except:
+            pass
+
     def load_sprites(self):
         self.toolbar_image = tk.PhotoImage(file='../Sprites/tool_bar.png')
         self.add_image = tk.PhotoImage(file='../Sprites/plus.png')
