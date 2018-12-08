@@ -49,8 +49,7 @@ class ChatBot:
     def get_week_day(self):
         return time.datetime.weekday()
 
-
-    def selectCurrentBP(self, bp=-1, id = -1):
+    def selectCurrentBP(self, bp=-1, id=-1):
 
         if bp == -1:
             bp = int(input('Enter BP id: '))
@@ -65,7 +64,6 @@ class ChatBot:
             if self.bot_blueprints[i].name == name:
                 print(name + ' ' + self.bot_blueprints[i].name)
 
-
     def get_bp_index_by_name(self, name):
         for i in range(len(self.bot_blueprints)):
             if self.bot_blueprints[i].name == name:
@@ -79,7 +77,6 @@ class ChatBot:
 
         if root != -1:
             self.saveBot(root)
-
 
     @staticmethod
     def closeBot(root):

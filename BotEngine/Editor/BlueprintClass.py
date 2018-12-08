@@ -17,7 +17,7 @@ class Blueprint():
 
         self.ParentBot.botMenu(self.ParentBot.Parent)
 
-    def enter_event(self, id = -1):
+    def enter_event(self, id=-1):
         for func in self.funcs:
             if func.type == 'event' and func.input == 'enter':
                 return func.upgrade_output(id)
@@ -58,9 +58,9 @@ class Blueprint():
 
         return -1
 
-    def find_output_by_input(self, input,id=-1):
+    def find_output_by_input(self, input, id=-1):
         for func in self.funcs:
-            res = func.try_to_input(input,id)
+            res = func.try_to_input(input, id)
             if res != None:
                 return res
         return None

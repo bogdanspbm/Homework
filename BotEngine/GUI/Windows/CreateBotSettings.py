@@ -42,7 +42,7 @@ class Child(tk.Toplevel):
         self.tel_token.place(x=57, y=99)
         self.tel_token.insert(tk.END, self.bot.tel_token)
 
-    def update_bot(self,event=''):
+    def update_bot(self, event=''):
         self.bot.Name = self.bot_name.get()
         self.bot.vk_token = self.vk_token.get()
         self.bot.tel_token = self.tel_token.get()

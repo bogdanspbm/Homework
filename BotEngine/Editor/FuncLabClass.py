@@ -121,7 +121,7 @@ class BlueprintFunctions():
                 var.app
 
     def upgrade_output(self, id=-1):
-        random_id = random.randrange(0,len(self.parent.ParentBot.users_id))
+        random_id = random.randrange(0, len(self.parent.ParentBot.users_id))
         self.secoutput = self.output
         for key in self.global_vars.keys():
             try:
@@ -129,7 +129,8 @@ class BlueprintFunctions():
                     val = str(self.global_vars[key.replace('id', str(id))]())
                 if key.count('_randid') > 0:
                     val = str(self.global_vars[key.replace('randid',
-                                                           self.parent.ParentBot.users_id[random_id])]())
+                                                           self.parent.ParentBot.users_id[
+                                                               random_id])]())
                 self.secoutput = self.secoutput.replace('%' + str(key) + '%',
                                                         val)
             except:
@@ -143,7 +144,8 @@ class BlueprintFunctions():
                 try:
                     val = str(self.global_vars[key.replace('randid',
                                                            str(
-                                                               self.parent.ParentBot.users_id[random_id
+                                                               self.parent.ParentBot.users_id[
+                                                                   random_id
                                                                ]))])
                 except KeyError:
                     print('bad rand')

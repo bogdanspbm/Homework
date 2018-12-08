@@ -3,9 +3,7 @@ from BotEngine.GUI import App
 import datetime as time
 
 
-
 def on_closing():
-
     for thread in app.threads:
         thread.active = False
 
@@ -22,7 +20,7 @@ if __name__ == '__main__':
     root.protocol("WM_DELETE_WINDOW", on_closing)
 
     app = App.Main(root, bot_editor)
-    #app.pack()
+    # app.pack()
 
     root.title('Bot Engine')
     root.iconbitmap('../Sprites/MainIco2.ico')

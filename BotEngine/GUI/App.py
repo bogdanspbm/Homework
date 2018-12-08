@@ -220,7 +220,8 @@ class Main(tk.Frame):
 
     def add_func(self, event='', func=-1):
         if func == -1:
-            func = BlueprintFunctions(parentbp=self.cur_bot.bot_blueprints[self.cur_bp])
+            func = BlueprintFunctions(
+                parentbp=self.cur_bot.bot_blueprints[self.cur_bp])
             self.engine.CurrentBot.bot_blueprints[self.cur_bp].funcs.append(
                 func)
 
@@ -296,7 +297,7 @@ class Main(tk.Frame):
             bot.start()
         else:
             self.tel_bots.remove(self.cur_bot_name)
-            self.tel_bots_treads[self.cur_bot_name].active=False
+            self.tel_bots_treads[self.cur_bot_name].active = False
             self.save_bot()
             self.tab.itemconfigure(self.tel_img_id, image=self.teloff)
 
@@ -311,7 +312,7 @@ class Main(tk.Frame):
             bot.start()
         else:
             self.vk_bots.remove(self.cur_bot_name)
-            self.vk_bots_treads[self.cur_bot_name].active=False
+            self.vk_bots_treads[self.cur_bot_name].active = False
             self.save_bot()
             self.tab.itemconfigure(self.vk_img_id, image=self.vkoff)
 
