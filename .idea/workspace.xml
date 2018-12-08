@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e9057142-7147-45bd-9f0c-910f4c07b5e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Bots/ExamplePeople.bot" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Bots/ExamplePeople.bot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BotEngine/Bots/ExampleReminder.bot" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Bots/ExampleReminder.bot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Editor/FuncLabClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Editor/FuncLabClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotEngine/Tests/StringToCode.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/Tests/StringToCode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BotEngine/keys" beforeDir="false" afterPath="$PROJECT_DIR$/BotEngine/keys" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,11 +82,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="keys" value="70" />
           <entry key="py" value="6596" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="PLAIN_TEXT" value="70" />
           <entry key="Python" value="6596" />
         </counts>
       </usages-collector>
@@ -109,7 +108,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotEngine/Editor/BotClass.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
@@ -206,11 +205,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BotEngine/keys">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="91" selection-start-column="6" selection-end-column="91" />
+            <state relative-caret-position="60">
+              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -298,7 +297,6 @@
         <option value="$PROJECT_DIR$/BotEngine/BotsAPI/KThread.py" />
         <option value="$PROJECT_DIR$/BotEngine/BotsAPI/Telegram/BotHandler.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/Windows/CreateBotWindow.py" />
-        <option value="$PROJECT_DIR$/BotEngine/keys" />
         <option value="$PROJECT_DIR$/BotEngine/Tests/Split.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/Windows/EditFuncWindow.py" />
         <option value="$PROJECT_DIR$/BotEngine/GUI/Icons/FunctionIcon.py" />
@@ -318,6 +316,7 @@
         <option value="$PROJECT_DIR$/BotEngine/Editor/FuncLabClass.py" />
         <option value="$PROJECT_DIR$/BotEngine/Tests/StringToCode.py" />
         <option value="$PROJECT_DIR$/BotEngine/Editor/BotClass.py" />
+        <option value="$PROJECT_DIR$/BotEngine/keys" />
       </list>
     </option>
   </component>
@@ -646,13 +645,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.851272" visible="true" weight="0.27202255" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.851272" visible="true" weight="0.27202255" />
       <window_info id="Structure" order="1" sideWeight="0.14872798" side_tool="true" weight="0.27202255" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.57787174" visible="true" weight="0.2751773" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.57787174" visible="true" weight="0.2751773" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6842847" weight="0.39574468" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -997,13 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BotEngine/keys">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="91" selection-start-column="6" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BotEngine/BotsAPI/VK/Bot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -1085,6 +1078,13 @@
             <marker date="1544254391990" expanded="true" signature="1825:1831" ph="..." />
             <marker date="1544254391990" expanded="true" signature="1872:1881" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotEngine/keys">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
         </state>
       </provider>
     </entry>
