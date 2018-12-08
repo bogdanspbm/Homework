@@ -157,7 +157,7 @@ class BlueprintFunctions():
                     except KeyError:
                         val = str(self.global_vars[key()])
                 else:
-                    val = self.global_vars[key]
+                    val = self.global_vars[key]()
             except TypeError:
                 val = str(self.global_vars[key])
                 if key.count('_id') > 0:
