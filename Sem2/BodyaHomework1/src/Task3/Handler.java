@@ -1,19 +1,33 @@
 package Task3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Handler {
 
-    public static void MoveArray(int[] arr) {
-        int last = arr[arr.length - 1];
-        for (int i = arr.length - 1; i > 0; i--) {
-            arr[i] = arr[i - 1];
+    public static void copyList(List<Integer> fromCopy, List<Integer> toCopy) {
+
+        for (int i = 0; i < fromCopy.size(); i++) {
+            toCopy.add(fromCopy.get(i));
         }
-        arr[0] = last;
+
     }
 
-    public static void DisplayArray(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.err.print(arr[i]);
+    public static List<Integer> moveArray(List<Integer> arr) {
+        List<Integer> list = new ArrayList<Integer>();
+        if (arr.isEmpty()) {
+            return list;
         }
+
+        copyList(arr, list);
+
+        int last = list.get(list.size() - 1);
+        for (int i = list.size() - 1; i > 0; i--) {
+            list.set(i, list.get(i - 1));
+        }
+        list.set(0, last);
+
+        return list;
     }
 
 }

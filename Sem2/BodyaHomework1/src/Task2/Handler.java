@@ -6,10 +6,10 @@ import java.util.Scanner;
 
 public class Handler {
 
-    public static void StartInput(int count) {
+    public static ArrayList StartInput(int count) {
 
         Scanner sc = new Scanner(System.in);
-        ArrayList<Employer> emps = new ArrayList();
+        ArrayList emps = new ArrayList();
 
         for (int i = 0; i < count; i++) {
             try {
@@ -25,15 +25,8 @@ public class Handler {
             }
         }
 
-        DisplayInfo(emps);
+        return emps;
 
     }
 
-    public static void DisplayInfo(ArrayList<Employer> emps) {
-
-        System.out.println("ФИО СТАВКА_В_ЧАС КОЛИЧЕСТВО_ЧАСОВ ЗАРПЛАТА");
-        for (int i = 0; i < emps.size(); i++) {
-            emps.get(i).PrintInfo();
-        }
-    }
 }

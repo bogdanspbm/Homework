@@ -1,12 +1,16 @@
 package Task1;
 
-public class IntToBinary {
+public final class IntToBinary {
 
-    public static String JavaIntToBinary(int val) {
-        return Integer.toBinaryString(val);
+    public int integer;
+    public String binary;
+
+    public IntToBinary(int val) {
+        this.integer = val;
+        this.binary = toBinary();
     }
 
-    private static String RotateString(String str) {
+    private String rotateString(String str) {
         String result = "";
 
         for (int i = 0; i < str.length(); i++) {
@@ -17,9 +21,9 @@ public class IntToBinary {
 
     }
 
-    public static String MyIntToBinary(int val) {
+    public String toBinary() {
         String result = "";
-        int tmp = val;
+        int tmp = this.integer;
 
         while (tmp != 0) {
             result += (tmp % 2);
@@ -30,19 +34,6 @@ public class IntToBinary {
             result = "0";
         }
 
-        return RotateString(result);
+        return rotateString(result);
     }
-
-    public static void DebugProgram(int depth) {
-        int rand;
-
-        for (int i = 0; i < depth; i++) {
-            rand = (int) (Math.random() * 100);
-            System.out.println("Test - " + (i + 1));
-            System.out.println(MyIntToBinary(rand));
-            System.out.println(JavaIntToBinary(rand));
-            System.out.println();
-        }
-    }
-
 }
