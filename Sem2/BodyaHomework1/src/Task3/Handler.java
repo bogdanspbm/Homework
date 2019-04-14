@@ -13,7 +13,7 @@ public class Handler {
 
     }
 
-    public static List<Integer> moveArray(List<Integer> arr) {
+    public static List<Integer> rotate(List<Integer> arr) {
         List<Integer> list = new ArrayList<Integer>();
         if (arr.isEmpty()) {
             return list;
