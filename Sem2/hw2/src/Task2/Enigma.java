@@ -8,6 +8,8 @@ public class Enigma {
 
     public static String intToString(int num) {
 
+        StringBuilder result = new StringBuilder();
+
         if (num == 1000) {
             return "Тысяча";
         }
@@ -16,7 +18,6 @@ public class Enigma {
             return "Ноль";
         }
 
-        String result = "";
         int fIndex, sIndex, tIndex;
 
         fIndex = num % 10 - 1;
@@ -34,41 +35,43 @@ public class Enigma {
 
         switch (num % 100) {
             case 11:
-                result = "Одиннадцать";
+                result.append("Одиннадцать");
                 break;
             case 12:
-                result = "Двенадцать";
+                result.append("Двенадцать");
                 break;
             case 13:
-                result = "Тринадцать";
+                result.append("Тринадцать");
                 break;
             case 14:
-                result = "Четырнадцать";
+                result.append("Четырнадцать");
                 break;
             case 15:
-                result = "Пятнадцать";
+                result.append("Пятнадцать");
                 break;
             case 16:
-                result = "Шестнадцать";
+                result.append("Шестнадцать");
                 break;
             case 17:
-                result = "Семндацать";
+                result.append("Семндацать");
                 break;
             case 18:
-                result = "Восемнадцать";
+                result.append("Восемнадцать");
                 break;
             case 19:
-                result = "Девятнадцать";
+                result.append("Девятнадцать");
                 break;
         }
 
-        if (result == "") {
-            result = thirdNum[tIndex] + secondNum[sIndex] + firstNum[fIndex];
+        if (result.toString().isEmpty()) {
+            result.append(thirdNum[tIndex]);
+            result.append(secondNum[sIndex]);
+            result.append(firstNum[fIndex]);
         } else {
-            result = thirdNum[tIndex] + result;
+            result.append(thirdNum[tIndex]);
         }
 
-        return result;
+        return result.toString();
     }
 
     private static int getCharInString(String str) {
