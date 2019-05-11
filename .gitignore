@@ -104,3 +104,4 @@ venv.bak/
 .mypy_cache/
 .idea/workspace.xml
 .idea/workspace.xml
+/Sem2/hw2/nbproject/private/
